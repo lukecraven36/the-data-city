@@ -1,18 +1,15 @@
 # Repository and environment handoff
 
-A new local Git repository exists at `/workspace/the-data-city`, branch `main`. The current managed environment is running; this project has its own directory and ignored private runtime state.
+Private repository: https://github.com/lukecraven36/the-data-city
 
-GitHub authentication identifies `lukecraven36`, but creation of the requested private repository was rejected by GitHub with `Resource not accessible by integration (createRepository)`. The connected integration does not have repository-creation permission. No remote repository was created, no source pushed and no site published.
+The GitHub connector verified private visibility and push access. Luke created the repository after the integration could not create it automatically. Its initial README commit is preserved in the merged history. The prepared source is on branch `main`; no site is published.
 
-To finish remote setup, create a **private** repository named `the-data-city` under `lukecraven36` in GitHub (leave it empty), or provide a GitHub connection with repository-creation rights. After creating the empty repository and granting the integration access:
+Local checkout: `/workspace/the-data-city`. The current managed environment is running; this project has its own directory and ignored private runtime state.
 
-```bash
-git remote add origin https://github.com/lukecraven36/the-data-city.git
-git push -u origin main
-```
+In Codex Cloud's environment setup UI, select this private repository and create/connect the environment. No environment-creation or repository-attachment tool is available in this session. Python standard-library code requires no install step. Run `python3 -m unittest discover -s tests -v` to verify the project.
 
-Do not include `.private/` in the push. Preserve that directory securely as the existing attempt ledger; a fresh clone must not reset it.
+Before provider requests in another environment, securely restore this project's existing `.private/` directory, including its authoritative usage ledger. Do not initialize a replacement budget. Configure provider secrets outside Git. No provider request has been dispatched as of this repository setup; the local count is 0 of 2. See README.md for secure signup/authentication and explicit classification steps.
 
-In Codex Cloud's environment setup UI, select the new private repository and create/connect the environment. No environment-creation or repository-attachment tool is available in this session. Python standard-library code requires no install step. Restore this project's existing private ledger securely, configure provider secrets outside Git and run the tests. Do not enable public preview access.
+Private GitHub visibility does not make a website private. Do not enable public preview access or deploy without Luke's instruction.
 
-The source-only ZIP is exported from Git and contains no credentials, response cache or usage database. It is suitable for reviewing/importing source, **not** for restoring the attempt ledger.
+The source-only ZIP is exported from Git and contains no credentials, response cache or usage database. It is suitable for reviewing/importing source, not for restoring the attempt ledger.
