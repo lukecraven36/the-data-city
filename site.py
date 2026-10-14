@@ -6,8 +6,10 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import html
 from pathlib import Path
 import secrets
+import warnings
 from urllib.parse import urlsplit
 import api
+import data_view
 
 ROOT = Path(__file__).resolve().parent
 NAV = [('/', 'Data'), ('/ai-lead', 'AI Lead'), ('/commercial-product-lead', 'Commercial Product Lead'), ('/about-me', 'About Me')]
@@ -16,6 +18,9 @@ def source(url, label):
     return f'<a class="source" href="{html.escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{html.escape(label)} ↗</a>'
 
 def data_page():
+    sample = data_view.reviewed_sample()
+    if sample:
+        return data_view.render(sample)
     try:
         rows = api.summary()
         usage = f'{len(rows)} of 2 local attempts used'
@@ -28,7 +33,7 @@ def data_page():
     except api.Blocked:
         usage = 'Usage state unavailable — requests blocked'
         status = 'Not connected'
-        next_step = 'Restore the persistent server-side usage ledger. Do not initialize a replacement budget.'
+        next_step = 'The persistent usage ledger is unavailable. Restore the original ledger or reconcile its history before any data request. Account access and a public input also remain unconfirmed.'
     sample_note = 'A response is saved privately and awaits inspection.' if status == 'Response awaiting review' else 'We have not yet retrieved a usable sample.'
     return f'''<div class="eyebrow">01 / Data · access first</div>
     <h1>Start with the<br>evidence.</h1>
@@ -37,6 +42,9 @@ def data_page():
     <h2 id="connection-title">The next step is access.</h2><p>{next_step}</p>
     <div class="ledger"><span>{usage}</span><span>Provider balance: unknown</span></div>
     <p class="small">Viewing this page uses no provider requests. Responses are saved privately; data retrieval is an explicit server-side action.</p></section>
+    <section><h2>Before the first sample</h2><p>Complete official signup if needed, authenticate privately on the server, and choose one public company website or description. This environment also needs network access to the provider. No account or dataset entitlement has been established.</p>
+    {source('https://instant-classification-api.thedatacity.com/signup', 'Official provider signup')}
+    {source('https://docs.thedatacity.com/instant-classification/guides/authentication', 'Secure authentication guide')}</section>
     <section class="split"><div><h2>What this access can show</h2><p>Instant Classification accepts a company website or description. It can return activity classifications and similar companies. {sample_note}</p>
     {source('https://docs.thedatacity.com/instant-classification/guides/quickstart', 'Classification quickstart')}</div>
     <div><h2>For company records</h2><p>The Industry Engine API requires a separately issued key. An Instant Classification account does not establish dataset entitlement. Available fields and permitted display need confirmation.</p>
@@ -44,7 +52,7 @@ def data_page():
     <aside class="note">No chart or company list has been chosen yet. Once a genuine response is reviewed, we can agree the simplest useful view.</aside>'''
 
 def ai_page():
-    return f'''<div class="eyebrow">02 / AI Lead · a proposed contribution</div><h1>Turn AI ambition<br>into customer value.</h1>
+    return f'''<div class="eyebrow">02 / AI Lead · a proposed contribution</div><h1>Turn AI ambition<br>into <em>customer value.</em></h1>
     <p class="intro">Begin with the decision a customer needs to make. Use The Data City’s evidence to make the answer more useful, traceable and practical.</p>
     <section><h2>AI is already in the proposition</h2><p>The Data City uses machine learning to understand company activity. Instant Classification, introduced in September 2025, puts that capability into a focused company-classification workflow.</p>
     {source('https://thedatacity.com/blog/introducing-instant-classification-tool/', 'Instant Classification · September 2025')}
@@ -61,7 +69,7 @@ def ai_page():
     <aside class="note">A proposal for a conversation, with no claim that an AI Lead vacancy exists. Existing machine-learning classification and proposed generative-AI workflows are distinct.</aside>'''
 
 def commercial_page():
-    return '''<div class="eyebrow">03 / Commercial Product Lead · a proposed contribution</div><h1>Understand the need.<br>Then shape the product.</h1>
+    return '''<div class="eyebrow">03 / Commercial Product Lead · a proposed contribution</div><h1>Understand the need.<br>Then <em>shape the product.</em></h1>
     <p class="intro">Connect customer discovery, product decisions and commercial conversations across The Data City’s portfolio.</p>
     <section><h2>Start with the customer’s challenge</h2><p>What decision are they trying to make? Where does the current process fail? The useful starting point is the problem and its value to the customer, before choosing a tool.</p></section>
     <ol class="process"><li><span class="number">01</span><div><h2>Understand</h2><p>Identify the customer, the task that matters and the limitations of their current approach.</p></div></li>
@@ -72,7 +80,7 @@ def commercial_page():
     <aside class="note">This proposed contribution covers value and market fit across the portfolio. AI Lead focuses on applying AI effectively. Both begin with a customer problem; neither assumes an existing vacancy.</aside>'''
 
 def about_page():
-    return f'''<div class="eyebrow">04 / About Me · Luke Craven</div><h1>A clearer view of<br>what I can bring.</h1>
+    return f'''<div class="eyebrow">04 / About Me · Luke Craven</div><h1>A clearer view of<br><em>what I can bring.</em></h1>
     <p class="intro">My background is in BI, analytics, requirements discovery and customer-facing demonstrations. I enjoy helping people turn a broad idea into something they can understand and use.</p>
     <section><h2>Why I would like to reconnect</h2><p>When Natalia and I spoke previously, I chose an AI-focused opportunity with Simpson Associates involving Microsoft. At the time, I did not fully appreciate how central AI already was to The Data City’s business, or where you were taking it.</p>
     <p>Since then, I have spent more time with customers understanding their AI needs and the problems they want to solve. That experience has made me reflect on where I work best and what I want to contribute. Looking back, I wonder whether I got the decision wrong.</p>
@@ -91,8 +99,11 @@ PAGES = {'/': data_page, '/ai-lead': ai_page, '/commercial-product-lead': commer
 
 def render(path):
     title = dict(NAV)[path]
-    nav = ''.join(f'<a href="{url}"'+(' aria-current="page"' if url == path else '')+f'>{label}</a>' for url, label in NAV)
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>{title} · The Data City conversation</title><link rel="stylesheet" href="/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header><a class="identity" href="/"><span class="mark">LC</span><span>Luke Craven<small>A conversation with The Data City</small></span></a><span class="private">Private working draft</span></header><nav aria-label="Main navigation">{nav}</nav><main id="main">{PAGES[path]()}</main><footer><span>Prepared for a conversation with Alex &amp; Natalia</span><span>Working draft · 13 October 2026</span></footer></body></html>'''
+    symbols = ['◈', '✦', '↗', '◎']
+    nav = ''.join(f'<a href="{url}"'+(' aria-current="page"' if url == path else '')+f'><span class="nav-symbol" aria-hidden="true">{symbols[i]}</span>{label}</a>' for i, (url, label) in enumerate(NAV))
+    script = '<script src="/data.js" defer></script>' if path == '/' else ''
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#15242a"><title>{title} · The Data City conversation</title><link rel="stylesheet" href="/style.css">{script}</head><body><a class="skip" href="#main">Skip to content</a><div class="app-shell"><aside class="sidebar"><a class="identity" href="/"><span class="mark">LC</span><span>Luke Craven<small>The Data City conversation</small></span></a><p class="side-caption">A PROPOSED CONTRIBUTION</p><nav aria-label="Main navigation">{nav}</nav><div class="side-bottom"><strong>PRIVATE WORKING DRAFT</strong>A conversation about customer needs, useful AI and what I could contribute.</div></aside><div class="site-content"><header class="topbar"><span class="topbar-date">The Data City / {title}</span><div class="topbar-right"><span class="private">Private working draft</span><span class="avatar" aria-hidden="true">LC</span></div></header><main id="main">{PAGES[path]()}</main><footer><span>Prepared for a conversation with Alex &amp; Natalia</span><span>Working draft · 13 October 2026</span></footer></div></div></body></html>'''
+
 
 class Handler(BaseHTTPRequestHandler):
     expected = None
@@ -111,6 +122,8 @@ class Handler(BaseHTTPRequestHandler):
             self.send_error(403); return
         if path == '/style.css':
             content = (ROOT / 'static/style.css').read_bytes(); mime = 'text/css'
+        elif path == '/data.js':
+            content = (ROOT / 'static/data.js').read_bytes(); mime = 'text/javascript; charset=utf-8'
         elif path in PAGES:
             content = render(path).encode(); mime = 'text/html; charset=utf-8'
         else:
@@ -119,13 +132,18 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', mime)
         self.send_header('Content-Length', str(len(content)))
         self.send_header('Cache-Control', 'no-store')
-        self.send_header('Content-Security-Policy', "default-src 'none'; style-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'")
+        self.send_header('Content-Security-Policy', "default-src 'none'; style-src 'self'; script-src 'self'; connect-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'")
         self.send_header('X-Content-Type-Options', 'nosniff')
         self.send_header('Referrer-Policy', 'no-referrer')
         self.end_headers(); self.wfile.write(content)
 
 if __name__ == '__main__':
-    password = getpass.getpass('Choose a local review password (hidden): ')
+    with warnings.catch_warnings():
+        warnings.simplefilter('error', getpass.GetPassWarning)
+        try:
+            password = getpass.getpass('Choose a local review password (hidden; separate from your provider password): ')
+        except getpass.GetPassWarning:
+            raise SystemExit('Hidden entry unavailable. Open a private interactive terminal.')
     if len(password) < 12:
         raise SystemExit('Use at least 12 characters.')
     Handler.expected = 'Basic ' + base64.b64encode(('luke:' + password).encode()).decode()

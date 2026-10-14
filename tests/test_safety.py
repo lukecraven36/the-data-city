@@ -10,6 +10,7 @@ from unittest.mock import patch
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import api
+import data_view
 # Python's built-in site module is already loaded. Load the app explicitly.
 import importlib.util
 spec = importlib.util.spec_from_file_location('review_site', Path(api.ROOT)/'site.py')
@@ -21,9 +22,11 @@ class Safety(unittest.TestCase):
         self.folder = Path(self.tmp.name)/'.private'
         self.patch = patch.multiple(api, PRIVATE=self.folder, DB=self.folder/'usage.sqlite3', TOKEN=self.folder/'token.json')
         self.patch.start(); api.initialize(); self.path = api.DB
+        self.sample_patch = patch.object(data_view, "SNAPSHOT", self.folder / "not-reviewed.json")
+        self.sample_patch.start()
         self.calls = []
     def tearDown(self):
-        self.patch.stop(); self.tmp.cleanup()
+        self.sample_patch.stop(); self.patch.stop(); self.tmp.cleanup()
     def transport(self, *args):
         self.calls.append(args)
         return 200, b'{"RTICs": [], "UnknownField": null}'
@@ -88,7 +91,7 @@ class Safety(unittest.TestCase):
         thread.start()
         client = http.client.HTTPConnection('127.0.0.1', server.server_port)
         try:
-            for path in list(review.PAGES) + ['/style.css']:
+            for path in list(review.PAGES) + ['/style.css', '/data.js']:
                 client.request('GET', path)
                 response=client.getresponse(); response.read()
                 self.assertEqual(response.status, 401)
@@ -96,7 +99,7 @@ class Safety(unittest.TestCase):
                 response=client.getresponse(); response.read()
                 self.assertEqual(response.status, 200)
                 self.assertEqual(response.getheader('Cache-Control'), 'no-store')
-            for path in ['/.private/token.json', '/docs/handoff.md', '/cheat-sheet']:
+            for path in ['/.private/token.json', '/.private/reviewed-sample.json', '/docs/handoff.md', '/cheat-sheet']:
                 client.request('GET', path, headers={'Authorization':review.Handler.expected})
                 response=client.getresponse(); response.read(); self.assertEqual(response.status,404)
             client.request('GET', '/', headers={'Authorization':review.Handler.expected, 'Host':'evil.example'})
@@ -112,5 +115,52 @@ class Safety(unittest.TestCase):
         with self.assertRaises(sqlite3.IntegrityError):
             c.execute("INSERT INTO attempts(route,fingerprint,payload,created,status) VALUES ('x','x','{}',0,'x')")
         c.close()
+
+    def test_init_cli_requires_explicit_history_confirmation(self):
+        with patch.object(sys, 'argv', ['api.py', 'init']), patch.object(api, 'initialize') as initialize:
+            with self.assertRaises(SystemExit):
+                api.main()
+            initialize.assert_not_called()
+
+    def test_login_refuses_echoed_password_fallback(self):
+        with patch('builtins.input', return_value='test@example.com'), \
+             patch.object(api.getpass, 'getpass', side_effect=api.getpass.GetPassWarning()), \
+             patch.object(api, 'request') as request:
+            with self.assertRaises(api.Blocked):
+                api.login()
+            request.assert_not_called()
+
+    def test_missing_ledger_page_is_truthful_and_does_not_reset(self):
+        self.path.unlink()
+        with patch.object(api, 'initialize', side_effect=AssertionError('Reset')), \
+             patch.object(api, 'request', side_effect=AssertionError('Dispatch')):
+            output = review.render('/')
+            self.assertIn('Usage state unavailable', output)
+            self.assertIn('reconcile its history', output)
+            self.assertNotIn('0 of 2 local attempts used', output)
+
+    def test_reviewed_response_is_cached_and_escaped(self):
+        sample = {'attempt': 1, 'response': {
+            'Description': '<script>private input</script>',
+            'RTICs': [{'Description': '<b>AI</b>', 'Code': 'A', 'Score': 0.614}],
+            'SimilarCompanies': [{'CompanyName': '<img src=x>', 'CompanyNumber': '001',
+                                 'Website': 'javascript://alert(1)', 'Similarity': 0.8376199}]}}
+        (self.folder / 'reviewed-sample.json').write_text(json.dumps(sample))
+        with patch.object(api, 'request', side_effect=AssertionError('Dispatch')):
+            for _ in range(3):
+                output = review.render('/')
+                self.assertIn('Saved API response', output)
+                self.assertIn('&lt;script&gt;', output)
+                self.assertNotIn('<img src=x>', output)
+                self.assertNotIn('href="javascript:', output)
+                self.assertIn('No classifications returned', output)
+                self.assertNotIn('61.4%', output)
+        self.assertEqual(api.summary(), [])
+
+    def test_cloud_dispatch_disabled_after_handoff(self):
+        (self.folder / 'dispatch-disabled').write_text('transferred')
+        with self.assertRaises(api.Blocked):
+            self.classify('public input')
+        self.assertEqual(self.calls, [])
 
 if __name__ == '__main__': unittest.main()

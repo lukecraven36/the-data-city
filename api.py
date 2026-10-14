@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 import sqlite3
 import time
+import warnings
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -115,7 +116,13 @@ def token_value():
 
 def login():
     email = input('Work account email: ').strip()
-    password = getpass.getpass('Provider password (hidden; not stored): ')
+    # Refuse getpass's fallback to echoed input.
+    with warnings.catch_warnings():
+        warnings.simplefilter('error', getpass.GetPassWarning)
+        try:
+            password = getpass.getpass('Provider password (hidden; not stored): ')
+        except getpass.GetPassWarning:
+            raise Blocked('Hidden password entry unavailable. Use a private interactive terminal or a runtime token secret.') from None
     status, raw = request('/api/v1/login/access-token', urllib.parse.urlencode({'username': email, 'password': password}).encode(), form=True)
     del password
     if status != 200:
@@ -135,6 +142,8 @@ def login():
     print('Token saved privately on the server. Password discarded.')
 
 def classify(payload, path=None, transport=request, token=None):
+    if (PRIVATE / 'dispatch-disabled').exists():
+        raise Blocked('Dispatch disabled here: the authoritative ledger was transferred to the local PC. Do not initialize a separate budget.')
     validate(payload)
     encoded = json.dumps(payload, sort_keys=True).encode()
     fingerprint = hashlib.sha256(b'instant-classification:' + encoded).hexdigest()
@@ -177,7 +186,10 @@ def summary(path=None):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     sub = p.add_subparsers(dest='command', required=True)
-    sub.add_parser('init'); sub.add_parser('login'); sub.add_parser('test-token'); sub.add_parser('status')
+    init = sub.add_parser('init')
+    init.add_argument('--confirm-no-prior-attempts', action='store_true',
+                      help='First setup only, after reconciling all earlier runs. Never replaces missing state.')
+    sub.add_parser('login'); sub.add_parser('test-token'); sub.add_parser('status')
     call = sub.add_parser('classify')
     call.add_argument('--payload', required=True, help='Local JSON file with one public Text or Website input.')
     call.add_argument('--confirm-public-input', action='store_true')
@@ -185,6 +197,8 @@ def main():
     args = p.parse_args()
     try:
         if args.command == 'init':
+            if not args.confirm_no_prior_attempts:
+                raise Blocked('Initialization blocked. Restore existing state; first setup requires confirmed absence of prior attempts.')
             initialize(); print('Persistent budget initialized once: 0 of 2 attempts.')
         elif args.command == 'login': login()
         elif args.command == 'test-token':
