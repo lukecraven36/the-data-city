@@ -91,7 +91,7 @@ class Safety(unittest.TestCase):
         thread.start()
         client = http.client.HTTPConnection('127.0.0.1', server.server_port)
         try:
-            for path in list(review.PAGES) + ['/style.css', '/data.js']:
+            for path in list(review.PAGES) + ['/style.css', '/data.js', '/cv.js']:
                 client.request('GET', path)
                 response=client.getresponse(); response.read()
                 self.assertEqual(response.status, 401)
@@ -162,5 +162,28 @@ class Safety(unittest.TestCase):
         with self.assertRaises(api.Blocked):
             self.classify('public input')
         self.assertEqual(self.calls, [])
+
+    def test_cv_has_three_highlights_and_full_details_for_every_role(self):
+        import cv_view
+        cv = json.loads((cv_view.ROOT / 'data/cv.json').read_text())
+        output = review.render('/about-me')
+        for section in [cv['profile'], cv['skills'], cv['interests'], cv['pathed'], *cv['roles']]:
+            self.assertEqual(len(section['summary']), 3)
+        self.assertEqual(output.count('class="cv-card"'), 6)
+        self.assertEqual(output.count('<details class="cv-detail">'), 11)
+        self.assertNotIn('<details class="cv-detail" open', output)
+        self.assertIn('8 June 2026', output)
+        self.assertIn('Head of Pre Sales and CSM', output)
+        self.assertIn('£48k to £150k', output)
+        self.assertIn('over 500 members', output)
+        self.assertIn('Full role description still to confirm', output)
+        self.assertIn('src="/cv.js"', output)
+        self.assertEqual(api.summary(), [])
+
+    def test_cv_does_not_publish_private_documents_or_contact_details(self):
+        output = review.render('/about-me')
+        for private in ['14 BROMLEY', 'BD18', '07985', '£62,000', 'passport',
+                        'lukecraven36@gmail.com', 'People@', 'Contract of Employment']:
+            self.assertNotIn(private, output)
 
 if __name__ == '__main__': unittest.main()

@@ -20,7 +20,9 @@ jobs:
       - name: Verify cached site and request limits
         run: python -m unittest discover -s tests -v
       - name: Verify browser script syntax
-        run: node --check static/data.js
+        run: |
+          node --check static/data.js
+          node --check static/cv.js
       - name: Export four pages without API requests
         run: python build_site.py
       - name: Save private review build

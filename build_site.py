@@ -17,7 +17,7 @@ def build():
         target = OUT / ('index.html' if route == '/' else route.lstrip('/') + '/index.html')
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(site.render(route), encoding='utf-8')
-    for name in ['style.css', 'data.js']:
+    for name in ['style.css', 'data.js', 'cv.js']:
         shutil.copyfile(ROOT / 'static' / name, OUT / name)
     # Platform access control must protect these files; never use public Pages.
     (OUT / '_headers').write_text('/*\n  Cache-Control: private, no-store\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  Content-Security-Policy: default-src \'none\'; style-src \'self\'; script-src \'self\'; connect-src \'none\'; base-uri \'none\'; frame-ancestors \'none\'; form-action \'none\'\n')

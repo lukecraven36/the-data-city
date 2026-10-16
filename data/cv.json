@@ -1,0 +1,134 @@
+{
+  "profile": {
+    "summary": [
+      "Commercial data and presales experience, connecting analytics with customer needs.",
+      "A background in leading demonstrations, discovery and end-to-end projects.",
+      "A focus on client trust, practical solutions and commercial value."
+    ],
+    "detail": "A commercial data enthusiast and Head of Pre Sales with a proven track record of translating complex analytics into tangible solutions and revenue. Experienced in leading end to end projects, fostering trust with clients, and driving innovation within ambitious companies that value an open culture."
+  },
+  "roles": [
+    {
+      "id": "simpson", "company": "Simpson Associates", "title": "Presales AI Specialist",
+      "dates": "8 June 2026 – present", "year": "2026", "current": true,
+      "summary": [
+        "Customer conversations about AI across NHS organisations, councils and financial businesses.",
+        "Discovery focused on the decision, workflow, constraints and outcome a customer needs.",
+        "AI-focused presales work with exposure to Microsoft technologies."
+      ],
+      "detail": [
+        "My current work is in AI-focused presales. I have described recent customer conversations spanning NHS organisations, councils and financial businesses.",
+        "My focus is understanding the business problem, the workflow and the desired outcome, then helping translate those needs into a practical, demonstrable approach."
+      ],
+      "source": "Title and start date confirmed in employment correspondence. Experience summarised from Luke’s account.",
+      "verification": "Full role description still to confirm; responsibilities and achievements have not been inferred from the job title."
+    },
+    {
+      "id": "qlik-fusion", "company": "Qlik Fusion (Catalyst)", "title": "Head of Pre Sales and CSM", "location": "Leeds",
+      "dates": "November 2025 – May 2026", "year": "2025",
+      "summary": [
+        "Built modern Qlik Cloud demos and worked with product and development on UI/UX and AI chat.",
+        "Acquired over 100 leads at Qlik Connect in Orlando, twice the previous year’s total.",
+        "Managed two portal accounts: supplier onboarding grew from 60 to 110 and annual revenue from £48k to £150k."
+      ],
+      "detail": [
+        "Developed a number of hyper modern Qlik Cloud demo environments which aligned with Fusion’s goal of creating “Beautiful Portals”.",
+        "Worked closely with the Head of Product and the Development team to help drive improvements to UI/UX and AI Chat functionality.",
+        "Produced a number of Product Feature videos to share with other Qlik Partners.",
+        "During Qlik Connect in Orlando, acquired over 100 leads for Fusion (x2 compared to previous year).",
+        "CSM to the 2 main accounts for our Supplier Experience Portal. Helping onboard new Suppliers, growing from 60 to 110, and increasing annual revenue from £48k to £150k."
+      ],
+      "source": "Dates, title and achievements supplied in Luke’s CV."
+    },
+    {
+      "id": "panintelligence", "company": "Panintelligence", "title": "Head of Pre Sales", "location": "Leeds",
+      "dates": "December 2023 – November 2025", "year": "2023",
+      "summary": [
+        "Led customer discovery, tailored demonstrations and the proof-of-concept process.",
+        "Introduced a Digital Sales Room to centralise prospect materials and communication.",
+        "Built a synthesised-data demo environment and refined sales-to-delivery handovers."
+      ],
+      "detail": [
+        "Led customer engagement by understanding client needs (SPIN), designing bespoke data demonstrations, and managing the Proof of Concept (POC) process.",
+        "Developed and implemented a Digital Sales Room to centralise prospect materials and streamline communication.",
+        "Created a comprehensive new demo environment using diverse synthesised data to enhance the relevance and impact of product demonstrations.",
+        "Refined pre-sales involvement in the sales and post-sales processes to ensure seamless customer transitions and strengthen client relationships."
+      ],
+      "source": "Dates, title and achievements supplied in Luke’s CV."
+    },
+    {
+      "id": "catalyst", "company": "Catalyst BI", "title": "Qlik and Pre Sales Consultant", "location": "Leeds",
+      "dates": "September 2021 – December 2023", "year": "2021",
+      "summary": [
+        "Demonstrated Qlik Cloud, Qlik AutoML and the Supplier Experience Portal.",
+        "Consulted across over 20 concurrent enterprise accounts, including major global brands.",
+        "Developed Qlik applications and machine-learning demos, with technical solutions and statements of work."
+      ],
+      "detail": [
+        "Delivered compelling feature, use case and technical demonstrations of Qlik Cloud, Qlik AutoML, and the Supplier Experience Portal. Developed several modernised Qlik Applications and Machine Learning demonstrations.",
+        "Consulted on a concurrent portfolio of over 20 active enterprise accounts, delivering technical solutions, authoring statements of work, and implementing Qlik Applications for massive global brands including Samsung, BMW, Morrisons, and Travis Perkins.",
+        "Provided technical solutions and authored detailed statements of work."
+      ],
+      "source": "Dates, title and achievements supplied in Luke’s CV."
+    },
+    {
+      "id": "morrisons", "company": "Morrisons", "title": "Supply Chain and Qlik Sense Specialist", "location": "Bradford",
+      "dates": "May 2019 – September 2021", "year": "2019",
+      "summary": [
+        "Productionised five Qlik applications handling over two billion rows of data.",
+        "Built a daily review application bringing supply-chain and commercial KPIs into one view.",
+        "Delivered application training to over 500 supply-chain and commercial colleagues during lockdown."
+      ],
+      "detail": [
+        "Productionised 5 Qlik applications handling over 2 billion rows of data.",
+        "Developed the Supply and Commercial Daily Review App, providing the business with a revolutionary single view of key performance indicators.",
+        "Delivered comprehensive training programs on the developed applications to over 500 members of the Supply Chain and Commercial teams during COVID lockdowns."
+      ],
+      "source": "Dates, title and achievements supplied in Luke’s CV."
+    },
+    {
+      "id": "dovecote", "company": "Dovecote Park", "title": "Supplier Implant and BI Analyst", "location": "Wakefield",
+      "dates": "September 2015 – March 2019", "year": "2015",
+      "summary": [
+        "Developed Qlik applications and interpreted data for Dovecote Park and Waitrose.",
+        "Used Excel and VBA to support bespoke branch and raw-material forecasting.",
+        "Built trusted customer relationships and influenced decisions benefiting both supplier and customer."
+      ],
+      "detail": [
+        "Data analysis through Qlik App development. Interpretation and implementation for both Dovecote and Waitrose.",
+        "Advanced understanding of Excel/VBA which assisted in the building of a bespoke Excel system for branch and raw material forecasting.",
+        "Influencing the decisions made by Waitrose so both customer and supplier benefited.",
+        "Relationship building with Waitrose in order to build understanding and trust."
+      ],
+      "source": "Dates, title and achievements supplied in Luke’s CV."
+    }
+  ],
+  "skills": {
+    "summary": [
+      "Commercial leadership: presales strategy, stakeholder relationships and project leadership.",
+      "Technical expertise: Qlik Sense, machine learning, applied data science, Excel and VBA.",
+      "Data practice: consultancy, solution design, BI, analysis, Agile, demand planning and forecasting."
+    ],
+    "detail": [
+      "Commercial Leadership: Pre Sales Strategy, Stakeholder Relationship Management, End to End Project Management, Project Leadership.",
+      "Technical Expertise: BI Platform Development (Qlik Sense), Applied Data Science, Machine Learning, Advanced Excel, VBA.",
+      "Data Methodologies: Data Consultancy, Solution Design, Business Intelligence, Data Analysis, Agile, Demand Planning, Forecasting."
+    ]
+  },
+  "interests": {
+    "summary": [
+      "Family comes first: my wife and two daughters.",
+      "A long-standing interest in music and songwriting, including playing bass in bands.",
+      "A keen gamer since childhood."
+    ],
+    "detail": "I have my family at heart, with a wonderful wife and 2 amazing daughters. I have been a keen musician and song writer for many years, playing bass guitar in numerous bands over the years. I have a keen passion for gaming, ever since the age of 4."
+  },
+  "pathed": {
+    "summary": [
+      "Additional background linked to Pathed Consulting.",
+      "A focus on BI, presales and making dashboards useful to their users.",
+      "Formal role and dates remain to be confirmed."
+    ],
+    "detail": "Earlier supplied material links me to Pathed Consulting and discusses BI, presales and making dashboards useful to the people using them. It is not a dated entry in the supplied CV, so no position in the employment timeline is implied."
+  }
+}

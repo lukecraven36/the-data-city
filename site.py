@@ -10,6 +10,7 @@ import warnings
 from urllib.parse import urlsplit
 import api
 import data_view
+import cv_view
 
 ROOT = Path(__file__).resolve().parent
 NAV = [('/', 'Data'), ('/ai-lead', 'AI Lead'), ('/commercial-product-lead', 'Commercial Product Lead'), ('/about-me', 'About Me')]
@@ -80,20 +81,7 @@ def commercial_page():
     <aside class="note">This proposed contribution covers value and market fit across the portfolio. AI Lead focuses on applying AI effectively. Both begin with a customer problem; neither assumes an existing vacancy.</aside>'''
 
 def about_page():
-    return f'''<div class="eyebrow">04 / About Me · Luke Craven</div><h1>A clearer view of<br><em>what I can bring.</em></h1>
-    <p class="intro">My background is in BI, analytics, requirements discovery and customer-facing demonstrations. I enjoy helping people turn a broad idea into something they can understand and use.</p>
-    <section><h2>Why I would like to reconnect</h2><p>When Natalia and I spoke previously, I chose an AI-focused opportunity with Simpson Associates involving Microsoft. At the time, I did not fully appreciate how central AI already was to The Data City’s business, or where you were taking it.</p>
-    <p>Since then, I have spent more time with customers understanding their AI needs and the problems they want to solve. That experience has made me reflect on where I work best and what I want to contribute. Looking back, I wonder whether I got the decision wrong.</p>
-    <p>I would like to reopen the conversation with a clearer view of how I could help: understanding customers and the market, shaping useful products and turning AI ambition into practical customer value.</p>
-    <span class="tag">Personal draft · review before sharing</span></section>
-    <section><h2>Relevant experience</h2><p class="small">These are background notes, not a dated CV. No chronological order or tenure is implied.</p>
-    <div class="experience"><h3>Panintelligence</h3><p>The supplied public material identifies me as a Pre Sales Consultant, relevant to analytics demonstrations and customer conversations.</p>
-    {source('https://www.linkedin.com/posts/luke-craven-887b3a81_not-another-ai-event-going-down-an-absolute-activity-7244403179319099392-o1Wb', 'Supporting post · supplied, not independently verified')}</div>
-    <div class="experience"><h3>Simpson Associates</h3><p>I describe my current work as AI-focused presales, with exposure to Microsoft and customer AI needs. Exact title and dates need confirmation.</p></div>
-    <div class="experience"><h3>Pathed Consulting</h3><p>The supplied public material links me to BI, presales and making dashboards useful to the people using them. Formal role and dates need confirmation.</p>
-    {source('https://www.linkedin.com/posts/luke-craven-887b3a81_pathed-consulting-bi-and-pre-sales-excellence-activity-7457743743950180352-mJRF', 'Supporting post · supplied, not independently verified')}</div>
-    <div class="experience"><h3>Earlier analytics and consultancy</h3><p>My broader background includes BI, discovery and demonstrations. References to Catalyst BI / Catalyst Cloud need employer, role and date verification before any formal entry.</p></div></section>
-    <aside class="note"><strong>To verify before sharing:</strong> career dates and formal titles; the timing of recent AI customer conversations; the wording of this personal reflection; and Natalia’s spelling before correspondence.</aside>'''
+    return cv_view.render()
 
 PAGES = {'/': data_page, '/ai-lead': ai_page, '/commercial-product-lead': commercial_page, '/about-me': about_page}
 
@@ -101,7 +89,8 @@ def render(path):
     title = dict(NAV)[path]
     symbols = ['◈', '✦', '↗', '◎']
     nav = ''.join(f'<a href="{url}"'+(' aria-current="page"' if url == path else '')+f'><span class="nav-symbol" aria-hidden="true">{symbols[i]}</span>{label}</a>' for i, (url, label) in enumerate(NAV))
-    script = '<script src="/data.js" defer></script>' if path == '/' else ''
+    script_path = {'/': '/data.js', '/about-me': '/cv.js'}.get(path)
+    script = f'<script src="{script_path}" defer></script>' if script_path else ''
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#15242a"><title>{title} · The Data City conversation</title><link rel="stylesheet" href="/style.css">{script}</head><body><a class="skip" href="#main">Skip to content</a><div class="app-shell"><aside class="sidebar"><a class="identity" href="/"><span class="mark">LC</span><span>Luke Craven<small>The Data City conversation</small></span></a><p class="side-caption">A PROPOSED CONTRIBUTION</p><nav aria-label="Main navigation">{nav}</nav><div class="side-bottom"><strong>PRIVATE WORKING DRAFT</strong>A conversation about customer needs, useful AI and what I could contribute.</div></aside><div class="site-content"><header class="topbar"><span class="topbar-date">The Data City / {title}</span><div class="topbar-right"><span class="private">Private working draft</span><span class="avatar" aria-hidden="true">LC</span></div></header><main id="main">{PAGES[path]()}</main><footer><span>Prepared for a conversation with Alex &amp; Natalia</span><span>Working draft · 13 October 2026</span></footer></div></div></body></html>'''
 
 
@@ -122,8 +111,8 @@ class Handler(BaseHTTPRequestHandler):
             self.send_error(403); return
         if path == '/style.css':
             content = (ROOT / 'static/style.css').read_bytes(); mime = 'text/css'
-        elif path == '/data.js':
-            content = (ROOT / 'static/data.js').read_bytes(); mime = 'text/javascript; charset=utf-8'
+        elif path in ('/data.js', '/cv.js'):
+            content = (ROOT / 'static' / path.lstrip('/')).read_bytes(); mime = 'text/javascript; charset=utf-8'
         elif path in PAGES:
             content = render(path).encode(); mime = 'text/html; charset=utf-8'
         else:
