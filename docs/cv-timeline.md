@@ -9,3 +9,5 @@ Simpson Associates: employment correspondence confirms Presales AI Specialist, c
 Pathed Consulting is supplementary, undated background from the earlier brief. It is outside the dated timeline and explicitly awaits formal-role/date confirmation. No date was invented for it or for the gap between Dovecote Park and Morrisons.
 
 Validation: fifteen tests pass, including exactly three summary points per section, expandable full details, authenticated asset routes, private-information exclusions and request-budget protections. JavaScript syntax checks and static export passed. Data, AI Lead and Commercial Product Lead HTML is unchanged. No provider request was made. Browser visual testing is unavailable in this environment.
+
+Publication succeeded privately on 16 October 2026, version 2. The original CV and employment documents were not deployed. Only the selected career content was included.
