@@ -197,7 +197,7 @@ class Safety(unittest.TestCase):
         for section in [cv['skills'], cv['interests'], cv['pathed'], *cv['roles']]:
             self.assertEqual(len(section['summary']), 3)
         self.assertEqual(output.count('class="cv-card"'), 6)
-        self.assertEqual(output.count('<details class="cv-detail">'), 11)
+        self.assertEqual(output.count('<details class="cv-detail">'), 10)
         self.assertNotIn('<details class="cv-detail" open', output)
         self.assertIn('8 June 2026', output)
         self.assertIn('Head of Pre Sales and CSM', output)
