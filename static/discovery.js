@@ -15,17 +15,45 @@
   const defaultAnswers = Object.fromEntries(new FormData($('#discovery-form')));
   const screens = ['contact-screen','discovery-screen','processing-screen','report-screen'];
   const announce = (text) => { $('#journey-announcement').textContent = text; };
+  const questionKeywords = {
+    goal: ['economic development', 'combined authority', 'growth plans', 'technology business landscape', 'types of businesses', 'scale', 'capabilities', 'investment support'],
+    existing: ['Companies House', 'ONS data', 'local business surveys', 'free trial', 'Beauhurst'],
+    output: ['technology businesses', 'what they do', 'where they are based', 'number of companies', 'employees per sector', 'jobs and skills', 'GVA', 'investment data', 'IS-8 footprint', 'clusters']
+  };
+  const allKeywords = [...new Set(Object.values(questionKeywords).flat())];
+  function highlighted(value, terms = allKeywords) {
+    const text = String(value);
+    const pattern = new RegExp('\\b(' + [...terms].sort((a,b) => b.length-a.length).map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')\\b', 'gi');
+    let result = '', end = 0;
+    for (const match of text.matchAll(pattern)) {
+      result += esc(text.slice(end, match.index)) + '<mark class="brief-highlight">' + esc(match[0]) + '</mark>';
+      end = match.index + match[0].length;
+    }
+    return result + esc(text.slice(end));
+  }
+  function updateHighlights(field) {
+    const mirror = field.parentElement.querySelector('.answer-highlights');
+    if (!mirror) return;
+    const style = getComputedStyle(field);
+    ['fontFamily','fontSize','fontWeight','fontStyle','letterSpacing','lineHeight','wordSpacing','textAlign','textIndent','paddingTop','paddingRight','paddingBottom','paddingLeft','borderTopWidth','borderRightWidth','borderBottomWidth','borderLeftWidth','borderRadius'].forEach(property => { mirror.style[property] = style[property]; });
+    mirror.innerHTML = highlighted(field.value, questionKeywords[field.name]);
+    mirror.scrollTop = field.scrollTop;
+    mirror.scrollLeft = field.scrollLeft;
+  }
   function fitQuestions() {
     if ($('#discovery-screen').hidden) return;
     $$('#discovery-form textarea').forEach(field => {
       field.style.height = 'auto';
       field.style.height = (field.scrollHeight + 2) + 'px';
+      updateHighlights(field);
     });
   }
   $$('#discovery-form textarea').forEach(field => field.addEventListener('input', fitQuestions));
+  $$('#discovery-form textarea').forEach(field => field.addEventListener('scroll', () => updateHighlights(field)));
   window.addEventListener('resize', fitQuestions);
   document.fonts.ready.then(fitQuestions);
   function show(screen, step, focus = true) {
+    document.body.classList.toggle('is-processing', screen === 'processing-screen');
     screens.forEach((id) => { $('#' + id).hidden = id !== screen; });
     if (screen === 'discovery-screen') requestAnimationFrame(fitQuestions);
     $$('.journey-steps li').forEach((li, i) => {
@@ -38,6 +66,7 @@
       const heading = $('#' + screen).querySelector('h1');
       heading.tabIndex = -1; heading.focus({preventScroll:true});
       window.scrollTo({top:0, behavior:'instant'});
+      if (screen === 'processing-screen') requestAnimationFrame(() => window.scrollTo({top:0, behavior:'instant'}));
     }
   }
   function valid(form, target) {
@@ -120,7 +149,7 @@
     return companies.map((c,i) => `<button type="button" class="bar-row ${variant}" data-company="${esc(c.id)}" aria-label="Open ${esc(shortName(c.name))}, ${esc(key)}, ${esc(money(c[key]))}"><span>${esc(shortName(c.name))}</span><strong>${esc(compact(c[key]))}</strong><svg viewBox="0 0 500 10" preserveAspectRatio="none" aria-hidden="true"><rect class="bar-background" x="0" y="0" width="500" height="10" rx="5"/><rect class="bar-fill tone-${i%3}" x="0" y="0" width="${Math.max(3,c[key]/max*500).toFixed(2)}" height="10" rx="5"/></svg></button>`).join('');
   }
   function renderReport() {
-    $('#understood-question').textContent = state.answers.goal;
+    $('#understood-question').innerHTML = highlighted(state.answers.goal, questionKeywords.goal);
     const total = (key) => data.companies.reduce((a,c) => a+c[key],0);
     const regions = new Set(data.companies.map((c) => c.region));
     $('#headline-kpis').innerHTML = [
@@ -128,7 +157,7 @@
       ['↗','Combined turnover',compact(total('turnover')),'Across the company preview','white'],
       ['✦','Funding landscape',compact(total('funding')),'Capital across the preview','white'],
       ['◎','Regions & nations',String(regions.size),'A UK-wide starting point','peach']
-    ].map(([icon,label,value,note,tone])=>`<article class="kpi-card kpi-${tone}"><div><span>${esc(label)}</span><span class="kpi-icon" aria-hidden="true">${icon}</span></div><strong>${esc(value)}</strong><small>${esc(note)}</small></article>`).join('');
+    ].map(([icon,label,value,note,tone],i)=>`<article class="kpi-card kpi-${tone}"><div><span>${i===0||i===3?'<mark class="brief-highlight">'+esc(label)+'</mark>':esc(label)}</span><span class="kpi-icon" aria-hidden="true">${icon}</span></div><strong>${i===0?'<mark class="brief-highlight">'+esc(value)+'</mark>':esc(value)}</strong><small>${esc(note)}</small></article>`).join('');
     $('#turnover-chart').innerHTML = bars([...data.companies].sort((a,b)=>b.turnover-a.turnover),'turnover','turnover-bars');
     $('#funding-chart').innerHTML = bars(data.companies.filter((c)=>c.funding>0).sort((a,b)=>b.funding-a.funding),'funding','funding-bars');
     const memberships = new Map();

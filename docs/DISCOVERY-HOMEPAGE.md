@@ -1,5 +1,15 @@
 # Discovery homepage — first draft, 18 October 2026
 
+## Latest interaction update
+
+The mobile processing state now sits at the top of the viewport. Navigation, topbar and journey headers are temporarily hidden during the prepared sequence; the progress list and cancel action fit within a 320×568 viewport. Cancelling restores the discovery interface. The content wrapper no longer centres the short loading screen vertically.
+
+The three editable answers use native textareas with an aria-hidden, matching highlight layer. Selected discovery phrases are marked yellow and update during editing, resizing and restoring the example. The actual field values and submitted brief stay plain text. Highlight rendering escapes user input before adding marker elements; this is a prepared phrase matcher and makes no AI/provider request.
+
+Yellow markers in the results connect the brief to company count, activities, registered geography, company scale/funding and the corresponding narrative. They do not imply that the preview contains GVA, jobs/skills, sector-level employment or IS-8 analysis. Those requests appear in the existing next-demonstration list. All seven data files remain byte-for-byte unchanged.
+
+Verification: 21 offline tests and static build passed. Focused browser checks covered aligned editable highlights, preservation of exact field values, edited HTML escaping, keyword restoration, mobile loading/cancel position at 320×568, 375×667 and 390×844, unchanged report metrics (10 companies, £3.75m turnover, £845k funding, 5 regions/nations), visible evidence highlights, header restoration, and no browser errors or external requests. Desktop and mobile screenshots were visually reviewed.
+
 The main route now presents **Your details → Your challenge → Your insights**, using the existing Family Hub palette, sidebar, rounded cards and serif emphasis. AI Lead, Commercial Product Lead and About Me remain supporting pages; the CV remains expandable. The earlier classification renderer and first reviewed response are retained in source.
 
 ## Implemented journey
