@@ -14,14 +14,30 @@ import urllib.parse
 import urllib.request
 
 ROOT = Path(__file__).resolve().parent
-PRIVATE = ROOT / '.private'
-DB = PRIVATE / 'usage.sqlite3'
-TOKEN = PRIVATE / 'token.json'
 BASE = 'https://instant-classification-api.thedatacity.com'
 CAP = 2
 
 class Blocked(Exception):
     pass
+
+def private_directory():
+    """Keep existing machine-local state outside a synchronised source checkout."""
+    configured = os.environ.get('TDC_PRIVATE_DIR')
+    local_path = ROOT / '.openai' / 'local' / 'private-directory.txt'
+    if not configured and local_path.exists():
+        configured = local_path.read_text(encoding='utf-8').strip()
+        if not configured:
+            raise Blocked('Empty private-directory setting. Restore the existing state path.')
+    if configured:
+        path = Path(configured)
+        if not path.is_absolute():
+            raise Blocked('Private-directory setting must be an absolute path.')
+        return path
+    return ROOT / '.private'
+
+PRIVATE = private_directory()
+DB = PRIVATE / 'usage.sqlite3'
+TOKEN = PRIVATE / 'token.json'
 
 def private_dir():
     PRIVATE.mkdir(mode=0o700, exist_ok=True)
@@ -30,6 +46,7 @@ def private_dir():
 def connect(path=None):
     path = path or DB
     # mode=rw is essential: missing state must never silently recreate a budget.
+    c = None
     try:
         c = sqlite3.connect(f'{path.as_uri()}?mode=rw', uri=True, timeout=10)
         c.execute('PRAGMA synchronous=FULL')
@@ -38,7 +55,13 @@ def connect(path=None):
         if row != (CAP,) or count > CAP:
             raise Blocked('Usage ledger is invalid. Stop and reconcile existing attempts.')
         return c
+    except Blocked:
+        if c is not None:
+            c.close()
+        raise
     except sqlite3.Error:
+        if c is not None:
+            c.close()
         raise Blocked('Usage ledger missing or damaged. Stop; restore it before making requests.') from None
 
 def initialize():

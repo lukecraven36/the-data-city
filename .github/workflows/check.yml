@@ -1,4 +1,4 @@
-name: Check four-page site
+name: Check three-page site
 on:
   push:
     branches: [main]
@@ -23,7 +23,10 @@ jobs:
         run: |
           node --check static/data.js
           node --check static/cv.js
-      - name: Export four pages without API requests
+          node --check static/discovery.js
+          node --check static/role.js
+          node --check static/review-access.js
+      - name: Export three pages and legacy redirects without API requests
         run: python build_site.py
       - name: Save private review build
         uses: actions/upload-artifact@v4

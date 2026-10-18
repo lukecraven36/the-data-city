@@ -2,6 +2,7 @@ import concurrent.futures
 import base64
 import http.client
 import json
+import os
 from pathlib import Path
 import tempfile
 import threading
@@ -15,6 +16,25 @@ import data_view
 import importlib.util
 spec = importlib.util.spec_from_file_location('review_site', Path(api.ROOT)/'site.py')
 review = importlib.util.module_from_spec(spec); spec.loader.exec_module(review)
+
+class PrivateDirectory(unittest.TestCase):
+    def test_external_state_selection_never_initializes_or_copies_state(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            external = root / 'existing-private'
+            with patch.object(api, 'ROOT', root), patch.dict(os.environ, {}, clear=True):
+                self.assertEqual(api.private_directory(), root / '.private')
+                config = root / '.openai/local/private-directory.txt'
+                config.parent.mkdir(parents=True)
+                config.write_text(str(external), encoding='utf-8')
+                self.assertEqual(api.private_directory(), external)
+                self.assertFalse(external.exists())
+                with patch.dict(os.environ, {'TDC_PRIVATE_DIR': str(root / 'override')}):
+                    self.assertEqual(api.private_directory(), root / 'override')
+                for invalid in ('', 'relative-private'):
+                    config.write_text(invalid, encoding='utf-8')
+                    with self.assertRaises(api.Blocked):
+                        api.private_directory()
 
 class Safety(unittest.TestCase):
     def setUp(self):
@@ -77,12 +97,13 @@ class Safety(unittest.TestCase):
                 for path in review.PAGES:
                     output = review.render(path)
                     self.assertIn('aria-current="page"', output)
-                    self.assertNotIn('luke@pathedconsulting.co.uk', output)
+                    if path != '/':
+                        self.assertNotIn('luke@pathedconsulting.co.uk', output)
                     self.assertNotIn('access_token', output)
-        self.assertEqual(len(review.PAGES), 4)
+        self.assertEqual(len(review.PAGES), 3)
         self.assertEqual(api.summary(self.path), [])
         self.classify('public one')
-        self.assertIn('Response awaiting review', review.render('/'))
+        self.assertIn('Response awaiting review', review.data_page())
         self.assertNotIn('UnknownField', review.render('/'))
     def test_http_access_and_exact_page_routes(self):
         review.Handler.expected = 'Basic ' + base64.b64encode(b'luke:test-review-password').decode()
@@ -91,7 +112,7 @@ class Safety(unittest.TestCase):
         thread.start()
         client = http.client.HTTPConnection('127.0.0.1', server.server_port)
         try:
-            for path in list(review.PAGES) + ['/style.css', '/data.js', '/cv.js']:
+            for path in list(review.PAGES) + ['/style.css', '/data.js', '/cv.js', '/discovery.js', '/discovery.css', '/role.css', '/role.js']:
                 client.request('GET', path)
                 response=client.getresponse(); response.read()
                 self.assertEqual(response.status, 401)
@@ -99,6 +120,11 @@ class Safety(unittest.TestCase):
                 response=client.getresponse(); response.read()
                 self.assertEqual(response.status, 200)
                 self.assertEqual(response.getheader('Cache-Control'), 'no-store')
+            for path, destination in review.REDIRECTS.items():
+                client.request('GET', path, headers={'Authorization':review.Handler.expected})
+                response=client.getresponse(); response.read()
+                self.assertEqual(response.status, 308)
+                self.assertEqual(response.getheader('Location'), destination)
             for path in ['/.private/token.json', '/.private/reviewed-sample.json', '/docs/handoff.md', '/cheat-sheet']:
                 client.request('GET', path, headers={'Authorization':review.Handler.expected})
                 response=client.getresponse(); response.read(); self.assertEqual(response.status,404)
@@ -134,7 +160,7 @@ class Safety(unittest.TestCase):
         self.path.unlink()
         with patch.object(api, 'initialize', side_effect=AssertionError('Reset')), \
              patch.object(api, 'request', side_effect=AssertionError('Dispatch')):
-            output = review.render('/')
+            output = review.data_page()
             self.assertIn('Usage state unavailable', output)
             self.assertIn('reconcile its history', output)
             self.assertNotIn('0 of 2 local attempts used', output)
@@ -148,7 +174,7 @@ class Safety(unittest.TestCase):
         (self.folder / 'reviewed-sample.json').write_text(json.dumps(sample))
         with patch.object(api, 'request', side_effect=AssertionError('Dispatch')):
             for _ in range(3):
-                output = review.render('/')
+                output = review.data_page()
                 self.assertIn('Saved API response', output)
                 self.assertIn('&lt;script&gt;', output)
                 self.assertNotIn('<img src=x>', output)
@@ -163,11 +189,12 @@ class Safety(unittest.TestCase):
             self.classify('public input')
         self.assertEqual(self.calls, [])
 
-    def test_cv_has_three_highlights_and_full_details_for_every_role(self):
+    def test_cv_has_five_profile_points_and_three_highlights_per_role(self):
         import cv_view
         cv = json.loads((cv_view.ROOT / 'data/cv.json').read_text())
         output = review.render('/about-me')
-        for section in [cv['profile'], cv['skills'], cv['interests'], cv['pathed'], *cv['roles']]:
+        self.assertEqual(len(cv['profile']['summary']), 5)
+        for section in [cv['skills'], cv['interests'], cv['pathed'], *cv['roles']]:
             self.assertEqual(len(section['summary']), 3)
         self.assertEqual(output.count('class="cv-card"'), 6)
         self.assertEqual(output.count('<details class="cv-detail">'), 11)
@@ -176,7 +203,9 @@ class Safety(unittest.TestCase):
         self.assertIn('Head of Pre Sales and CSM', output)
         self.assertIn('£48k to £150k', output)
         self.assertIn('over 500 members', output)
-        self.assertIn('Full role description still to confirm', output)
+        self.assertNotIn('Full role description still to confirm', output)
+        self.assertIn('£100,000', output)
+        self.assertIn('Keltbray', output)
         self.assertIn('src="/cv.js"', output)
         self.assertEqual(api.summary(), [])
 

@@ -2,6 +2,8 @@
 
 Prepared 18 October 2026. **Documented, not yet paired or tested on Luke's devices.**
 
+Update, 18 October: Luke confirms phone control is already connected and working; do not repeat pairing. Local execution on Windows host `MSI`, the registered checkout at handoff commit `8a6fc4a`, 16 passing offline tests, static build, loopback HTTP checks and HTTP 200 token check are recorded in [the migration verification](LOCAL-MIGRATION-VERIFIED.md). Original private state remains outside OneDrive, usage 1/2. The setup/proof checklist below is the original preparation guidance; phone steering/approval and the mobile website journey were not independently retested in the migration task.
+
 Official instructions: https://developers.openai.com/training/walkthroughs/working-on-your-phone
 Background: https://developers.openai.com/blog/mastering-codex-remote-for-engineering
 

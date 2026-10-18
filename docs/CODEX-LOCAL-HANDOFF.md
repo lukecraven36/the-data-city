@@ -1,5 +1,9 @@
 # Local Codex handoff — 18 October 2026
 
+**Latest scope and data:** Luke has superseded the Leeds-only example with a generic local-government authority researching technology businesses, without geography filtering. Approved attempt 2 succeeded with ten companies; local usage is now **2/2**. [The enrichment pack](TECHNOLOGY-ENRICHMENT.md) preserves all ten, their filed figures, sources, identity caveats and chart guidance. This is the next homepage's prepared dataset; the historical council scenario below is context. No more classification calls or publication are authorised by this note.
+
+**Local follow-up:** [Windows migration verification](LOCAL-MIGRATION-VERIFIED.md) records the actual host/checkouts, preserved external private state, 1/2 ledger, passing offline checks and HTTP 200 token check. Read it before the historical preparation status below. No classification or publication occurred during migration.
+
 ## Instruction precedence and scope
 
 Luke supplied [the revised brief](ai-discovery-revised-brief.md) for review and a move to local Codex. It proposes Home / AI Discovery as the primary experience, retaining AI Lead, Commercial Product Lead and About Me. Preserve existing functionality while preparing migration. Do not rebuild the homepage until local execution and the API workflow are verified. The original [handoff](handoff.md) remains historical context; the revised direction changes the opening page, not the credential and data constraints.

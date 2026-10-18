@@ -1,0 +1,2389 @@
+{
+  "schema_version": 1,
+  "researched_on": "2026-10-18",
+  "purpose": "Prepared local-government technology-business insight demonstration; no geographic filter.",
+  "sample_basis": "All ten unique companies returned by approved Instant Classification attempt 2. Not a census or representative sector sample.",
+  "source_commit": "8a6fc4a996a2680c2e1096b388f708bbab8d8160",
+  "cached_api": {
+    "attempt": 2,
+    "http_status": 200,
+    "payload": {
+      "Text": "Technology businesses developing proprietary software platforms and digital products for business customers. Their products include cloud software, cybersecurity tools, data analytics platforms and business process automation."
+    },
+    "response": {
+      "RTICs": [
+        {
+          "Code": "RTIC008603",
+          "Description": "Engineering Biology Supply Chain - Computational - AI / Bioinformatics / Omics / Software",
+          "Score": 1.643,
+          "WordsMatched": 9
+        },
+        {
+          "Code": "RTIC003406",
+          "Description": "Advanced Materials - Textiles",
+          "Score": 0.864,
+          "WordsMatched": 7
+        },
+        {
+          "Code": "RTIC003405",
+          "Description": "Advanced Materials - Polymers",
+          "Score": 0.475,
+          "WordsMatched": 4
+        },
+        {
+          "Code": "RTIC009121",
+          "Description": "Robotics and Autonomous systems - Integrators",
+          "Score": 0.158,
+          "WordsMatched": 6
+        }
+      ],
+      "RSICs": [
+        {
+          "Code": "62012",
+          "Description": "Business and domestic software development",
+          "Score": 47.01
+        },
+        {
+          "Code": "62020",
+          "Description": "Information technology consultancy activities",
+          "Score": 46.22
+        },
+        {
+          "Code": "62090",
+          "Description": "Other information technology service activities",
+          "Score": 28.45
+        },
+        {
+          "Code": "63110",
+          "Description": "Data processing, hosting and related activities",
+          "Score": 8.55
+        },
+        {
+          "Code": "58290",
+          "Description": "Other software publishing",
+          "Score": 4.89
+        },
+        {
+          "Code": "63120",
+          "Description": "Web portals",
+          "Score": 4.87
+        }
+      ],
+      "RNAICs": [
+        {
+          "Code": "541511",
+          "Description": "Custom Computer Programming Services",
+          "Score": 5.18
+        },
+        {
+          "Code": "513210",
+          "Description": "Software Publishers",
+          "Score": 2.07
+        }
+      ],
+      "SICs": [],
+      "SimilarCompanies": [
+        {
+          "CompanyNumber": "SC545249",
+          "CompanyName": "DATABOTIX LIMITED",
+          "Website": "databotix.co.uk",
+          "Similarity": 0.8171197
+        },
+        {
+          "CompanyNumber": "06676069",
+          "CompanyName": "TECHNOLOGY IN BUSINESS LIMITED",
+          "Website": "technologyinbusiness.co.uk",
+          "Similarity": 0.8141971
+        },
+        {
+          "CompanyNumber": "15780581",
+          "CompanyName": "RR TECH SOLUTIONS LTD",
+          "Website": "rrtechsolutions.xyz",
+          "Similarity": 0.8124188
+        },
+        {
+          "CompanyNumber": "13870484",
+          "CompanyName": "BIZTECHSOLS LTD",
+          "Website": "biztechsols.com",
+          "Similarity": 0.8096883
+        },
+        {
+          "CompanyNumber": "12290241",
+          "CompanyName": "DIGNIORI WAY LTD",
+          "Website": "digniori-way.com",
+          "Similarity": 0.80800736
+        },
+        {
+          "CompanyNumber": "15474498",
+          "CompanyName": "LONDON SOFTWARE TECH LTD",
+          "Website": "londonsoftwaretech.com",
+          "Similarity": 0.8071177
+        },
+        {
+          "CompanyNumber": "07752721",
+          "CompanyName": "DIGITAV LTD",
+          "Website": "digitav.com",
+          "Similarity": 0.8038057
+        },
+        {
+          "CompanyNumber": "13002622",
+          "CompanyName": "SMART IT PROJECT SOLUTIONS LTD",
+          "Website": "smartitproject.com",
+          "Similarity": 0.8036605
+        },
+        {
+          "CompanyNumber": "09257246",
+          "CompanyName": "DIGITIVE LTD",
+          "Website": "digitive.co.uk",
+          "Similarity": 0.8033599
+        },
+        {
+          "CompanyNumber": "15589626",
+          "CompanyName": "RETINA DIGITAL LIMITED",
+          "Website": "thisisretina.co.uk",
+          "Similarity": 0.8031665
+        }
+      ],
+      "Description": "Technology businesses developing proprietary software platforms and digital products for business customers. Their products include cloud software, cybersecurity tools, data analytics platforms and business process automation.",
+      "Website": null,
+      "TotalWordsProcessed": 26,
+      "ProcessingTimeMs": 0
+    },
+    "source_id": "tdc-attempt-2",
+    "classification_scope": "All returned RTIC/R-SIC/R-NAIC results classify the submitted description, not each listed company."
+  },
+  "coverage": {
+    "companies": 10,
+    "verified_legal_entities": 10,
+    "registered_postcodes_mapped": 10,
+    "latest_accounts_reviewed": 10,
+    "reported_average_employee_counts": 9,
+    "latest_turnover_disclosures": 1,
+    "companies_with_any_reviewed_turnover_disclosure": 2,
+    "net_asset_comparatives": 7,
+    "verified_external_funding_events": 0
+  },
+  "chart_data": {
+    "registered_regions": {
+      "Scotland": 1,
+      "London": 5,
+      "East of England": 2,
+      "North West": 1,
+      "South West": 1
+    },
+    "reported_sic_memberships": {
+      "62020": 7,
+      "62090": 2,
+      "63110": 1,
+      "62012": 5,
+      "62030": 1,
+      "63120": 1,
+      "52290": 1,
+      "71129": 1,
+      "58290": 1,
+      "78109": 1,
+      "85600": 1,
+      "47910": 1
+    },
+    "sic_note": "Companies can have several SICs; counts overlap and must not be added as distinct sector populations."
+  },
+  "companies": [
+    {
+      "company_number": "SC545249",
+      "name": "DATABOTIX LIMITED",
+      "website_returned": "databotix.co.uk",
+      "similarity": {
+        "value": 0.8171197,
+        "source_id": "tdc-attempt-2",
+        "note": "Similarity to the submitted description, not a probability or investment score."
+      },
+      "legal_identity": {
+        "status": "Active",
+        "incorporated_on": "2016-09-13",
+        "age_years_on_research_date": 10.09,
+        "source_id": "ch-SC545249"
+      },
+      "registered_location": {
+        "locality": "Aberdeen",
+        "postcode": "AB11 6DA",
+        "country": "Scotland",
+        "region": null,
+        "admin_district": "Aberdeen City",
+        "latitude": 57.143283,
+        "longitude": -2.109598,
+        "coordinates_basis": "Registered-office postcode centroid; not an operating-site coordinate.",
+        "source_ids": [
+          "ch-SC545249",
+          "geography-SC545249"
+        ]
+      },
+      "reported_operating_location": {
+        "locality": "Aberdeen",
+        "source_url": "https://databotix.co.uk/",
+        "status": "company_reported"
+      },
+      "reported_sic_codes": [
+        {
+          "code": "62020",
+          "description": "Information technology consultancy activities",
+          "source_id": "ch-SC545249"
+        },
+        {
+          "code": "62090",
+          "description": "Other information technology service activities",
+          "source_id": "ch-SC545249"
+        },
+        {
+          "code": "63110",
+          "description": "Data processing, hosting and related activities",
+          "source_id": "ch-SC545249"
+        }
+      ],
+      "company_rtic_codes": {
+        "value": null,
+        "status": "not_returned_for_individual_company"
+      },
+      "business_description": {
+        "summary": "Custom software, mobile applications, analytics and business digitisation; also develops Cheqdin childcare-management software.",
+        "capabilities": [
+          "Custom software",
+          "Mobile apps",
+          "Business intelligence",
+          "Workflow automation",
+          "Childcare software"
+        ],
+        "model": "Services and named software product",
+        "source_id": "website-SC545249",
+        "status": "company_claim_or_returned_website_claim",
+        "website_identity_note": "Company number SC545249 appears on the company website; Cheqdin legal terms name Databotix as the operator.",
+        "tags_basis": "Editorial reading of the website; not Data City RTIC classification."
+      },
+      "product_examples": [
+        "Cheqdin childcare management"
+      ],
+      "latest_accounts": {
+        "period_end": "2025-09-30",
+        "filed_on": "2026-06-26",
+        "description": "Total exemption full accounts made up to 30 September 2025",
+        "source_id": "accounts-SC545249"
+      },
+      "metrics": {
+        "net_assets_gbp": {
+          "value": -356146,
+          "unit": "GBP",
+          "source_id": "accounts-SC545249",
+          "pdf_page": 3,
+          "as_of": "2025-09-30",
+          "status": "reported"
+        },
+        "previous_net_assets_gbp": {
+          "value": -339695,
+          "unit": "GBP",
+          "source_id": "accounts-SC545249",
+          "pdf_page": 3,
+          "as_of": "2024-09-30",
+          "status": "reported"
+        },
+        "current_assets_gbp": {
+          "value": 12152,
+          "unit": "GBP",
+          "source_id": "accounts-SC545249",
+          "pdf_page": 3,
+          "as_of": "2025-09-30",
+          "status": "reported"
+        },
+        "previous_current_assets_gbp": {
+          "value": 12619,
+          "unit": "GBP",
+          "source_id": "accounts-SC545249",
+          "pdf_page": 3,
+          "as_of": "2024-09-30",
+          "status": "reported"
+        },
+        "cash_gbp": {
+          "value": 11666,
+          "unit": "GBP",
+          "source_id": "accounts-SC545249",
+          "pdf_page": 3,
+          "as_of": "2025-09-30",
+          "status": "reported"
+        },
+        "previous_cash_gbp": {
+          "value": 3791,
+          "unit": "GBP",
+          "source_id": "accounts-SC545249",
+          "pdf_page": 3,
+          "as_of": "2024-09-30",
+          "status": "reported"
+        },
+        "creditors_within_one_year_gbp": {
+          "value": 364798,
+          "unit": "GBP",
+          "source_id": "accounts-SC545249",
+          "pdf_page": 3,
+          "as_of": "2025-09-30",
+          "status": "reported"
+        },
+        "creditors_after_one_year_gbp": {
+          "value": 3500,
+          "unit": "GBP",
+          "source_id": "accounts-SC545249",
+          "pdf_page": 3,
+          "as_of": "2025-09-30",
+          "status": "reported"
+        },
+        "turnover_gbp": {
+          "value": null,
+          "unit": "GBP",
+          "status": "not_disclosed_in_latest_filing",
+          "source_id": "accounts-SC545249",
+          "pdf_page": null,
+          "period_start": null,
+          "period_end": "2025-09-30",
+          "period_label": "Accounting year ending 2025-09-30"
+        },
+        "average_employees": {
+          "value": null,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-SC545249",
+          "pdf_page": null,
+          "period_end": "2025-09-30",
+          "status": "not_located_in_latest_filing",
+          "note": "Not current workforce, local jobs or contractors. Director inclusion can vary by filing."
+        }
+      },
+      "derived": {
+        "net_assets_change_gbp": {
+          "value": -16451,
+          "source_ids": [
+            "accounts-SC545249"
+          ],
+          "method": "Latest net assets minus the comparative net assets in the same filing.",
+          "note": "Balance-sheet change only; not turnover growth, funding received or valuation."
+        }
+      },
+      "public_funding": {
+        "events": [],
+        "total_gbp": null,
+        "status": "not_found_in_sources_checked",
+        "checked_on": "2026-10-18",
+        "note": "Bounded public-web and indexed Dealroom searches found no reliably matched round. No full Dealroom account/API or complete grants database was queried; absence is not zero funding."
+      },
+      "internal_financing": [
+        {
+          "type": "Director balances outstanding",
+          "amount_gbp": 341680,
+          "page": 6,
+          "note": "Balance at 30 September 2025; not a period fundraising total.",
+          "source_id": "accounts-SC545249",
+          "as_of": "2025-09-30"
+        }
+      ],
+      "caveats": [
+        "Income statement was omitted from the filed accounts; a turnover accounting policy is not a disclosed turnover figure.",
+        "The going-concern note records GBP341680 owed to directors at the period end and continuing director support. This is outstanding internal financing, not a newly announced funding round.",
+        "No average-employee figure was located in the latest filing."
+      ]
+    },
+    {
+      "company_number": "06676069",
+      "name": "TECHNOLOGY IN BUSINESS LIMITED",
+      "website_returned": "technologyinbusiness.co.uk",
+      "similarity": {
+        "value": 0.8141971,
+        "source_id": "tdc-attempt-2",
+        "note": "Similarity to the submitted description, not a probability or investment score."
+      },
+      "legal_identity": {
+        "status": "Active",
+        "incorporated_on": "2008-08-19",
+        "age_years_on_research_date": 18.16,
+        "source_id": "ch-06676069"
+      },
+      "registered_location": {
+        "locality": "London",
+        "postcode": "EC2A 4NE",
+        "country": "England",
+        "region": "London",
+        "admin_district": "Hackney",
+        "latitude": 51.525617,
+        "longitude": -0.083602,
+        "coordinates_basis": "Registered-office postcode centroid; not an operating-site coordinate.",
+        "source_ids": [
+          "ch-06676069",
+          "geography-06676069"
+        ]
+      },
+      "reported_operating_location": {
+        "locality": "London (Fulham contact address)",
+        "source_url": "https://www.technologyinbusiness.co.uk/",
+        "status": "company_reported"
+      },
+      "reported_sic_codes": [
+        {
+          "code": "62020",
+          "description": "Information technology consultancy activities",
+          "source_id": "ch-06676069"
+        }
+      ],
+      "company_rtic_codes": {
+        "value": null,
+        "status": "not_returned_for_individual_company"
+      },
+      "business_description": {
+        "summary": "Software procurement assessment, new-product design and software lifecycle consulting, with stated experience in finance, media, manufacturing and biotech.",
+        "capabilities": [
+          "Software procurement",
+          "Product design",
+          "Software lifecycle",
+          "Consulting"
+        ],
+        "model": "Consulting and software services",
+        "source_id": "website-06676069",
+        "status": "company_claim_or_returned_website_claim",
+        "website_identity_note": "Website footer explicitly gives company number 06676069.",
+        "tags_basis": "Editorial reading of the website; not Data City RTIC classification."
+      },
+      "product_examples": [],
+      "latest_accounts": {
+        "period_end": "2025-12-31",
+        "filed_on": "2026-09-25",
+        "description": "Micro company accounts made up to 31 December 2025",
+        "source_id": "accounts-06676069"
+      },
+      "metrics": {
+        "net_assets_gbp": {
+          "value": 95216,
+          "unit": "GBP",
+          "source_id": "accounts-06676069",
+          "pdf_page": 2,
+          "as_of": "2025-12-31",
+          "status": "reported"
+        },
+        "previous_net_assets_gbp": {
+          "value": 71363,
+          "unit": "GBP",
+          "source_id": "accounts-06676069",
+          "pdf_page": 2,
+          "as_of": "2024-12-31",
+          "status": "reported"
+        },
+        "current_assets_gbp": {
+          "value": 150621,
+          "unit": "GBP",
+          "source_id": "accounts-06676069",
+          "pdf_page": 2,
+          "as_of": "2025-12-31",
+          "status": "reported"
+        },
+        "previous_current_assets_gbp": {
+          "value": 81172,
+          "unit": "GBP",
+          "source_id": "accounts-06676069",
+          "pdf_page": 2,
+          "as_of": "2024-12-31",
+          "status": "reported"
+        },
+        "creditors_within_one_year_gbp": {
+          "value": 64505,
+          "unit": "GBP",
+          "source_id": "accounts-06676069",
+          "pdf_page": 2,
+          "as_of": "2025-12-31",
+          "status": "reported"
+        },
+        "prepayments_gbp": {
+          "value": 10250,
+          "unit": "GBP",
+          "source_id": "accounts-06676069",
+          "pdf_page": 2,
+          "as_of": "2025-12-31",
+          "status": "reported"
+        },
+        "accruals_gbp": {
+          "value": 1150,
+          "unit": "GBP",
+          "source_id": "accounts-06676069",
+          "pdf_page": 2,
+          "as_of": "2025-12-31",
+          "status": "reported"
+        },
+        "turnover_gbp": {
+          "value": null,
+          "unit": "GBP",
+          "status": "not_disclosed_in_latest_filing",
+          "source_id": "accounts-06676069",
+          "pdf_page": null,
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "period_label": "Accounting year ending 2025-12-31"
+        },
+        "average_employees": {
+          "value": 2,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-06676069",
+          "pdf_page": 2,
+          "period_end": "2025-12-31",
+          "status": "reported",
+          "note": "Not current workforce, local jobs or contractors. Director inclusion can vary by filing."
+        },
+        "previous_average_employees": {
+          "value": 2,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-06676069",
+          "pdf_page": 2,
+          "period_end": "2024-12-31",
+          "status": "reported_comparative",
+          "note": "Comparative as shown in the latest filing."
+        }
+      },
+      "derived": {
+        "net_assets_change_gbp": {
+          "value": 23853,
+          "source_ids": [
+            "accounts-06676069"
+          ],
+          "method": "Latest net assets minus the comparative net assets in the same filing.",
+          "note": "Balance-sheet change only; not turnover growth, funding received or valuation."
+        }
+      },
+      "public_funding": {
+        "events": [],
+        "total_gbp": null,
+        "status": "not_found_in_sources_checked",
+        "checked_on": "2026-10-18",
+        "note": "Bounded public-web and indexed Dealroom searches found no reliably matched round. No full Dealroom account/API or complete grants database was queried; absence is not zero funding."
+      },
+      "internal_financing": [],
+      "caveats": [
+        "Average employee count expressly includes directors.",
+        "The website contact address is in Fulham; registered office is in Paul Street. These are different location types.",
+        "The latest filing was submitted on 25 September 2026; search-engine copies still showed the older 2024 accounts. Live filing history was used."
+      ]
+    },
+    {
+      "company_number": "15780581",
+      "name": "RR TECH SOLUTIONS LTD",
+      "website_returned": "rrtechsolutions.xyz",
+      "similarity": {
+        "value": 0.8124188,
+        "source_id": "tdc-attempt-2",
+        "note": "Similarity to the submitted description, not a probability or investment score."
+      },
+      "legal_identity": {
+        "status": "Active",
+        "incorporated_on": "2024-06-15",
+        "age_years_on_research_date": 2.34,
+        "source_id": "ch-15780581"
+      },
+      "registered_location": {
+        "locality": "London",
+        "postcode": "E10 6PY",
+        "country": "England",
+        "region": "London",
+        "admin_district": "Waltham Forest",
+        "latitude": 51.568293,
+        "longitude": -0.008923,
+        "coordinates_basis": "Registered-office postcode centroid; not an operating-site coordinate.",
+        "source_ids": [
+          "ch-15780581",
+          "geography-15780581"
+        ]
+      },
+      "reported_operating_location": {
+        "locality": null,
+        "source_url": null,
+        "status": "not_established"
+      },
+      "reported_sic_codes": [
+        {
+          "code": "62012",
+          "description": "Business and domestic software development",
+          "source_id": "ch-15780581"
+        },
+        {
+          "code": "62020",
+          "description": "Information technology consultancy activities",
+          "source_id": "ch-15780581"
+        }
+      ],
+      "company_rtic_codes": {
+        "value": null,
+        "status": "not_returned_for_individual_company"
+      },
+      "business_description": {
+        "summary": "System design, custom software and consulting. Its showcase includes the Meal Deal UK ordering platform and Adam mobile app.",
+        "capabilities": [
+          "System design",
+          "Custom software",
+          "Mobile apps",
+          "Online ordering"
+        ],
+        "model": "Services and named software product",
+        "source_id": "website-15780581",
+        "status": "company_claim_or_returned_website_claim",
+        "website_identity_note": "Company website names RR Tech Solutions Ltd; Apple lists RR Tech Solutions LTD as Adam's provider with the same domain and registered postcode.",
+        "tags_basis": "Editorial reading of the website; not Data City RTIC classification."
+      },
+      "product_examples": [
+        "Adam - Muslim Baby Names",
+        "Meal Deal UK ordering platform (client project)"
+      ],
+      "latest_accounts": {
+        "period_end": "2025-06-30",
+        "filed_on": "2026-03-08",
+        "description": "Micro company accounts made up to 30 June 2025",
+        "source_id": "accounts-15780581"
+      },
+      "metrics": {
+        "net_assets_gbp": {
+          "value": -220,
+          "unit": "GBP",
+          "source_id": "accounts-15780581",
+          "pdf_page": 2,
+          "as_of": "2025-06-30",
+          "status": "reported"
+        },
+        "previous_net_assets_gbp": {
+          "value": null,
+          "unit": "GBP",
+          "source_id": "accounts-15780581",
+          "pdf_page": 2,
+          "as_of": null,
+          "status": "not_available"
+        },
+        "current_assets_gbp": {
+          "value": 4,
+          "unit": "GBP",
+          "source_id": "accounts-15780581",
+          "pdf_page": 2,
+          "as_of": "2025-06-30",
+          "status": "reported"
+        },
+        "creditors_within_one_year_gbp": {
+          "value": 224,
+          "unit": "GBP",
+          "source_id": "accounts-15780581",
+          "pdf_page": 2,
+          "as_of": "2025-06-30",
+          "status": "reported"
+        },
+        "turnover_gbp": {
+          "value": null,
+          "unit": "GBP",
+          "status": "not_disclosed_in_latest_filing",
+          "source_id": "accounts-15780581",
+          "pdf_page": null,
+          "period_start": null,
+          "period_end": "2025-06-30",
+          "period_label": "Accounting year ending 2025-06-30"
+        },
+        "average_employees": {
+          "value": 0,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-15780581",
+          "pdf_page": 3,
+          "period_end": "2025-06-30",
+          "status": "reported",
+          "note": "Not current workforce, local jobs or contractors. Director inclusion can vary by filing."
+        }
+      },
+      "derived": {},
+      "public_funding": {
+        "events": [],
+        "total_gbp": null,
+        "status": "not_found_in_sources_checked",
+        "checked_on": "2026-10-18",
+        "note": "Bounded public-web and indexed Dealroom searches found no reliably matched round. No full Dealroom account/API or complete grants database was queried; absence is not zero funding."
+      },
+      "internal_financing": [],
+      "caveats": [
+        "Zero is the reported average employee count, not a claim that no founders or contractors work in the business.",
+        "Parentheses in the balance sheet denote negative net assets: minus GBP220, not plus GBP220.",
+        "The website's older 'soon be released' language is superseded by the available App Store listing."
+      ]
+    },
+    {
+      "company_number": "13870484",
+      "name": "BIZTECHSOLS LTD",
+      "website_returned": "biztechsols.com",
+      "similarity": {
+        "value": 0.8096883,
+        "source_id": "tdc-attempt-2",
+        "note": "Similarity to the submitted description, not a probability or investment score."
+      },
+      "legal_identity": {
+        "status": "Active",
+        "incorporated_on": "2022-01-25",
+        "age_years_on_research_date": 4.73,
+        "source_id": "ch-13870484"
+      },
+      "registered_location": {
+        "locality": "Barking",
+        "postcode": "IG11 8TQ",
+        "country": "England",
+        "region": "London",
+        "admin_district": "Barking and Dagenham",
+        "latitude": 51.541268,
+        "longitude": 0.083318,
+        "coordinates_basis": "Registered-office postcode centroid; not an operating-site coordinate.",
+        "source_ids": [
+          "ch-13870484",
+          "geography-13870484"
+        ]
+      },
+      "reported_operating_location": {
+        "locality": null,
+        "source_url": null,
+        "status": "not_established"
+      },
+      "reported_sic_codes": [
+        {
+          "code": "62012",
+          "description": "Business and domestic software development",
+          "source_id": "ch-13870484"
+        },
+        {
+          "code": "62020",
+          "description": "Information technology consultancy activities",
+          "source_id": "ch-13870484"
+        },
+        {
+          "code": "62030",
+          "description": "Computer facilities management activities",
+          "source_id": "ch-13870484"
+        },
+        {
+          "code": "63120",
+          "description": "Web portals",
+          "source_id": "ch-13870484"
+        }
+      ],
+      "company_rtic_codes": {
+        "value": null,
+        "status": "not_returned_for_individual_company"
+      },
+      "business_description": {
+        "summary": "Returned website advertises custom software, managed IT, cloud, cybersecurity and web/mobile development; legal-entity linkage remains unconfirmed.",
+        "capabilities": [
+          "Custom software",
+          "Managed IT",
+          "Cloud",
+          "Cybersecurity",
+          "Web and mobile development"
+        ],
+        "model": "IT services (website identity requires confirmation)",
+        "source_id": "website-13870484",
+        "status": "company_claim_or_returned_website_claim",
+        "website_identity_note": "The API supplied this domain, but its retrieved page does not disclose the UK company number. Public results also associate the domain with a similarly named Pakistan company. Do not merge foreign company figures, staff or reviews into the UK entity.",
+        "tags_basis": "Editorial reading of the website; not Data City RTIC classification."
+      },
+      "product_examples": [],
+      "latest_accounts": {
+        "period_end": "2026-01-31",
+        "filed_on": "2026-09-27",
+        "description": "Micro company accounts made up to 31 January 2026",
+        "source_id": "accounts-13870484"
+      },
+      "metrics": {
+        "net_assets_gbp": {
+          "value": -8061,
+          "unit": "GBP",
+          "source_id": "accounts-13870484",
+          "pdf_page": 2,
+          "as_of": "2026-01-31",
+          "status": "reported"
+        },
+        "previous_net_assets_gbp": {
+          "value": 1,
+          "unit": "GBP",
+          "source_id": "accounts-13870484",
+          "pdf_page": 2,
+          "as_of": "2025-01-31",
+          "status": "reported"
+        },
+        "current_assets_gbp": {
+          "value": 138,
+          "unit": "GBP",
+          "source_id": "accounts-13870484",
+          "pdf_page": 2,
+          "as_of": "2026-01-31",
+          "status": "reported"
+        },
+        "previous_current_assets_gbp": {
+          "value": 0,
+          "unit": "GBP",
+          "source_id": "accounts-13870484",
+          "pdf_page": 2,
+          "as_of": "2025-01-31",
+          "status": "reported"
+        },
+        "creditors_within_one_year_gbp": {
+          "value": 8200,
+          "unit": "GBP",
+          "source_id": "accounts-13870484",
+          "pdf_page": 2,
+          "as_of": "2026-01-31",
+          "status": "reported"
+        },
+        "unpaid_share_capital_gbp": {
+          "value": 1,
+          "unit": "GBP",
+          "source_id": "accounts-13870484",
+          "pdf_page": 2,
+          "as_of": "2026-01-31",
+          "status": "reported"
+        },
+        "turnover_gbp": {
+          "value": null,
+          "unit": "GBP",
+          "status": "not_disclosed_in_latest_filing",
+          "source_id": "accounts-13870484",
+          "pdf_page": null,
+          "period_start": null,
+          "period_end": "2026-01-31",
+          "period_label": "Accounting year ending 2026-01-31"
+        },
+        "average_employees": {
+          "value": 1,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-13870484",
+          "pdf_page": 3,
+          "period_end": "2026-01-31",
+          "status": "reported",
+          "note": "Not current workforce, local jobs or contractors. Director inclusion can vary by filing."
+        },
+        "previous_average_employees": {
+          "value": 1,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-13870484",
+          "pdf_page": 3,
+          "period_end": "2025-01-31",
+          "status": "reported_comparative",
+          "note": "Biztechsols comparative differs from the prior original filing; do not infer growth."
+        },
+        "historical_turnover_gbp": {
+          "value": 6700,
+          "unit": "GBP",
+          "source_id": "historical-accounts-13870484",
+          "pdf_page": 4,
+          "period_start": "2024-02-01",
+          "period_end": "2025-01-31",
+          "status": "reported_historical",
+          "note": "Not the latest accounting period. Do not substitute for latest revenue."
+        }
+      },
+      "derived": {
+        "net_assets_change_gbp": {
+          "value": -8062,
+          "source_ids": [
+            "accounts-13870484"
+          ],
+          "method": "Latest net assets minus the comparative net assets in the same filing.",
+          "note": "Balance-sheet change only; not turnover growth, funding received or valuation."
+        }
+      },
+      "public_funding": {
+        "events": [],
+        "total_gbp": null,
+        "status": "not_found_in_sources_checked",
+        "checked_on": "2026-10-18",
+        "note": "Bounded public-web and indexed Dealroom searches found no reliably matched round. No full Dealroom account/API or complete grants database was queried; absence is not zero funding."
+      },
+      "internal_financing": [],
+      "caveats": [
+        "Turnover GBP6700 belongs to the older year ending January 2025; latest January 2026 filing omits turnover.",
+        "Latest filing compares average employees 1 versus 1; the prior original filing says 0 for January 2025. Preserve this discrepancy and do not calculate employee growth.",
+        "Historical profit and loss reports a GBP3100 loss; this must not be confused with latest-period profit.",
+        "Company retained despite website identity uncertainty."
+      ]
+    },
+    {
+      "company_number": "12290241",
+      "name": "DIGNIORI WAY LTD",
+      "website_returned": "digniori-way.com",
+      "similarity": {
+        "value": 0.80800736,
+        "source_id": "tdc-attempt-2",
+        "note": "Similarity to the submitted description, not a probability or investment score."
+      },
+      "legal_identity": {
+        "status": "Active",
+        "incorporated_on": "2019-10-30",
+        "age_years_on_research_date": 6.97,
+        "source_id": "ch-12290241"
+      },
+      "registered_location": {
+        "locality": "London",
+        "postcode": "WC2A 2JR",
+        "country": "England",
+        "region": "London",
+        "admin_district": "Westminster",
+        "latitude": 51.514455,
+        "longitude": -0.111772,
+        "coordinates_basis": "Registered-office postcode centroid; not an operating-site coordinate.",
+        "source_ids": [
+          "ch-12290241",
+          "geography-12290241"
+        ]
+      },
+      "reported_operating_location": {
+        "locality": null,
+        "source_url": null,
+        "status": "not_established"
+      },
+      "reported_sic_codes": [
+        {
+          "code": "52290",
+          "description": "Other transportation support activities",
+          "source_id": "ch-12290241"
+        },
+        {
+          "code": "62012",
+          "description": "Business and domestic software development",
+          "source_id": "ch-12290241"
+        },
+        {
+          "code": "62090",
+          "description": "Other information technology service activities",
+          "source_id": "ch-12290241"
+        },
+        {
+          "code": "71129",
+          "description": "Other engineering activities",
+          "source_id": "ch-12290241"
+        }
+      ],
+      "company_rtic_codes": {
+        "value": null,
+        "status": "not_returned_for_individual_company"
+      },
+      "business_description": {
+        "summary": "Software development and support, project teams, IoT solutions, data management and data protection.",
+        "capabilities": [
+          "Custom software",
+          "IoT",
+          "Data management",
+          "Data protection",
+          "Software support"
+        ],
+        "model": "Software and technology services",
+        "source_id": "website-12290241",
+        "status": "company_claim_or_returned_website_claim",
+        "website_identity_note": "Website footer gives company number 12290241 and the matching Bell Yard registered address.",
+        "tags_basis": "Editorial reading of the website; not Data City RTIC classification."
+      },
+      "product_examples": [],
+      "latest_accounts": {
+        "period_end": "2025-10-31",
+        "filed_on": "2025-12-07",
+        "description": "Unaudited abridged accounts made up to 31 October 2025",
+        "source_id": "accounts-12290241"
+      },
+      "metrics": {
+        "net_assets_gbp": {
+          "value": 1958,
+          "unit": "GBP",
+          "source_id": "accounts-12290241",
+          "pdf_page": 3,
+          "as_of": "2025-10-31",
+          "status": "reported"
+        },
+        "previous_net_assets_gbp": {
+          "value": 1,
+          "unit": "GBP",
+          "source_id": "accounts-12290241",
+          "pdf_page": 3,
+          "as_of": "2024-10-31",
+          "status": "reported"
+        },
+        "current_assets_gbp": {
+          "value": 1957,
+          "unit": "GBP",
+          "source_id": "accounts-12290241",
+          "pdf_page": 3,
+          "as_of": "2025-10-31",
+          "status": "reported"
+        },
+        "previous_current_assets_gbp": {
+          "value": 0,
+          "unit": "GBP",
+          "source_id": "accounts-12290241",
+          "pdf_page": 3,
+          "as_of": "2024-10-31",
+          "status": "reported"
+        },
+        "cash_gbp": {
+          "value": 1957,
+          "unit": "GBP",
+          "source_id": "accounts-12290241",
+          "pdf_page": 3,
+          "as_of": "2025-10-31",
+          "status": "reported"
+        },
+        "previous_cash_gbp": {
+          "value": 0,
+          "unit": "GBP",
+          "source_id": "accounts-12290241",
+          "pdf_page": 3,
+          "as_of": "2024-10-31",
+          "status": "reported"
+        },
+        "unpaid_share_capital_gbp": {
+          "value": 1,
+          "unit": "GBP",
+          "source_id": "accounts-12290241",
+          "pdf_page": 3,
+          "as_of": "2025-10-31",
+          "status": "reported"
+        },
+        "turnover_gbp": {
+          "value": null,
+          "unit": "GBP",
+          "status": "not_disclosed_in_latest_filing",
+          "source_id": "accounts-12290241",
+          "pdf_page": null,
+          "period_start": null,
+          "period_end": "2025-10-31",
+          "period_label": "Accounting year ending 2025-10-31"
+        },
+        "average_employees": {
+          "value": 1,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-12290241",
+          "pdf_page": 6,
+          "period_end": "2025-10-31",
+          "status": "reported",
+          "note": "Not current workforce, local jobs or contractors. Director inclusion can vary by filing."
+        },
+        "previous_average_employees": {
+          "value": 1,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-12290241",
+          "pdf_page": 6,
+          "period_end": "2024-10-31",
+          "status": "reported_comparative",
+          "note": "Comparative as shown in the latest filing."
+        }
+      },
+      "derived": {
+        "net_assets_change_gbp": {
+          "value": 1957,
+          "source_ids": [
+            "accounts-12290241"
+          ],
+          "method": "Latest net assets minus the comparative net assets in the same filing.",
+          "note": "Balance-sheet change only; not turnover growth, funding received or valuation."
+        }
+      },
+      "public_funding": {
+        "events": [],
+        "total_gbp": null,
+        "status": "not_found_in_sources_checked",
+        "checked_on": "2026-10-18",
+        "note": "Bounded public-web and indexed Dealroom searches found no reliably matched round. No full Dealroom account/API or complete grants database was queried; absence is not zero funding."
+      },
+      "internal_financing": [],
+      "caveats": [
+        "Previous filing was dormant; the latest is abridged. Registered active status alone does not prove continuous trading.",
+        "Balance-sheet profit-and-loss reserves are not annual revenue or annual profit.",
+        "Very small comparative bases make percentage growth misleading; use absolute balance changes."
+      ]
+    },
+    {
+      "company_number": "15474498",
+      "name": "LONDON SOFTWARE TECH LTD",
+      "website_returned": "londonsoftwaretech.com",
+      "similarity": {
+        "value": 0.8071177,
+        "source_id": "tdc-attempt-2",
+        "note": "Similarity to the submitted description, not a probability or investment score."
+      },
+      "legal_identity": {
+        "status": "Active",
+        "incorporated_on": "2024-02-09",
+        "age_years_on_research_date": 2.69,
+        "source_id": "ch-15474498"
+      },
+      "registered_location": {
+        "locality": "St Albans",
+        "postcode": "AL2 2RT",
+        "country": "England",
+        "region": "East of England",
+        "admin_district": "St Albans",
+        "latitude": 51.71733,
+        "longitude": -0.349642,
+        "coordinates_basis": "Registered-office postcode centroid; not an operating-site coordinate.",
+        "source_ids": [
+          "ch-15474498",
+          "geography-15474498"
+        ]
+      },
+      "reported_operating_location": {
+        "locality": null,
+        "source_url": null,
+        "status": "not_established"
+      },
+      "reported_sic_codes": [
+        {
+          "code": "58290",
+          "description": "Other software publishing",
+          "source_id": "ch-15474498"
+        },
+        {
+          "code": "62020",
+          "description": "Information technology consultancy activities",
+          "source_id": "ch-15474498"
+        },
+        {
+          "code": "78109",
+          "description": "Other activities of employment placement agencies",
+          "source_id": "ch-15474498"
+        },
+        {
+          "code": "85600",
+          "description": "Educational support services",
+          "source_id": "ch-15474498"
+        }
+      ],
+      "company_rtic_codes": {
+        "value": null,
+        "status": "not_returned_for_individual_company"
+      },
+      "business_description": {
+        "summary": "Returned website describes technology consulting, software, cloud services, data analytics, AI and cybersecurity.",
+        "capabilities": [
+          "Consulting",
+          "Custom software",
+          "Cloud",
+          "Data analytics",
+          "AI",
+          "Cybersecurity"
+        ],
+        "model": "Technology consulting and software services",
+        "source_id": "website-15474498",
+        "status": "company_claim_or_returned_website_claim",
+        "website_identity_note": "Domain returned by the API and matching trading name; a company number was not found on the retrieved homepage. Legal-entity association remains provisional.",
+        "tags_basis": "Editorial reading of the website; not Data City RTIC classification."
+      },
+      "product_examples": [],
+      "latest_accounts": {
+        "period_end": "2025-02-28",
+        "filed_on": "2025-11-13",
+        "description": "Total exemption full accounts made up to 28 February 2025",
+        "source_id": "accounts-15474498"
+      },
+      "metrics": {
+        "net_assets_gbp": {
+          "value": 6000,
+          "unit": "GBP",
+          "source_id": "accounts-15474498",
+          "pdf_page": 4,
+          "as_of": "2025-02-28",
+          "status": "reported"
+        },
+        "previous_net_assets_gbp": {
+          "value": null,
+          "unit": "GBP",
+          "source_id": "accounts-15474498",
+          "pdf_page": 4,
+          "as_of": null,
+          "status": "not_available"
+        },
+        "current_assets_gbp": {
+          "value": 0,
+          "unit": "GBP",
+          "source_id": "accounts-15474498",
+          "pdf_page": 4,
+          "as_of": "2025-02-28",
+          "status": "reported"
+        },
+        "fixed_assets_gbp": {
+          "value": 4000,
+          "unit": "GBP",
+          "source_id": "accounts-15474498",
+          "pdf_page": 4,
+          "as_of": "2025-02-28",
+          "status": "reported"
+        },
+        "unpaid_share_capital_gbp": {
+          "value": 2000,
+          "unit": "GBP",
+          "source_id": "accounts-15474498",
+          "pdf_page": 4,
+          "as_of": "2025-02-28",
+          "status": "reported"
+        },
+        "turnover_gbp": {
+          "value": 2000,
+          "unit": "GBP",
+          "status": "reported",
+          "source_id": "accounts-15474498",
+          "pdf_page": 3,
+          "period_start": "2024-02-09",
+          "period_end": "2025-02-28",
+          "period_label": "13 months, as labelled in the filing"
+        },
+        "average_employees": {
+          "value": 0,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-15474498",
+          "pdf_page": 7,
+          "period_end": "2025-02-28",
+          "status": "reported",
+          "note": "Not current workforce, local jobs or contractors. Director inclusion can vary by filing."
+        }
+      },
+      "derived": {},
+      "public_funding": {
+        "events": [],
+        "total_gbp": null,
+        "status": "not_found_in_sources_checked",
+        "checked_on": "2026-10-18",
+        "note": "Bounded public-web and indexed Dealroom searches found no reliably matched round. No full Dealroom account/API or complete grants database was queried; absence is not zero funding."
+      },
+      "internal_financing": [],
+      "caveats": [
+        "Reported turnover GBP2000 covers the first period 9 February 2024 to 28 February 2025, labelled 13 months. Do not annualise or compare directly with 12-month sales.",
+        "Accounts contain unusual asset movements. Retain filed figures as reported without inventing an explanation or a valuation.",
+        "St Albans is the registered locality even though the company name contains London."
+      ]
+    },
+    {
+      "company_number": "07752721",
+      "name": "DIGITAV LTD",
+      "website_returned": "digitav.com",
+      "similarity": {
+        "value": 0.8038057,
+        "source_id": "tdc-attempt-2",
+        "note": "Similarity to the submitted description, not a probability or investment score."
+      },
+      "legal_identity": {
+        "status": "Active",
+        "incorporated_on": "2011-08-25",
+        "age_years_on_research_date": 15.15,
+        "source_id": "ch-07752721"
+      },
+      "registered_location": {
+        "locality": "Thornton-Cleveleys",
+        "postcode": "FY5 5HT",
+        "country": "England",
+        "region": "North West",
+        "admin_district": "Wyre",
+        "latitude": 53.870115,
+        "longitude": -3.000743,
+        "coordinates_basis": "Registered-office postcode centroid; not an operating-site coordinate.",
+        "source_ids": [
+          "ch-07752721",
+          "geography-07752721"
+        ]
+      },
+      "reported_operating_location": {
+        "locality": "Blackpool",
+        "source_url": "https://www.digitav.com/about/",
+        "status": "company_reported"
+      },
+      "reported_sic_codes": [
+        {
+          "code": "62012",
+          "description": "Business and domestic software development",
+          "source_id": "ch-07752721"
+        }
+      ],
+      "company_rtic_codes": {
+        "value": null,
+        "status": "not_returned_for_individual_company"
+      },
+      "business_description": {
+        "summary": "Custom operational software, CRM, workflow automation, API integration and support for established applications, serving organisations across the UK.",
+        "capabilities": [
+          "Custom software",
+          "CRM",
+          "Workflow automation",
+          "API integration",
+          "Software maintenance"
+        ],
+        "model": "Custom software and integration services",
+        "source_id": "website-07752721",
+        "status": "company_claim_or_returned_website_claim",
+        "website_identity_note": "Website explicitly gives company number 07752721 and distinguishes its Blackpool head office from the registered office.",
+        "tags_basis": "Editorial reading of the website; not Data City RTIC classification."
+      },
+      "product_examples": [
+        "GTEC training-funding administration (client case study)"
+      ],
+      "latest_accounts": {
+        "period_end": "2025-03-31",
+        "filed_on": "2025-11-10",
+        "description": "Micro company accounts made up to 31 March 2025",
+        "source_id": "accounts-07752721"
+      },
+      "metrics": {
+        "net_assets_gbp": {
+          "value": 85360,
+          "unit": "GBP",
+          "source_id": "accounts-07752721",
+          "pdf_page": 3,
+          "as_of": "2025-03-31",
+          "status": "reported"
+        },
+        "previous_net_assets_gbp": {
+          "value": 30417,
+          "unit": "GBP",
+          "source_id": "accounts-07752721",
+          "pdf_page": 3,
+          "as_of": "2024-03-31",
+          "status": "reported"
+        },
+        "current_assets_gbp": {
+          "value": 27318,
+          "unit": "GBP",
+          "source_id": "accounts-07752721",
+          "pdf_page": 3,
+          "as_of": "2025-03-31",
+          "status": "reported"
+        },
+        "previous_current_assets_gbp": {
+          "value": 12949,
+          "unit": "GBP",
+          "source_id": "accounts-07752721",
+          "pdf_page": 3,
+          "as_of": "2024-03-31",
+          "status": "reported"
+        },
+        "fixed_assets_gbp": {
+          "value": 94617,
+          "unit": "GBP",
+          "source_id": "accounts-07752721",
+          "pdf_page": 3,
+          "as_of": "2025-03-31",
+          "status": "reported"
+        },
+        "previous_fixed_assets_gbp": {
+          "value": 76288,
+          "unit": "GBP",
+          "source_id": "accounts-07752721",
+          "pdf_page": 3,
+          "as_of": "2024-03-31",
+          "status": "reported"
+        },
+        "creditors_within_one_year_gbp": {
+          "value": 20009,
+          "unit": "GBP",
+          "source_id": "accounts-07752721",
+          "pdf_page": 3,
+          "as_of": "2025-03-31",
+          "status": "reported"
+        },
+        "creditors_after_one_year_gbp": {
+          "value": 16566,
+          "unit": "GBP",
+          "source_id": "accounts-07752721",
+          "pdf_page": 3,
+          "as_of": "2025-03-31",
+          "status": "reported"
+        },
+        "turnover_gbp": {
+          "value": null,
+          "unit": "GBP",
+          "status": "not_disclosed_in_latest_filing",
+          "source_id": "accounts-07752721",
+          "pdf_page": null,
+          "period_start": null,
+          "period_end": "2025-03-31",
+          "period_label": "Accounting year ending 2025-03-31"
+        },
+        "average_employees": {
+          "value": 3,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-07752721",
+          "pdf_page": 3,
+          "period_end": "2025-03-31",
+          "status": "reported",
+          "note": "Not current workforce, local jobs or contractors. Director inclusion can vary by filing."
+        },
+        "previous_average_employees": {
+          "value": 3,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-07752721",
+          "pdf_page": 3,
+          "period_end": "2024-03-31",
+          "status": "reported_comparative",
+          "note": "Comparative as shown in the latest filing."
+        }
+      },
+      "derived": {
+        "net_assets_change_gbp": {
+          "value": 54943,
+          "source_ids": [
+            "accounts-07752721"
+          ],
+          "method": "Latest net assets minus the comparative net assets in the same filing.",
+          "note": "Balance-sheet change only; not turnover growth, funding received or valuation."
+        }
+      },
+      "public_funding": {
+        "events": [],
+        "total_gbp": null,
+        "status": "not_found_in_sources_checked",
+        "checked_on": "2026-10-18",
+        "note": "Bounded public-web and indexed Dealroom searches found no reliably matched round. No full Dealroom account/API or complete grants database was queried; absence is not zero funding."
+      },
+      "internal_financing": [],
+      "caveats": [
+        "GBP54943 increase in net assets is a balance-sheet change, not revenue growth, investment received or a valuation.",
+        "The GTEC case concerns administration of client funding, not investment received by Digitav.",
+        "Published project outcome claims are self-reported and should be labelled accordingly."
+      ]
+    },
+    {
+      "company_number": "13002622",
+      "name": "SMART IT PROJECT SOLUTIONS LTD",
+      "website_returned": "smartitproject.com",
+      "similarity": {
+        "value": 0.8036605,
+        "source_id": "tdc-attempt-2",
+        "note": "Similarity to the submitted description, not a probability or investment score."
+      },
+      "legal_identity": {
+        "status": "Active",
+        "incorporated_on": "2020-11-06",
+        "age_years_on_research_date": 5.95,
+        "source_id": "ch-13002622"
+      },
+      "registered_location": {
+        "locality": "London",
+        "postcode": "E3 3YD",
+        "country": "England",
+        "region": "London",
+        "admin_district": "Tower Hamlets",
+        "latitude": 51.521838,
+        "longitude": -0.018013,
+        "coordinates_basis": "Registered-office postcode centroid; not an operating-site coordinate.",
+        "source_ids": [
+          "ch-13002622",
+          "geography-13002622"
+        ]
+      },
+      "reported_operating_location": {
+        "locality": "London (company contact address)",
+        "source_url": "https://smartitproject.com/contact-us/",
+        "status": "company_reported"
+      },
+      "reported_sic_codes": [
+        {
+          "code": "47910",
+          "description": "Retail sale via mail order houses or via Internet",
+          "source_id": "ch-13002622"
+        },
+        {
+          "code": "62020",
+          "description": "Information technology consultancy activities",
+          "source_id": "ch-13002622"
+        }
+      ],
+      "company_rtic_codes": {
+        "value": null,
+        "status": "not_returned_for_individual_company"
+      },
+      "business_description": {
+        "summary": "Cybersecurity, IT consulting, software/web/mobile development and digital marketing.",
+        "capabilities": [
+          "Cybersecurity",
+          "IT consulting",
+          "Custom software",
+          "Mobile apps",
+          "Digital marketing"
+        ],
+        "model": "IT and digital services",
+        "source_id": "website-13002622",
+        "status": "company_claim_or_returned_website_claim",
+        "website_identity_note": "Website company name and London contact address match the registered entity.",
+        "tags_basis": "Editorial reading of the website; not Data City RTIC classification."
+      },
+      "product_examples": [],
+      "latest_accounts": {
+        "period_end": "2025-11-30",
+        "filed_on": "2026-03-31",
+        "description": "Micro company accounts made up to 30 November 2025",
+        "source_id": "accounts-13002622"
+      },
+      "metrics": {
+        "net_assets_gbp": {
+          "value": -44437,
+          "unit": "GBP",
+          "source_id": "accounts-13002622",
+          "pdf_page": 2,
+          "as_of": "2025-11-30",
+          "status": "reported"
+        },
+        "previous_net_assets_gbp": {
+          "value": -42352,
+          "unit": "GBP",
+          "source_id": "accounts-13002622",
+          "pdf_page": 2,
+          "as_of": "2024-11-30",
+          "status": "reported"
+        },
+        "current_assets_gbp": {
+          "value": 28,
+          "unit": "GBP",
+          "source_id": "accounts-13002622",
+          "pdf_page": 2,
+          "as_of": "2025-11-30",
+          "status": "reported"
+        },
+        "previous_current_assets_gbp": {
+          "value": 1488,
+          "unit": "GBP",
+          "source_id": "accounts-13002622",
+          "pdf_page": 2,
+          "as_of": "2024-11-30",
+          "status": "reported"
+        },
+        "creditors_within_one_year_gbp": {
+          "value": 44465,
+          "unit": "GBP",
+          "source_id": "accounts-13002622",
+          "pdf_page": 2,
+          "as_of": "2025-11-30",
+          "status": "reported"
+        },
+        "turnover_gbp": {
+          "value": null,
+          "unit": "GBP",
+          "status": "not_disclosed_in_latest_filing",
+          "source_id": "accounts-13002622",
+          "pdf_page": null,
+          "period_start": null,
+          "period_end": "2025-11-30",
+          "period_label": "Accounting year ending 2025-11-30"
+        },
+        "average_employees": {
+          "value": 2,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-13002622",
+          "pdf_page": 3,
+          "period_end": "2025-11-30",
+          "status": "reported",
+          "note": "Not current workforce, local jobs or contractors. Director inclusion can vary by filing."
+        },
+        "previous_average_employees": {
+          "value": 3,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-13002622",
+          "pdf_page": 3,
+          "period_end": "2024-11-30",
+          "status": "reported_comparative",
+          "note": "Comparative as shown in the latest filing."
+        }
+      },
+      "derived": {
+        "net_assets_change_gbp": {
+          "value": -2085,
+          "source_ids": [
+            "accounts-13002622"
+          ],
+          "method": "Latest net assets minus the comparative net assets in the same filing.",
+          "note": "Balance-sheet change only; not turnover growth, funding received or valuation."
+        }
+      },
+      "public_funding": {
+        "events": [],
+        "total_gbp": null,
+        "status": "not_found_in_sources_checked",
+        "checked_on": "2026-10-18",
+        "note": "Bounded public-web and indexed Dealroom searches found no reliably matched round. No full Dealroom account/API or complete grants database was queried; absence is not zero funding."
+      },
+      "internal_financing": [],
+      "caveats": [
+        "Reported average employees decreased from 3 to 2 between the two accounting periods. This is not a current headcount or a hiring forecast.",
+        "Registered SIC also includes online retail; website activity and statutory classifications are separate evidence."
+      ]
+    },
+    {
+      "company_number": "09257246",
+      "name": "DIGITIVE LTD",
+      "website_returned": "digitive.co.uk",
+      "similarity": {
+        "value": 0.8033599,
+        "source_id": "tdc-attempt-2",
+        "note": "Similarity to the submitted description, not a probability or investment score."
+      },
+      "legal_identity": {
+        "status": "Active",
+        "incorporated_on": "2014-10-09",
+        "age_years_on_research_date": 12.02,
+        "source_id": "ch-09257246"
+      },
+      "registered_location": {
+        "locality": "Eccles / Norwich",
+        "postcode": "NR16 2JA",
+        "country": "England",
+        "region": "East of England",
+        "admin_district": "Breckland",
+        "latitude": 52.474406,
+        "longitude": 0.97084,
+        "coordinates_basis": "Registered-office postcode centroid; not an operating-site coordinate.",
+        "source_ids": [
+          "ch-09257246",
+          "geography-09257246"
+        ]
+      },
+      "reported_operating_location": {
+        "locality": "Hethel / Norwich (website contact address)",
+        "source_url": "https://www.digitive.co.uk/contact",
+        "status": "company_reported"
+      },
+      "reported_sic_codes": [
+        {
+          "code": "62020",
+          "description": "Information technology consultancy activities",
+          "source_id": "ch-09257246"
+        }
+      ],
+      "company_rtic_codes": {
+        "value": null,
+        "status": "not_returned_for_individual_company"
+      },
+      "business_description": {
+        "summary": "Custom software, API integration, cloud services, DevOps, automation and outsourced development delivery.",
+        "capabilities": [
+          "Custom software",
+          "API integration",
+          "Cloud",
+          "DevOps",
+          "Automation"
+        ],
+        "model": "Software delivery and cloud services",
+        "source_id": "website-09257246",
+        "status": "company_claim_or_returned_website_claim",
+        "website_identity_note": "Site identifies Digitive Ltd, with Norwich contact location; full company-number linkage was not found on the reviewed pages. Association is corroborated by the returned domain, legal name and locality, not a unique identifier.",
+        "tags_basis": "Editorial reading of the website; not Data City RTIC classification."
+      },
+      "product_examples": [],
+      "latest_accounts": {
+        "period_end": "2025-04-05",
+        "filed_on": "2025-12-23",
+        "description": "Micro company accounts made up to 5 April 2025",
+        "source_id": "accounts-09257246"
+      },
+      "metrics": {
+        "net_assets_gbp": {
+          "value": 2,
+          "unit": "GBP",
+          "source_id": "accounts-09257246",
+          "pdf_page": 2,
+          "as_of": "2025-04-05",
+          "status": "reported"
+        },
+        "previous_net_assets_gbp": {
+          "value": -5967,
+          "unit": "GBP",
+          "source_id": "accounts-09257246",
+          "pdf_page": 2,
+          "as_of": "2024-04-05",
+          "status": "reported"
+        },
+        "current_assets_gbp": {
+          "value": 20156,
+          "unit": "GBP",
+          "source_id": "accounts-09257246",
+          "pdf_page": 2,
+          "as_of": "2025-04-05",
+          "status": "reported"
+        },
+        "previous_current_assets_gbp": {
+          "value": 14438,
+          "unit": "GBP",
+          "source_id": "accounts-09257246",
+          "pdf_page": 2,
+          "as_of": "2024-04-05",
+          "status": "reported"
+        },
+        "fixed_assets_gbp": {
+          "value": 1803,
+          "unit": "GBP",
+          "source_id": "accounts-09257246",
+          "pdf_page": 2,
+          "as_of": "2025-04-05",
+          "status": "reported"
+        },
+        "previous_fixed_assets_gbp": {
+          "value": 7199,
+          "unit": "GBP",
+          "source_id": "accounts-09257246",
+          "pdf_page": 2,
+          "as_of": "2024-04-05",
+          "status": "reported"
+        },
+        "creditors_within_one_year_gbp": {
+          "value": 21957,
+          "unit": "GBP",
+          "source_id": "accounts-09257246",
+          "pdf_page": 2,
+          "as_of": "2025-04-05",
+          "status": "reported"
+        },
+        "turnover_gbp": {
+          "value": null,
+          "unit": "GBP",
+          "status": "not_disclosed_in_latest_filing",
+          "source_id": "accounts-09257246",
+          "pdf_page": null,
+          "period_start": null,
+          "period_end": "2025-04-05",
+          "period_label": "Accounting year ending 2025-04-05"
+        },
+        "average_employees": {
+          "value": 2,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-09257246",
+          "pdf_page": 3,
+          "period_end": "2025-04-05",
+          "status": "reported",
+          "note": "Not current workforce, local jobs or contractors. Director inclusion can vary by filing."
+        }
+      },
+      "derived": {
+        "net_assets_change_gbp": {
+          "value": 5969,
+          "source_ids": [
+            "accounts-09257246"
+          ],
+          "method": "Latest net assets minus the comparative net assets in the same filing.",
+          "note": "Balance-sheet change only; not turnover growth, funding received or valuation."
+        }
+      },
+      "public_funding": {
+        "events": [],
+        "total_gbp": null,
+        "status": "not_found_in_sources_checked",
+        "checked_on": "2026-10-18",
+        "note": "Bounded public-web and indexed Dealroom searches found no reliably matched round. No full Dealroom account/API or complete grants database was queried; absence is not zero funding."
+      },
+      "internal_financing": [
+        {
+          "type": "Director balance outstanding",
+          "amount_gbp": 2084,
+          "page": 3,
+          "note": "Year-end amount disclosed in director advances note; not a period fundraising total.",
+          "source_id": "accounts-09257246",
+          "as_of": "2025-04-05"
+        }
+      ],
+      "caveats": [
+        "Registered office and website contact office are different addresses.",
+        "The latest accounts report net assets GBP2, compared with net liabilities GBP5967 previously.",
+        "An internal director balance GBP2084 is disclosed; it is not a public equity funding round."
+      ]
+    },
+    {
+      "company_number": "15589626",
+      "name": "RETINA DIGITAL LIMITED",
+      "website_returned": "thisisretina.co.uk",
+      "similarity": {
+        "value": 0.8031665,
+        "source_id": "tdc-attempt-2",
+        "note": "Similarity to the submitted description, not a probability or investment score."
+      },
+      "legal_identity": {
+        "status": "Active",
+        "incorporated_on": "2024-03-24",
+        "age_years_on_research_date": 2.57,
+        "source_id": "ch-15589626"
+      },
+      "registered_location": {
+        "locality": "Penryn",
+        "postcode": "TR10 9FD",
+        "country": "England",
+        "region": "South West",
+        "admin_district": "Cornwall",
+        "latitude": 50.169074,
+        "longitude": -5.128581,
+        "coordinates_basis": "Registered-office postcode centroid; not an operating-site coordinate.",
+        "source_ids": [
+          "ch-15589626",
+          "geography-15589626"
+        ]
+      },
+      "reported_operating_location": {
+        "locality": "Penryn (company privacy-policy address)",
+        "source_url": "https://thisisretina.co.uk/privacy-policy/",
+        "status": "company_reported"
+      },
+      "reported_sic_codes": [
+        {
+          "code": "62012",
+          "description": "Business and domestic software development",
+          "source_id": "ch-15589626"
+        }
+      ],
+      "company_rtic_codes": {
+        "value": null,
+        "status": "not_returned_for_individual_company"
+      },
+      "business_description": {
+        "summary": "Websites, ecommerce, software automation, systems integration, ongoing support and fractional technical leadership.",
+        "capabilities": [
+          "Web development",
+          "Ecommerce",
+          "Automation",
+          "Systems integration",
+          "Technical leadership"
+        ],
+        "model": "Digital systems and technical services",
+        "source_id": "website-15589626",
+        "status": "company_claim_or_returned_website_claim",
+        "website_identity_note": "Privacy policy identifies Retina Digital Ltd and the same Penryn registered address; the exact company number is not stated there.",
+        "tags_basis": "Editorial reading of the website; not Data City RTIC classification."
+      },
+      "product_examples": [
+        "BNGx platform (client case study)",
+        "CHX Products automation (client case study)"
+      ],
+      "latest_accounts": {
+        "period_end": "2025-03-31",
+        "filed_on": "2025-12-23",
+        "description": "Micro company accounts made up to 31 March 2025",
+        "source_id": "accounts-15589626"
+      },
+      "metrics": {
+        "net_assets_gbp": {
+          "value": -3777,
+          "unit": "GBP",
+          "source_id": "accounts-15589626",
+          "pdf_page": 2,
+          "as_of": "2025-03-31",
+          "status": "reported"
+        },
+        "previous_net_assets_gbp": {
+          "value": null,
+          "unit": "GBP",
+          "source_id": "accounts-15589626",
+          "pdf_page": 2,
+          "as_of": null,
+          "status": "not_available"
+        },
+        "current_assets_gbp": {
+          "value": 437,
+          "unit": "GBP",
+          "source_id": "accounts-15589626",
+          "pdf_page": 2,
+          "as_of": "2025-03-31",
+          "status": "reported"
+        },
+        "fixed_assets_gbp": {
+          "value": 881,
+          "unit": "GBP",
+          "source_id": "accounts-15589626",
+          "pdf_page": 2,
+          "as_of": "2025-03-31",
+          "status": "reported"
+        },
+        "creditors_within_one_year_gbp": {
+          "value": 4375,
+          "unit": "GBP",
+          "source_id": "accounts-15589626",
+          "pdf_page": 2,
+          "as_of": "2025-03-31",
+          "status": "reported"
+        },
+        "accruals_gbp": {
+          "value": 720,
+          "unit": "GBP",
+          "source_id": "accounts-15589626",
+          "pdf_page": 2,
+          "as_of": "2025-03-31",
+          "status": "reported"
+        },
+        "turnover_gbp": {
+          "value": null,
+          "unit": "GBP",
+          "status": "not_disclosed_in_latest_filing",
+          "source_id": "accounts-15589626",
+          "pdf_page": null,
+          "period_start": null,
+          "period_end": "2025-03-31",
+          "period_label": "Accounting year ending 2025-03-31"
+        },
+        "average_employees": {
+          "value": 1,
+          "unit": "persons (reported accounting-period average)",
+          "source_id": "accounts-15589626",
+          "pdf_page": 2,
+          "period_end": "2025-03-31",
+          "status": "reported",
+          "note": "Not current workforce, local jobs or contractors. Director inclusion can vary by filing."
+        }
+      },
+      "derived": {},
+      "public_funding": {
+        "events": [],
+        "total_gbp": null,
+        "status": "not_found_in_sources_checked",
+        "checked_on": "2026-10-18",
+        "note": "Bounded public-web and indexed Dealroom searches found no reliably matched round. No full Dealroom account/API or complete grants database was queried; absence is not zero funding."
+      },
+      "internal_financing": [],
+      "caveats": [
+        "First-period accounts disclose one average employee and net liabilities GBP3777.",
+        "Animated website counters appeared as zero in fetched HTML; these are excluded from the dataset rather than treated as business measures.",
+        "Website client results are not Retina's own revenue or employee growth."
+      ]
+    }
+  ],
+  "sources": {
+    "tdc-attempt-2": {
+      "title": "The Data City approved classification response",
+      "url": "https://docs.thedatacity.com/instant-classification/guides/quickstart",
+      "kind": "cached_api",
+      "retrieved_on": "2026-10-18",
+      "http_status": 200,
+      "retrieved_at": "2026-10-18T08:42:52.785738+00:00",
+      "note": "Original body remains in the external private ledger; allowlisted non-secret response fields are retained in this pack."
+    },
+    "apple-adam": {
+      "title": "Adam app: seller and release evidence",
+      "url": "https://apps.apple.com/pl/app/adam-muslim-baby-names/id6511248430",
+      "kind": "app_store",
+      "retrieved_on": "2026-10-18",
+      "note": "Seller supplied app information; not independent evidence of revenue or active users."
+    },
+    "cheqdin-legal": {
+      "title": "Cheqdin operator identity",
+      "url": "https://cheqdin.com/eula",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18"
+    },
+    "digitav-case": {
+      "title": "Digitav GTEC funding-administration case",
+      "url": "https://www.digitav.com/case-study-accelerating-renewable-energy-funding-with-gtec/",
+      "kind": "company_case_study",
+      "retrieved_on": "2026-10-18",
+      "note": "Self-reported client delivery outcome; not investment received by Digitav."
+    },
+    "retina-privacy": {
+      "title": "Retina legal identity and address",
+      "url": "https://thisisretina.co.uk/privacy-policy/",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18"
+    },
+    "retina-case": {
+      "title": "Retina CHX Products case",
+      "url": "https://thisisretina.co.uk/portfolio_page/chx-products-case-study/",
+      "kind": "company_case_study",
+      "retrieved_on": "2026-10-18",
+      "note": "Self-reported client outcome, not company growth."
+    },
+    "digitive-contact": {
+      "title": "Digitive contact locality",
+      "url": "https://www.digitive.co.uk/contact",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18"
+    },
+    "smart-contact": {
+      "title": "Smart IT contact locality",
+      "url": "https://smartitproject.com/contact-us/",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18"
+    },
+    "ch-filing-guidance": {
+      "title": "Companies House public filing options",
+      "url": "https://www.gov.uk/annual-accounts/microentities-small-and-dormant-companies",
+      "kind": "official_guidance",
+      "retrieved_on": "2026-10-18"
+    },
+    "ch-SC545249": {
+      "title": "Companies House: DATABOTIX LIMITED",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC545249",
+      "kind": "statutory_register",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:45:49.426831+00:00",
+      "sha256": "f7fe773bc648b6257f33361dffed57ad0ea927aacb5731d73af47dbb39f1a429"
+    },
+    "accounts-SC545249": {
+      "title": "Total exemption full accounts made up to 30 September 2025",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC545249/filing-history/MzUyODc1NDg0N2FkaXF6a2N4/document?format=pdf&download=0",
+      "kind": "filed_accounts",
+      "retrieved_on": "2026-10-18",
+      "filed_on": "2026-06-26",
+      "period_end": "2025-09-30",
+      "sha256": "d6272b4074c1c3ee2d95227848ec0b60b2be3a3b56cb26b4bba12a9f4e7dc7b6",
+      "local_cache": ".openai/local/research/SC545249-accounts-0.pdf",
+      "review_method": "Rendered all pages with Poppler; visually read balances and notes. PDFs are image scans; text extraction alone is insufficient.",
+      "audit_status": "Unaudited / audit exempt, as filed"
+    },
+    "website-SC545249": {
+      "title": "Returned company website: DATABOTIX LIMITED",
+      "url": "https://databotix.co.uk/",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18",
+      "access": "Read through web research tool",
+      "identity_note": "Company number SC545249 appears on the company website; Cheqdin legal terms name Databotix as the operator."
+    },
+    "geography-SC545249": {
+      "title": "Registered postcode geography",
+      "url": "https://api.postcodes.io/postcodes/AB11%206DA",
+      "kind": "postcode_lookup",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:48:14.293846+00:00",
+      "sha256": "24115c24baf73e91be898982565585e7d0ca3303531934a7640e32f8600823a6"
+    },
+    "ch-06676069": {
+      "title": "Companies House: TECHNOLOGY IN BUSINESS LIMITED",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/06676069",
+      "kind": "statutory_register",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:45:49.494220+00:00",
+      "sha256": "1d10801398a898d90c69cecc86be0dba8fede156f0bd06333b51ba65739e4ffc"
+    },
+    "accounts-06676069": {
+      "title": "Micro company accounts made up to 31 December 2025",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/06676069/filing-history/MzU0NzU2MTY3MGFkaXF6a2N4/document?format=pdf&download=0",
+      "kind": "filed_accounts",
+      "retrieved_on": "2026-10-18",
+      "filed_on": "2026-09-25",
+      "period_end": "2025-12-31",
+      "sha256": "3e6e6418ecb023d05228c7a46bd45a719f3fdbc841c8a5bb82f0209f2fcb4e78",
+      "local_cache": ".openai/local/research/06676069-accounts-0.pdf",
+      "review_method": "Rendered all pages with Poppler; visually read balances and notes. PDFs are image scans; text extraction alone is insufficient.",
+      "audit_status": "Unaudited / audit exempt, as filed"
+    },
+    "website-06676069": {
+      "title": "Returned company website: TECHNOLOGY IN BUSINESS LIMITED",
+      "url": "https://www.technologyinbusiness.co.uk/",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18",
+      "access": 200,
+      "identity_note": "Website footer explicitly gives company number 06676069."
+    },
+    "geography-06676069": {
+      "title": "Registered postcode geography",
+      "url": "https://api.postcodes.io/postcodes/EC2A%204NE",
+      "kind": "postcode_lookup",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:48:14.280458+00:00",
+      "sha256": "65254489ef66c609687a1394f5c877f1bc6e5037ab79048f05af522e0f1a4b84"
+    },
+    "ch-15780581": {
+      "title": "Companies House: RR TECH SOLUTIONS LTD",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15780581",
+      "kind": "statutory_register",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:45:49.431830+00:00",
+      "sha256": "eae4562ce6e4ece6c64435bbc820be6ea4cf7f8fa7f5db8cd072a36b76e45d35"
+    },
+    "accounts-15780581": {
+      "title": "Micro company accounts made up to 30 June 2025",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15780581/filing-history/MzUwODk3OTg2NWFkaXF6a2N4/document?format=pdf&download=0",
+      "kind": "filed_accounts",
+      "retrieved_on": "2026-10-18",
+      "filed_on": "2026-03-08",
+      "period_end": "2025-06-30",
+      "sha256": "2320a58bbd7767ae05e09d24ee91e02470d31b1f9529c368e5483a3a000d0692",
+      "local_cache": ".openai/local/research/15780581-accounts-0.pdf",
+      "review_method": "Rendered all pages with Poppler; visually read balances and notes. PDFs are image scans; text extraction alone is insufficient.",
+      "audit_status": "Unaudited / audit exempt, as filed"
+    },
+    "website-15780581": {
+      "title": "Returned company website: RR TECH SOLUTIONS LTD",
+      "url": "https://www.rrtechsolutions.xyz/",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18",
+      "access": 200,
+      "identity_note": "Company website names RR Tech Solutions Ltd; Apple lists RR Tech Solutions LTD as Adam's provider with the same domain and registered postcode."
+    },
+    "geography-15780581": {
+      "title": "Registered postcode geography",
+      "url": "https://api.postcodes.io/postcodes/E10%206PY",
+      "kind": "postcode_lookup",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:48:14.295846+00:00",
+      "sha256": "91b6f6aa00d6e01c71ff0a1ae9dce2fc7260557b8649c26f05237b4d0305e531"
+    },
+    "ch-13870484": {
+      "title": "Companies House: BIZTECHSOLS LTD",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/13870484",
+      "kind": "statutory_register",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:45:50.047505+00:00",
+      "sha256": "29f49a4b83e6b97c838de4697d5d9887f5df28be909265cccb370480bc8fdd15"
+    },
+    "accounts-13870484": {
+      "title": "Micro company accounts made up to 31 January 2026",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/13870484/filing-history/MzU0NzgzODIwNWFkaXF6a2N4/document?format=pdf&download=0",
+      "kind": "filed_accounts",
+      "retrieved_on": "2026-10-18",
+      "filed_on": "2026-09-27",
+      "period_end": "2026-01-31",
+      "sha256": "c00f95113474c7d93697075a246b886d05a1769a0412886400b2da71f0745a71",
+      "local_cache": ".openai/local/research/13870484-accounts-0.pdf",
+      "review_method": "Rendered all pages with Poppler; visually read balances and notes. PDFs are image scans; text extraction alone is insufficient.",
+      "audit_status": "Unaudited / audit exempt, as filed"
+    },
+    "website-13870484": {
+      "title": "Returned company website: BIZTECHSOLS LTD",
+      "url": "https://biztechsols.com/",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18",
+      "access": 200,
+      "identity_note": "The API supplied this domain, but its retrieved page does not disclose the UK company number. Public results also associate the domain with a similarly named Pakistan company. Do not merge foreign company figures, staff or reviews into the UK entity."
+    },
+    "geography-13870484": {
+      "title": "Registered postcode geography",
+      "url": "https://api.postcodes.io/postcodes/IG11%208TQ",
+      "kind": "postcode_lookup",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:48:14.389975+00:00",
+      "sha256": "474c07c5b0d10dcb90be4d3820a7f3b1f9dc3c43c6f3189a49271c3aaf1e5c67"
+    },
+    "historical-accounts-13870484": {
+      "title": "Micro company accounts made up to 31 January 2025",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/13870484/filing-history/MzQ4NTQ1MTE5MWFkaXF6a2N4/document?format=pdf&download=0",
+      "kind": "filed_accounts",
+      "retrieved_on": "2026-10-18",
+      "period_end": "2025-01-31",
+      "filed_on": "2025-10-19",
+      "sha256": "7ae72cce951c37ebabfc3bd6655119a9ad6aaa050067aed9e728fb969d03a07e",
+      "local_cache": ".openai/local/research/13870484-accounts-1.pdf",
+      "review_method": "All pages rendered; income statement and employee note visually reviewed."
+    },
+    "ch-12290241": {
+      "title": "Companies House: DIGNIORI WAY LTD",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/12290241",
+      "kind": "statutory_register",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:45:50.547910+00:00",
+      "sha256": "fb818dd674f03d817727d0d1b9b801976e4022562e13a01010859b7a3fcd76ec"
+    },
+    "accounts-12290241": {
+      "title": "Unaudited abridged accounts made up to 31 October 2025",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/12290241/filing-history/MzQ5Mjc3NjcyOGFkaXF6a2N4/document?format=pdf&download=0",
+      "kind": "filed_accounts",
+      "retrieved_on": "2026-10-18",
+      "filed_on": "2025-12-07",
+      "period_end": "2025-10-31",
+      "sha256": "b4d9b865ec034f9d97a7545fe2cfa799d0d69553d16f24cc9b66950a0b1184a0",
+      "local_cache": ".openai/local/research/12290241-accounts-0.pdf",
+      "review_method": "Rendered all pages with Poppler; visually read balances and notes. PDFs are image scans; text extraction alone is insufficient.",
+      "audit_status": "Unaudited / audit exempt, as filed"
+    },
+    "website-12290241": {
+      "title": "Returned company website: DIGNIORI WAY LTD",
+      "url": "https://digniori-way.com/",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18",
+      "access": "Read through web research tool",
+      "identity_note": "Website footer gives company number 12290241 and the matching Bell Yard registered address."
+    },
+    "geography-12290241": {
+      "title": "Registered postcode geography",
+      "url": "https://api.postcodes.io/postcodes/WC2A%202JR",
+      "kind": "postcode_lookup",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:48:14.357381+00:00",
+      "sha256": "314312d1c50f4517970335a3edc802a837af992b6bc093df812e930963825ba8"
+    },
+    "ch-15474498": {
+      "title": "Companies House: LONDON SOFTWARE TECH LTD",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15474498",
+      "kind": "statutory_register",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:45:50.540768+00:00",
+      "sha256": "30fbe315017b2a8b0c61f1941e272907e9f2709ee15c3853896d58bff24c7562"
+    },
+    "accounts-15474498": {
+      "title": "Total exemption full accounts made up to 28 February 2025",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15474498/filing-history/MzQ4ODY4MzQwNmFkaXF6a2N4/document?format=pdf&download=0",
+      "kind": "filed_accounts",
+      "retrieved_on": "2026-10-18",
+      "filed_on": "2025-11-13",
+      "period_end": "2025-02-28",
+      "sha256": "7a0c80b252adff6175f8f5726bcffed57042d2235babeeecca0f47d373a0aef4",
+      "local_cache": ".openai/local/research/15474498-accounts-0.pdf",
+      "review_method": "Rendered all pages with Poppler; visually read balances and notes. PDFs are image scans; text extraction alone is insufficient.",
+      "audit_status": "Unaudited / audit exempt, as filed"
+    },
+    "website-15474498": {
+      "title": "Returned company website: LONDON SOFTWARE TECH LTD",
+      "url": "https://londonsoftwaretech.com/",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18",
+      "access": 200,
+      "identity_note": "Domain returned by the API and matching trading name; a company number was not found on the retrieved homepage. Legal-entity association remains provisional."
+    },
+    "geography-15474498": {
+      "title": "Registered postcode geography",
+      "url": "https://api.postcodes.io/postcodes/AL2%202RT",
+      "kind": "postcode_lookup",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:48:14.372709+00:00",
+      "sha256": "2c830bfe6f7b4b3a52d8baee2d5a80f90b2e6f718fc6d456c1a52290c501fdfa"
+    },
+    "ch-07752721": {
+      "title": "Companies House: DIGITAV LTD",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07752721",
+      "kind": "statutory_register",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:45:51.105274+00:00",
+      "sha256": "3bbd6f1bb8be146e3f0fd18e50b41689909eb4f0d85f42874d40753e4e14dec2"
+    },
+    "accounts-07752721": {
+      "title": "Micro company accounts made up to 31 March 2025",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07752721/filing-history/MzQ4ODAzOTYxN2FkaXF6a2N4/document?format=pdf&download=0",
+      "kind": "filed_accounts",
+      "retrieved_on": "2026-10-18",
+      "filed_on": "2025-11-10",
+      "period_end": "2025-03-31",
+      "sha256": "5380b80dae66c255e5a3d1954b816675dd8b932cd29439f45f406932297a99cf",
+      "local_cache": ".openai/local/research/07752721-accounts-0.pdf",
+      "review_method": "Rendered all pages with Poppler; visually read balances and notes. PDFs are image scans; text extraction alone is insufficient.",
+      "audit_status": "Unaudited / audit exempt, as filed"
+    },
+    "website-07752721": {
+      "title": "Returned company website: DIGITAV LTD",
+      "url": "https://www.digitav.com/about/",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18",
+      "access": 200,
+      "identity_note": "Website explicitly gives company number 07752721 and distinguishes its Blackpool head office from the registered office."
+    },
+    "geography-07752721": {
+      "title": "Registered postcode geography",
+      "url": "https://api.postcodes.io/postcodes/FY5%205HT",
+      "kind": "postcode_lookup",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:48:14.439637+00:00",
+      "sha256": "ba4d1679b0f5b2a58bb494978d82b85a8b153e59b8d5ad494d7e4868d96190c8"
+    },
+    "ch-13002622": {
+      "title": "Companies House: SMART IT PROJECT SOLUTIONS LTD",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/13002622",
+      "kind": "statutory_register",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:45:51.292377+00:00",
+      "sha256": "1fa3e223cef6fd6e43dcc53f85a921c1225d70fdeb19108b932650de7fc6487d"
+    },
+    "accounts-13002622": {
+      "title": "Micro company accounts made up to 30 November 2025",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/13002622/filing-history/MzUxMzczMTQzNmFkaXF6a2N4/document?format=pdf&download=0",
+      "kind": "filed_accounts",
+      "retrieved_on": "2026-10-18",
+      "filed_on": "2026-03-31",
+      "period_end": "2025-11-30",
+      "sha256": "a79e89a322114d8b1b462ed88b2eaded8eb6bfc74256035d57bad031ad731cf8",
+      "local_cache": ".openai/local/research/13002622-accounts-0.pdf",
+      "review_method": "Rendered all pages with Poppler; visually read balances and notes. PDFs are image scans; text extraction alone is insufficient.",
+      "audit_status": "Unaudited / audit exempt, as filed"
+    },
+    "website-13002622": {
+      "title": "Returned company website: SMART IT PROJECT SOLUTIONS LTD",
+      "url": "https://smartitproject.com/",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18",
+      "access": 200,
+      "identity_note": "Website company name and London contact address match the registered entity."
+    },
+    "geography-13002622": {
+      "title": "Registered postcode geography",
+      "url": "https://api.postcodes.io/postcodes/E3%203YD",
+      "kind": "postcode_lookup",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:48:14.429636+00:00",
+      "sha256": "96aee3d6e27a1bfd9841666ee2c1ab9a15b6502c925489fc9449ac27ebe2f69d"
+    },
+    "ch-09257246": {
+      "title": "Companies House: DIGITIVE LTD",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09257246",
+      "kind": "statutory_register",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:45:51.474450+00:00",
+      "sha256": "7c4387de1cc9851ebd977a74b8236d192a0557ca3664d781c31c906a85cee3cd"
+    },
+    "accounts-09257246": {
+      "title": "Micro company accounts made up to 5 April 2025",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09257246/filing-history/MzQ5NjAyNDY2MGFkaXF6a2N4/document?format=pdf&download=0",
+      "kind": "filed_accounts",
+      "retrieved_on": "2026-10-18",
+      "filed_on": "2025-12-23",
+      "period_end": "2025-04-05",
+      "sha256": "07f7a4cccc423311f74107ff22ab198d237e54ac118ddefe80c40b29a9fc1450",
+      "local_cache": ".openai/local/research/09257246-accounts-0.pdf",
+      "review_method": "Rendered all pages with Poppler; visually read balances and notes. PDFs are image scans; text extraction alone is insufficient.",
+      "audit_status": "Unaudited / audit exempt, as filed"
+    },
+    "website-09257246": {
+      "title": "Returned company website: DIGITIVE LTD",
+      "url": "https://www.digitive.co.uk/",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18",
+      "access": "Read through web research tool",
+      "identity_note": "Site identifies Digitive Ltd, with Norwich contact location; full company-number linkage was not found on the reviewed pages. Association is corroborated by the returned domain, legal name and locality, not a unique identifier."
+    },
+    "geography-09257246": {
+      "title": "Registered postcode geography",
+      "url": "https://api.postcodes.io/postcodes/NR16%202JA",
+      "kind": "postcode_lookup",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:48:14.476851+00:00",
+      "sha256": "18135f609329ed2c4cc3c893a0d7dbbab8c6a0e7c63d3e4a094029e3a4040b86"
+    },
+    "ch-15589626": {
+      "title": "Companies House: RETINA DIGITAL LIMITED",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15589626",
+      "kind": "statutory_register",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:45:52.149592+00:00",
+      "sha256": "910d820b3af006eb200e512505886e5b1156aa547cdd68ca9e6bbbc499bb23a5"
+    },
+    "accounts-15589626": {
+      "title": "Micro company accounts made up to 31 March 2025",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15589626/filing-history/MzQ5NjA3NjQxNGFkaXF6a2N4/document?format=pdf&download=0",
+      "kind": "filed_accounts",
+      "retrieved_on": "2026-10-18",
+      "filed_on": "2025-12-23",
+      "period_end": "2025-03-31",
+      "sha256": "5825dbbf63f4d56be57396c1c51d2f202273116583e7edcf4cb224eaf3d30418",
+      "local_cache": ".openai/local/research/15589626-accounts-0.pdf",
+      "review_method": "Rendered all pages with Poppler; visually read balances and notes. PDFs are image scans; text extraction alone is insufficient.",
+      "audit_status": "Unaudited / audit exempt, as filed"
+    },
+    "website-15589626": {
+      "title": "Returned company website: RETINA DIGITAL LIMITED",
+      "url": "https://thisisretina.co.uk/",
+      "kind": "company_website",
+      "retrieved_on": "2026-10-18",
+      "access": 200,
+      "identity_note": "Privacy policy identifies Retina Digital Ltd and the same Penryn registered address; the exact company number is not stated there."
+    },
+    "geography-15589626": {
+      "title": "Registered postcode geography",
+      "url": "https://api.postcodes.io/postcodes/TR10%209FD",
+      "kind": "postcode_lookup",
+      "retrieved_on": "2026-10-18",
+      "retrieved_at": "2026-10-18T08:48:14.501851+00:00",
+      "sha256": "82b56f88a20dcf8cbe59c027d4b3bcb2dea9283bf1e1749a4e08f566bea795da"
+    }
+  },
+  "limitations": [
+    "No geographic or financial exclusion; all ten API companies retained.",
+    "Filed accounts are company-reported and unaudited. Registered active status does not prove current trading.",
+    "Latest financial periods differ. No total revenue, total current jobs, market growth, economic impact, investment ranking or IS-8 membership is inferred.",
+    "Website descriptions and client case studies are company claims, not independent validation.",
+    "Missing values are null; reported zero is preserved. Net assets are neither revenue nor market value.",
+    "Public funding search gaps remain visible; internal director financing is separate from external rounds.",
+    "No additional classification calls, paid services, account signup, publication or website implementation occurred."
+  ],
+  "research_queries": {
+    "funding": "Exact company-name searches with funding, investment or grant; Databotix also checked via Cheqdin.",
+    "dealroom": "Public indexed Dealroom company-profile searches covering all ten names and Cheqdin. No reliably matched profile found.",
+    "grants": "Indexed ukri.org checks for Databotix/Digitav/Digitive/Digniori, and gov.uk checks for RR Tech Solutions/Biztechsols/Retina Digital; not a complete grant-register search.",
+    "excluded_false_matches": [
+      "Canadian student project DataBotix is not SC545249.",
+      "Hungarian DIGITAV grant project is not 07752721.",
+      "Digitav GTEC client funding administration is not investment into Digitav.",
+      "Similarly named Pakistan Biztechsols profile is not safely merged with 13870484."
+    ]
+  }
+}

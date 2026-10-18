@@ -1,0 +1,17 @@
+{
+  "purpose": "Luke-authorised illustrative turnover and funding values for a prepared concept presentation. Not researched estimates or facts about these legal entities. Never merge into technology-discovery-enriched.json.",
+  "authorised_on": "2026-10-18",
+  "funding_basis": "Illustrative cumulative funding for visual composition; not verified company fundraising.",
+  "values": {
+    "SC545249": {"turnover_gbp": 840000, "funding_gbp": 350000},
+    "06676069": {"turnover_gbp": 420000, "funding_gbp": 0},
+    "15780581": {"turnover_gbp": 180000, "funding_gbp": 75000},
+    "13870484": {"turnover_gbp": 260000, "funding_gbp": 0},
+    "12290241": {"turnover_gbp": 320000, "funding_gbp": 120000},
+    "15474498": {"funding_gbp": 0},
+    "07752721": {"turnover_gbp": 680000, "funding_gbp": 150000},
+    "13002622": {"turnover_gbp": 360000, "funding_gbp": 0},
+    "09257246": {"turnover_gbp": 480000, "funding_gbp": 100000},
+    "15589626": {"turnover_gbp": 210000, "funding_gbp": 50000}
+  }
+}

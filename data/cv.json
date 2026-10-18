@@ -1,31 +1,52 @@
 {
   "profile": {
     "summary": [
-      "Commercial data and presales experience, connecting analytics with customer needs.",
-      "A background in leading demonstrations, discovery and end-to-end projects.",
-      "A focus on client trust, practical solutions and commercial value."
+      "Understand the real problem: listen to customers, explore their frustrations and establish what needs to change.",
+      "Uncover hidden opportunities: connect conversations across teams to find challenges the business has not yet recognised.",
+      "Turn discovery into sales: build a clear case for action and shape opportunities into valuable customer engagements.",
+      "Make AI practical: prioritise use cases and roadmaps around business value, workflows and the data foundations they need.",
+      "Connect customers and strategy: bring frontline insight into demonstrations, propositions and go-to-market decisions."
     ],
-    "detail": "A commercial data enthusiast and Head of Pre Sales with a proven track record of translating complex analytics into tangible solutions and revenue. Experienced in leading end to end projects, fostering trust with clients, and driving innovation within ambitious companies that value an open culture."
+    "detail": [
+      "My recent pre-sales experience starts with the customer’s situation: what is difficult, where time is lost, what frustrates people and what happens if nothing changes. I explore the implications and the need before considering whether AI has a useful role. That gives the conversation a clear business purpose and helps establish trust with the people who live with the problem.",
+      "The opportunity often becomes clearer as different teams share their perspective. At Keltbray, conversations with the finance team identified five challenges, including issues their data team had not been aware of. That discovery led to a £100,000 contract for workflow automation, data pipelines and integration for the finance team. The work creates the foundations for AI to support further process automation.",
+      "This is where I make a commercial contribution: helping a customer recognise the challenge, understand its impact and see a credible route forward. Across discovery, tailored demonstrations and proposals, I turn that understanding into opportunities that can develop into sales and longer-term customer relationships.",
+      "At Simpson Associates, I have also explored use cases with North Yorkshire Council, City of York Council and Bradford Teaching Hospitals NHS. I built an AI-driven discovery tool to help identify use cases, suggest further opportunities and prioritise roadmaps. It supports the judgement needed to decide where to start and what needs to be in place first.",
+      "Alongside customer-facing work, I have helped define Simpson Associates’ AI strategy, go-to-market approach and positioning within the Microsoft ecosystem. Work on RFPs, RFIs and tenders has developed my experience of shaping complex public-sector AI use cases. I bring together the customer’s needs, a useful proposed solution and a clear commercial story."
+    ]
   },
   "roles": [
     {
-      "id": "simpson", "company": "Simpson Associates", "title": "Presales AI Specialist",
-      "dates": "8 June 2026 – present", "year": "2026", "current": true,
+      "id": "simpson",
+      "company": "Simpson Associates",
+      "title": "Presales AI Specialist",
+      "dates": "8 June 2026 – present",
+      "year": "2026",
+      "current": true,
       "summary": [
-        "Customer conversations about AI across NHS organisations, councils and financial businesses.",
-        "Discovery focused on the decision, workflow, constraints and outcome a customer needs.",
-        "AI-focused presales work with exposure to Microsoft technologies."
+        "Lead problem-led customer discovery across businesses, councils and NHS organisations, uncovering needs before considering AI.",
+        "Identified five finance challenges at Keltbray, leading to a £100,000 workflow automation, data pipeline and integration contract.",
+        "Help define AI strategy and go-to-market positioning, prioritise use cases and shape complex public-sector tender responses."
       ],
       "detail": [
-        "My current work is in AI-focused presales. I have described recent customer conversations spanning NHS organisations, councils and financial businesses.",
-        "My focus is understanding the business problem, the workflow and the desired outcome, then helping translate those needs into a practical, demonstrable approach."
+        "Customer discovery and commercial opportunities. I speak with customers to understand their situation, problems, frustrations, the implications for their business and the outcome they need. I begin with the business challenge and establish where an intervention would create value before considering AI.",
+        "These conversations can surface issues that are not visible across the whole organisation. With Keltbray’s finance team, we identified five challenges, some of which their data team did not know about. That led to a £100,000 contract specifically for finance, covering workflow automation, a data pipeline and integration work. Those foundations create the opportunity to overlay AI and automate processes further.",
+        "I have also worked through use-case discovery with North Yorkshire Council, City of York Council and Bradford Teaching Hospitals NHS. My role is to draw out the operational need, clarify the opportunity and shape a practical next step for the customer.",
+        "To support this work, I created an AI-driven tool that helps build and identify use cases, automatically suggests further opportunities and helps prioritise roadmaps during discovery. It helps turn a wide-ranging customer conversation into a clearer set of options and priorities.",
+        "AI strategy and solution shaping. Alongside pre-sales discovery, I have helped define Simpson Associates’ AI strategy, its AI go-to-market approach and how to position the business as a leader in AI within the Microsoft ecosystem.",
+        "I contribute to RFPs, RFIs and tenders, shaping proposed solutions for complex AI use cases, particularly across local government, policing and healthcare. This involves connecting customer requirements, data and integration needs, workflow changes and the proposed role of AI in a coherent solution.",
+        "These two aspects of the role inform each other: customer conversations reveal where the need is strongest, while strategy and solution shaping help turn that understanding into a focused proposition, a prioritised roadmap and a commercial opportunity."
       ],
-      "source": "Title and start date confirmed in employment correspondence. Experience summarised from Luke’s account.",
-      "verification": "Full role description still to confirm; responsibilities and achievements have not been inferred from the job title."
+      "source": "Title and start date confirmed in employment correspondence. Responsibilities, named customer examples and the £100,000 outcome supplied by Luke in October 2026.",
+      "detail_prose": true
     },
     {
-      "id": "qlik-fusion", "company": "Qlik Fusion (Catalyst)", "title": "Head of Pre Sales and CSM", "location": "Leeds",
-      "dates": "November 2025 – May 2026", "year": "2025",
+      "id": "qlik-fusion",
+      "company": "Qlik Fusion (Catalyst)",
+      "title": "Head of Pre Sales and CSM",
+      "location": "Leeds",
+      "dates": "November 2025 – May 2026",
+      "year": "2025",
       "summary": [
         "Built modern Qlik Cloud demos and worked with product and development on UI/UX and AI chat.",
         "Acquired over 100 leads at Qlik Connect in Orlando, twice the previous year’s total.",
@@ -41,8 +62,12 @@
       "source": "Dates, title and achievements supplied in Luke’s CV."
     },
     {
-      "id": "panintelligence", "company": "Panintelligence", "title": "Head of Pre Sales", "location": "Leeds",
-      "dates": "December 2023 – November 2025", "year": "2023",
+      "id": "panintelligence",
+      "company": "Panintelligence",
+      "title": "Head of Pre Sales",
+      "location": "Leeds",
+      "dates": "December 2023 – November 2025",
+      "year": "2023",
       "summary": [
         "Led customer discovery, tailored demonstrations and the proof-of-concept process.",
         "Introduced a Digital Sales Room to centralise prospect materials and communication.",
@@ -57,8 +82,12 @@
       "source": "Dates, title and achievements supplied in Luke’s CV."
     },
     {
-      "id": "catalyst", "company": "Catalyst BI", "title": "Qlik and Pre Sales Consultant", "location": "Leeds",
-      "dates": "September 2021 – December 2023", "year": "2021",
+      "id": "catalyst",
+      "company": "Catalyst BI",
+      "title": "Qlik and Pre Sales Consultant",
+      "location": "Leeds",
+      "dates": "September 2021 – December 2023",
+      "year": "2021",
       "summary": [
         "Demonstrated Qlik Cloud, Qlik AutoML and the Supplier Experience Portal.",
         "Consulted across over 20 concurrent enterprise accounts, including major global brands.",
@@ -72,8 +101,12 @@
       "source": "Dates, title and achievements supplied in Luke’s CV."
     },
     {
-      "id": "morrisons", "company": "Morrisons", "title": "Supply Chain and Qlik Sense Specialist", "location": "Bradford",
-      "dates": "May 2019 – September 2021", "year": "2019",
+      "id": "morrisons",
+      "company": "Morrisons",
+      "title": "Supply Chain and Qlik Sense Specialist",
+      "location": "Bradford",
+      "dates": "May 2019 – September 2021",
+      "year": "2019",
       "summary": [
         "Productionised five Qlik applications handling over two billion rows of data.",
         "Built a daily review application bringing supply-chain and commercial KPIs into one view.",
@@ -87,8 +120,12 @@
       "source": "Dates, title and achievements supplied in Luke’s CV."
     },
     {
-      "id": "dovecote", "company": "Dovecote Park", "title": "Supplier Implant and BI Analyst", "location": "Wakefield",
-      "dates": "September 2015 – March 2019", "year": "2015",
+      "id": "dovecote",
+      "company": "Dovecote Park",
+      "title": "Supplier Implant and BI Analyst",
+      "location": "Wakefield",
+      "dates": "September 2015 – March 2019",
+      "year": "2015",
       "summary": [
         "Developed Qlik applications and interpreted data for Dovecote Park and Waitrose.",
         "Used Excel and VBA to support bespoke branch and raw-material forecasting.",
@@ -105,14 +142,29 @@
   ],
   "skills": {
     "summary": [
-      "Commercial leadership: presales strategy, stakeholder relationships and project leadership.",
-      "Technical expertise: Qlik Sense, machine learning, applied data science, Excel and VBA.",
-      "Data practice: consultancy, solution design, BI, analysis, Agile, demand planning and forecasting."
+      "Customer discovery and commercial growth: listening, stakeholder engagement, tailored demonstrations and pre-sales strategy.",
+      "AI strategy and solution shaping: use-case discovery, roadmap prioritisation, go-to-market positioning and tender responses.",
+      "Data and delivery foundations: Qlik Sense, business intelligence, analysis, machine learning, Excel and VBA."
     ],
     "detail": [
-      "Commercial Leadership: Pre Sales Strategy, Stakeholder Relationship Management, End to End Project Management, Project Leadership.",
-      "Technical Expertise: BI Platform Development (Qlik Sense), Applied Data Science, Machine Learning, Advanced Excel, VBA.",
-      "Data Methodologies: Data Consultancy, Solution Design, Business Intelligence, Data Analysis, Agile, Demand Planning, Forecasting."
+      "Customer and commercial practice: problem-led discovery, understanding business implications, stakeholder relationships, tailored demonstrations, proofs of concept, pre-sales strategy and developing opportunities into sales.",
+      "AI and strategy: use-case identification, roadmap prioritisation, AI go-to-market strategy, Microsoft ecosystem positioning, solution shaping and responses to RFPs, RFIs and tenders.",
+      "Technical and data experience: BI platform development with Qlik Sense, applied data science, machine learning, advanced Excel, VBA, data consultancy, solution design and data analysis.",
+      "Delivery and planning: end-to-end project management, project leadership, Agile, demand planning and forecasting."
+    ],
+    "tags": [
+      "Customer discovery",
+      "Presales",
+      "AI strategy",
+      "Use cases",
+      "Roadmaps",
+      "Solution design",
+      "Tenders",
+      "Demonstrations",
+      "Stakeholder engagement",
+      "Qlik Sense",
+      "Data analysis",
+      "Commercial growth"
     ]
   },
   "interests": {

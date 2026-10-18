@@ -1,11 +1,11 @@
 {
   "project_id": "appgprj_6acf1c4ed75c8191b1c46bcce73705e3",
-  "version_id": "appgprj_6acf1c4ed75c8191b1c46bcce73705e3~appgver_32db0bd5718081919a35839a818a1d65",
-  "version_number": 2,
-  "deployment_id": "appgdep_6ad2729b98fc8191ae2ea0c764c2a7b6",
+  "version_id": "appgprj_6acf1c4ed75c8191b1c46bcce73705e3~appgver_bf632d8341c881918197f8331aaad1c6",
+  "deployment_id": "appgdep_6ad4d047fcf4819188f8662dab0cd1d2",
   "url": "https://data-city-conversation.lukecraven36.chatgpt.site",
-  "site_source_commit": "934fa887cff77b5b442671eb30994d0d2c5780d0",
-  "github_source_commit": "2d3ec9cb99abd5b65cb10a7e957aa62afdf58594",
+  "site_source_commit": "81c6b30e588e638992012e321890a0a4c46c035b",
+  "github_base_commit": "8a6fc4a996a2680c2e1096b388f708bbab8d8160",
+  "github_working_changes": "preserved locally; not pushed to GitHub",
   "audience": "owner-only",
   "status": "succeeded"
 }
