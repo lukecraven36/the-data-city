@@ -1,6 +1,6 @@
 # The Data City — private conversation site
 
-Exactly four pages: **Data**, **AI Lead**, **Commercial Product Lead**, **About Me**. The governing brief is [docs/handoff.md](docs/handoff.md). No old dashboard, cheat-sheet, chatbot or bulk retrieval.
+Current implementation has exactly four pages: **Data**, **AI Lead**, **Commercial Product Lead**, **About Me**. The original brief is [docs/handoff.md](docs/handoff.md). The [revised AI Discovery brief](docs/ai-discovery-revised-brief.md) proposes a new homepage after local migration is verified. Start with [the local handoff](docs/CODEX-LOCAL-HANDOFF.md) and [phone workflow](docs/MOBILE-LOCAL-WORKFLOW.md). No homepage rebuild has been made as part of the handoff review. No cheat-sheet or bulk retrieval.
 
 ## Current version
 
@@ -14,7 +14,7 @@ The design derives from the actual Family Hub source: dark `#15242a` sidebar, li
 
 The private repository is `lukecraven36/the-data-city`. GitHub Actions automatically checks the site and exports its four static pages on pushes to `main` and pull requests. Builds read the saved sample and never authenticate with or call The Data City. Review artifacts expire after seven days.
 
-`python3 build_site.py` generates `dist/`. No dependency installation is needed. The hosting manifest identifies the owner-only Site at https://data-city-conversation.lukecraven36.chatgpt.site, separate from the earlier Data City dashboard. Version 1 is published. GitHub is the source of truth; publishing requires syncing that commit to the Site source repository and saving/deploying the matching build. GitHub CI alone does **not** publish a live site. Luke has authorised private publication and ongoing updates requested in this chat. Codex can perform the GitHub sync and private publication without another approval for routine edits; no laptop server is needed. Arbitrary GitHub pushes are not yet wired to automatic live deployment.
+`python3 build_site.py` generates `dist/`. No dependency installation is needed. The hosting manifest identifies the owner-only Site at https://data-city-conversation.lukecraven36.chatgpt.site, separate from the earlier Data City dashboard. Version 2 is published (see `.openai/publication.json`). GitHub is the source of truth; publishing requires syncing that commit to the Site source repository and saving/deploying the matching build. GitHub CI alone does **not** publish a live site. Luke has authorised private publication and ongoing updates requested in this chat. Codex can perform the GitHub sync and private publication without another approval for routine edits; no laptop server is needed. Arbitrary GitHub pushes are not yet wired to automatic live deployment.
 
 Never enable public GitHub Pages or publish the exported files publicly. A private GitHub repository does not make public hosting private.
 
