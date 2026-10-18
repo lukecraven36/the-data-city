@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 65.555" width="215" height="65.555">
+  <!-- datacity full lockup. Colours are literal on purpose: this file is loaded
+       through an img tag, and an external SVG renders in an isolated context
+       with no access to the page's CSS custom properties, so a CSS variable
+       would resolve to nothing and the gradient would vanish. The values mirror
+       the brand cyan #02B1D0 and brand crimson #D10956 tokens in
+       src/styles.css, so change them together. The gradient runs cyan at the
+       top left to crimson at the bottom right, matching the orientation of
+       datacity-logo-icon.svg. Note: XML comments cannot contain a double
+       hyphen, so token names are spelled out here rather than quoted. -->
+  <defs>
+    <linearGradient id="tdc-logo__grad" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#02B1D0" />
+      <stop offset="1" stop-color="#D10956" />
+    </linearGradient>
+    <clipPath id="tdc-logo__clip-path">
+      <path d="M18.879-.005l22.246 13.113v44.413H18.879zM0 11.147v46.392h2.33l-.017-19.947.789-.477V9.295zM6.293 7.43v50.088H8.62V19.875l.776-.468V5.585zm6.381-3.776v53.882h2.333V13.611l.77-.465V1.815z" />
+    </clipPath>
+  </defs>
+  <path class="tdc-logo__icon" fill="url(#tdc-logo__grad)" clip-path="url(#tdc-logo__clip-path)" d="M0 0h41.125v58.038H0z" />
+  <!-- The original wordmark sat about 15 units below the icon's optical
+       centre. Keeping the artwork centred within the same canvas lets the
+       header align it with adjacent navigation labels without CSS nudges. -->
+  <path class="tdc-logo__text" fill="#FFFFFF" transform="translate(0 -15)" d="M86.013 29.501v28h-6.14v-1.8a7.513 7.513 0 01-5.638 2.34c-5.293 0-9.512-4.373-9.512-10.318s4.219-10.317 9.512-10.317a7.377 7.377 0 015.638 2.339V29.501zm-5.983 18.18a4.574 4.574 0 00-4.679-4.833 4.485 4.485 0 00-4.564 4.833c0 2.953 1.918 4.909 4.564 4.909a4.617 4.617 0 004.676-4.909zM87.161 47.719c0-5.944 4.219-10.317 9.512-10.317a7.377 7.377 0 015.638 2.339v-1.8h6.137v19.561h-6.137v-1.8a7.513 7.513 0 01-5.638 2.34c-5.293-.005-9.512-4.377-9.512-10.323zm15.3-.038a4.574 4.574 0 00-4.679-4.833 4.485 4.485 0 00-4.565 4.833c0 2.953 1.918 4.909 4.565 4.909a4.617 4.617 0 004.685-4.909zM124.327 56.848a12.3 12.3 0 01-4.794.959c-4.756 0-6.9-2.915-6.9-7.364v-7.134h-3.03V37.94h3.03v-6.137h6.137v6.137h5.251v5.37h-5.255v7.13a1.807 1.807 0 002.033 2.033 4.142 4.142 0 002.071-.5zM125.133 47.719c0-5.944 4.219-10.317 9.512-10.317a7.377 7.377 0 015.638 2.339v-1.8h6.137v19.561h-6.137v-1.8a7.513 7.513 0 01-5.638 2.34c-5.293-.005-9.512-4.377-9.512-10.323zm15.3-.038a4.574 4.574 0 00-4.679-4.833 4.485 4.485 0 00-4.564 4.833c0 2.953 1.918 4.909 4.564 4.909a4.617 4.617 0 004.683-4.909zM147.571 47.719a10.1 10.1 0 0110.394-10.317c5.6 0 9.052 3.567 9.781 6.635l-5.676 1.611a4.079 4.079 0 00-4.066-2.838c-2.723 0-4.449 2.225-4.449 4.871 0 2.608 1.726 4.947 4.449 4.947a4.024 4.024 0 004.066-2.762l5.673 1.607c-.729 3.068-4.181 6.559-9.7 6.559a10.122 10.122 0 01-10.472-10.313zM168.555 32.186a3.529 3.529 0 113.529 3.49 3.472 3.472 0 01-3.529-3.49zm.384 5.753h6.137V57.5h-6.137zM190.989 56.848a12.3 12.3 0 01-4.794.959c-4.756 0-6.9-2.915-6.9-7.364v-7.134h-3.03V37.94h3.03v-6.137h6.137v6.137h5.255v5.37h-5.255v7.13a1.807 1.807 0 002.033 2.033 4.142 4.142 0 002.071-.5zM215 37.939l-11.622 27.616h-6.252l3.49-8.515.268-.039-.268.039-8.783-19.1h6.712l5.1 11.928 4.794-11.928z" />
+</svg>

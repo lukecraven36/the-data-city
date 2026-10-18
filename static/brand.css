@@ -1,0 +1,45 @@
+/* The Data City US reference: local Poppins, navy, cyan, violet and magenta. */
+:root{--paper:#f8f7fc;--ink:#100a2d;--muted:#655f77;--line:#e2dfeb;--accent:#d10956;--tint:#f0edf8;--lime:#c9f3fa;--peach:#e5cdf5;--brand-cyan:#02b1d0;--brand-violet:#6b3fb0;--brand-crimson:#d10956;--brand-navy:#100a2d}
+.role-donut-key i{background:#d10956}.role-donut-key li:nth-child(2) i{background:#02b1d0}.role-donut-key li:nth-child(3) i{background:#b68bdd}.role-donut-key li:nth-child(4) i{background:#2c62c4}
+body{font-family:Poppins,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper)}
+h1,h2,h3,button,input,textarea{font-family:inherit}h1{font-weight:600;letter-spacing:-.055em}h2,h3{font-weight:600;letter-spacing:-.035em}h1 em{font-family:inherit;font-weight:600;font-style:normal;letter-spacing:inherit;background:linear-gradient(115deg,#087f99,#6b3fb0 55%,#b61d66);background-clip:text;-webkit-background-clip:text;color:transparent}
+.sidebar{background:radial-gradient(ellipse at 20% 100%,#342058 0%,transparent 65%),#100a2d}.sidebar .identity{padding:0;display:block}.site-brand{display:block}.site-brand img{display:block;width:172px;max-width:100%;height:auto}.site-brand small{color:#c6c0da!important;font-size:9px!important;letter-spacing:0!important;font-weight:400!important;margin-top:13px!important;line-height:1.7}.sidebar nav a[aria-current]{background:#d10956;color:#fff}.side-bottom{background:#22183d;color:#c6c0da}.side-bottom strong{color:#8ee2f0}.side-caption{color:#aaa2c1}.avatar{background:#e8e0f3;color:#4c2575}.private{border-color:#d8cee7;color:#655f77}.topbar-date{color:#655f77}.eyebrow{color:#65527f}.note{background:#f2eaf8;border-left-color:#b61d66}.cv-jumps a:hover,button:hover{background:#f2e7f7}.cv-profile{border-top-color:#d10956}.cv-profile>.eyebrow{color:#a91c57}.cv-current{background:#d9f1f7;color:#19566a}#simpson .cv-card{border-top-color:#02b1d0}.cv-reconnect{background:#f0eaf8;border-color:#e0d4ef}
+.discovery-hero{background:radial-gradient(ellipse at 85% 100%,#6b3fb06b,transparent 65%),linear-gradient(145deg,#100a2d,#1b103a);border-radius:24px;padding:30px;color:#fff}.discovery-hero .section-kicker{color:#aaa3c4}.discovery-hero h1{font-weight:600;font-size:clamp(40px,4.1vw,65px);letter-spacing:-.045em}.discovery-hero h1 em,.role-hero h1 em,.role-outcomes h2 em{font-family:inherit;font-weight:600;font-style:normal;background:linear-gradient(110deg,#48c7df,#ad86dd 58%,#e38eb3);background-clip:text;-webkit-background-clip:text;color:transparent}.discovery-hero>p{color:#d0cae0;font-size:14px}.hero-promise div>span{color:#c0b8d4}.hero-promise strong{color:#fff}.hero-promise .promise-icon{background:#d10956;color:#fff}.mini-preview{background:linear-gradient(140deg,#edf7fc,#f0e8fa);border-color:#d8d4eb;color:#100a2d}.discovery-layout .section-kicker{letter-spacing:.12em}.primary-button{background:#d10956!important;color:#fff!important;border-color:#d10956!important}.primary-button:hover{background:#ad0947!important}.journey-steps .is-current .step-index{background:#d10956;border-color:#d10956;color:#fff}.journey-steps .is-complete .step-index{background:#dcf3f8;border-color:#b8e3ec;color:#14687b}.concept-label>span{background:#02b1d0}.question-number{background:#efe5f7;color:#77389d}.question-card:focus-within{border-color:#bc8fb6}.discovery-guidance{background:linear-gradient(145deg,#efe9f8,#e4f4fa);border-color:#ddd3ec}.processing-orbit{background:#f3e6f4;color:#b61d66}.kpi-card{background:#fff}.kpi-card:first-child{background:#100a2d;color:#fff}.kpi-card:first-child>div,.kpi-card:first-child>small{color:#d0c8e1}.kpi-card:first-child .kpi-icon{color:#7edce9}.kpi-card:nth-child(2){background:#e7f6fa}.kpi-card:nth-child(3){background:#f3e7f4}.kpi-card:nth-child(4){background:#eee8fa}.map-point circle{fill:#d10956}.map-point:hover circle{fill:#6b3fb0}.followup-panel{background:#100a2d;color:#fff}.followup-panel h2 em{font-family:inherit;font-style:normal;color:#9edfec}.followup-panel .card-number,.followup-panel p{color:#d0c8e1}.followup-panel .text-button{color:#8edeea}.followup-panel .followup-note{color:#b9adc9}.report-tabs button[aria-selected=true]{color:#b61d66;border-bottom-color:#d10956}
+.role-hero,.role-outcomes{background:radial-gradient(ellipse at 90% 100%,#6b3fb04d,transparent 70%),#100a2d}.role-hero h1{font-weight:600;letter-spacing:-.045em}.role-hero-intro{color:#d0c8e1}.role-kicker{color:#b6aeca}.role-orbit-core{background:linear-gradient(145deg,#6dd7e7,#d1b6f0);color:#100a2d;box-shadow:0 0 0 12px #6b3fb022}.role-orbit-track{border-color:#8b76b1}.role-orbit-track::after{border-color:#493666}.role-focus-boxes li{border-color:#60b6ca;color:#a1e5ed}.role-focus-boxes li:nth-child(2){border-color:#8f78c4;color:#d0b9f3}.role-focus-boxes li:nth-child(3){border-color:#bd5c8a;color:#f0b7cf}.role-focus-boxes li:nth-child(4){border-color:#829ad5;color:#c1d2fa}.role-stage-tabs button[aria-selected=true]{background:#d10956;border-color:#d10956}.role-stage-tabs button[aria-selected=true] span{color:#ffe2ed}.role-mix-card h2,.role-proof-card h2{font-weight:600}.role-proof-card{background:#f1eaf8;border-color:#e1d2ef}.role-proof-stats strong{color:#b61d66}.role-proof-card>p{color:#665078}.role-proof-stats div>span{color:#6b557f}.role-plan{background:#efecf6}.role-scorecard li{background:#281d42}.role-scorecard li>span{background:#d10956;color:#fff}.role-outcomes .eyebrow,.role-outcomes p,.role-scorecard small{color:#cec5dd}.role-closing a{background:#d10956}.role-inline-link{color:#a31550}.role-panel-copy h3{font-weight:600}
+.review-entry{background:radial-gradient(ellipse at 10% 10%,#02b1d026,transparent 50%),radial-gradient(ellipse at 90% 90%,#b61d6629,transparent 55%),#100a2d}.review-entry-card{background:#fff;border-color:#36234f;box-shadow:0 28px 100px #07031f50}.review-brand{display:block;background:#100a2d;padding:20px 24px;border-radius:14px;margin-bottom:34px}.review-brand img{display:block;width:172px;max-width:100%;height:auto}.review-brand small{color:#c9c0db;font-size:9px;margin-top:10px;font-weight:400;line-height:1.8}.review-entry h1{font-weight:600;letter-spacing:-.045em}.review-entry h1 em{color:transparent}.review-entry form button{background:#d10956;border-color:#d10956}.review-entry form button:hover{background:#ad0947}.review-eyebrow{color:#8a356b}.review-entry input:focus-visible{outline-color:#02b1d0}
+@media(max-width:850px){.site-brand img{width:150px}.sidebar .identity small{margin-top:8px!important}.site-brand small{font-size:9px!important}}
+@media(max-width:650px){.discovery-hero{padding:25px 22px}.discovery-hero h1{font-size:43px}.role-hero h1{font-size:36px}.review-brand{padding:18px;margin-bottom:29px}.review-brand img{width:156px}.sidebar .identity{max-width:100%}.site-brand img{width:145px}.role-section-head h2{font-size:24px}.question-heading h1{font-size:39px}}
+@media(max-width:360px){.discovery-hero h1{font-size:36px}.role-hero h1{font-size:32px}.review-entry h1{font-size:34px}}
+@media(max-width:650px){.sidebar nav{display:grid;grid-template-columns:1fr 1.3fr .65fr;gap:4px;overflow:visible}.sidebar nav a{white-space:normal;justify-content:center;text-align:center;padding:10px 6px;font-size:9px;min-height:46px}}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/poppins-400.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/poppins-500.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/poppins-600.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/poppins-700.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

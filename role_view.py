@@ -3,7 +3,7 @@
 
 def render():
     return '''<div class="role-story">
-    <div class="eyebrow">02 / A role at Data City</div>
+    <div class="eyebrow">02 / A role at The Data City</div>
     <section class="role-hero" aria-labelledby="role-title">
       <div class="role-hero-copy"><span class="role-kicker">A proposed contribution</span>
         <h1 id="role-title">Show the value.<br><em>Create the momentum.</em></h1>
@@ -18,7 +18,7 @@ def render():
         <div class="role-orbit-node role-orbit-west"><span>04 / Develop</span><strong>A smarter next version</strong></div>
       </div>
     </section>
-    <aside class="role-context"><span class="role-context-mark" aria-hidden="true">“</span><div><strong>Show, don’t just tell.</strong><p>This is a business opportunity, particularly as The Data City expands in the US. My contribution would be to make customer value visible earlier in the sales conversation.</p></div></aside>
+    <aside class="role-context"><span class="role-context-mark" aria-hidden="true">“</span><div><strong>Show, don’t just tell.</strong><p>This is a business opportunity, particularly as The Data City expands in the US and globally. My contribution would be to make customer value visible earlier in the sales conversation.</p></div></aside>
 
     <section id="role-in-motion" aria-labelledby="role-motion-title">
       <div class="role-section-head"><div><span class="eyebrow">One role · four connected moves</span><h2 id="role-motion-title">From “what if?” to “let’s do this.”</h2></div><span class="role-interaction-hint">Explore each move ↓</span></div>

@@ -15,8 +15,19 @@
   const defaultAnswers = Object.fromEntries(new FormData($('#discovery-form')));
   const screens = ['contact-screen','discovery-screen','processing-screen','report-screen'];
   const announce = (text) => { $('#journey-announcement').textContent = text; };
+  function fitQuestions() {
+    if ($('#discovery-screen').hidden) return;
+    $$('#discovery-form textarea').forEach(field => {
+      field.style.height = 'auto';
+      field.style.height = (field.scrollHeight + 2) + 'px';
+    });
+  }
+  $$('#discovery-form textarea').forEach(field => field.addEventListener('input', fitQuestions));
+  window.addEventListener('resize', fitQuestions);
+  document.fonts.ready.then(fitQuestions);
   function show(screen, step, focus = true) {
     screens.forEach((id) => { $('#' + id).hidden = id !== screen; });
+    if (screen === 'discovery-screen') requestAnimationFrame(fitQuestions);
     $$('.journey-steps li').forEach((li, i) => {
       li.classList.toggle('is-current', i === step);
       li.classList.toggle('is-complete', i < step);
@@ -74,6 +85,7 @@
   $('#edit-brief').addEventListener('click', () => show('discovery-screen',1));
   $('#restore-example').addEventListener('click', () => {
     Object.entries(defaultAnswers).forEach(([k,v]) => { $('#discovery-form').elements[k].value=v; });
+    fitQuestions();
     announce('Local government example restored.');
   });
   $('#print-report').addEventListener('click', () => window.print());

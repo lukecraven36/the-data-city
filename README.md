@@ -2,7 +2,7 @@
 
 Latest research: [the ten-company technology enrichment pack](docs/TECHNOLOGY-ENRICHMENT.md) records the second approved API response, public-source enrichment and dashboard-ready evidence. Luke has broadened the demonstration to a generic local-government authority with no Leeds/geography filter. All ten returned companies are retained. Local usage is now **2/2**. The new homepage uses this evidence with a separate illustrative presentation layer; see [the discovery homepage record](docs/DISCOVERY-HOMEPAGE.md).
 
-Current implementation has three main pages: **Discover Your Market**, **A Role at Data City**, **About Me**; the two former role URLs redirect to the combined page. The original brief is [docs/handoff.md](docs/handoff.md). The [revised AI Discovery brief](docs/ai-discovery-revised-brief.md) proposes a new homepage after local migration is verified. Start with [the local handoff](docs/CODEX-LOCAL-HANDOFF.md) and [phone workflow](docs/MOBILE-LOCAL-WORKFLOW.md). The homepage now implements the prepared contact-to-discovery-to-report journey; implementation and verification are recorded in [docs/DISCOVERY-HOMEPAGE.md](docs/DISCOVERY-HOMEPAGE.md). No cheat-sheet or bulk retrieval.
+Current implementation has three main pages: **Discover Your Market**, **A Role at The Data City**, **About Me**; the two former role URLs redirect to the combined page. The original brief is [docs/handoff.md](docs/handoff.md). The [revised AI Discovery brief](docs/ai-discovery-revised-brief.md) proposes a new homepage after local migration is verified. Start with [the local handoff](docs/CODEX-LOCAL-HANDOFF.md) and [phone workflow](docs/MOBILE-LOCAL-WORKFLOW.md). The homepage now implements the prepared contact-to-discovery-to-report journey; implementation and verification are recorded in [docs/DISCOVERY-HOMEPAGE.md](docs/DISCOVERY-HOMEPAGE.md). No cheat-sheet or bulk retrieval.
 
 ## Current version
 
@@ -10,7 +10,7 @@ The original Data renderer is retained in source, with the real HTTP 200 respons
 
 The non-secret reviewed sample is now tracked at `data/reviewed-sample.json` in this repository so cloud builds can reproduce the page without another provider call. Its contents are the response Luke shared and the hypothetical input; it contains no password, token or account email. Its inclusion supersedes earlier notes saying all samples were kept outside Git. Luke authorised a public repository and public GitHub Pages demonstration on 18 October 2026, with a browser-only email entry screen. The screen is a convenience gate, not verified identity or private hosting.
 
-The design derives from the actual Family Hub source: dark `#15242a` sidebar, lime `#d7fa69`, blue `#2548cb`, pale background, rounded cards and bold sans-serif headings with serif emphasis. No household records, integrations or credentials were copied.
+The current visual identity follows The Data City’s US reference: deep navy, cyan/violet gradients, magenta actions, the official logo and locally served Poppins typography. It preserves the existing interactive layout. Ryan’s discovery corrections and the branding update are recorded in [the feedback implementation](docs/RYAN-FEEDBACK.md).
 
 ## GitHub and cloud workflow
 
