@@ -24,6 +24,7 @@
     document.querySelectorAll('dialog[open]').forEach(dialog => dialog.close());
     document.documentElement.classList.add('review-required');
     root.hidden = false;
+    root.scrollTop = 0;
     email.value = '';
     error.textContent = '';
     email.removeAttribute('aria-invalid');
