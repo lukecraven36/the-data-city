@@ -217,5 +217,31 @@
     const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));
     const a=document.createElement('a');a.href=url;a.download='your-discovery-brief.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
   });
+  function applyReviewer(identity) {
+    if (!identity) return;
+    cancelTimers();
+    const form = $('#contact-form');
+    const values = {firstName:'',surname:'',email:'',phone:'',jobTitle:'',organisation:'',industry:'Local Government',...identity};
+    for (const [name, value] of Object.entries(values)) {
+      const field = form.elements[name];
+      if (!field) continue;
+      if (field instanceof HTMLSelectElement) {
+        [...field.options].forEach(option => { option.defaultSelected = option.value === value; });
+      } else {
+        field.defaultValue = value;
+      }
+      field.value = value;
+    }
+    $('#discovery-form').reset();
+    state.contact = {}; state.answers = {}; state.compared.clear();
+    $('#persona-name').textContent = `${values.firstName} ${values.surname}`.trim();
+    $('#persona-org').textContent = `${values.organisation} · ${values.industry}`;
+    $('.persona-avatar').textContent = ((values.firstName[0] || '') + (values.surname[0] || '')).toUpperCase();
+    $$('.form-error').forEach(element => { element.hidden = true; });
+    $$('[aria-invalid]').forEach(element => element.removeAttribute('aria-invalid'));
+    show('contact-screen', 0, false);
+  }
+  window.addEventListener('review-identity-change', event => applyReviewer(event.detail));
+  if (window.dataCityReviewer) applyReviewer(window.dataCityReviewer);
   show('contact-screen',0,false);
 })();

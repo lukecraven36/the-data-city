@@ -10,7 +10,18 @@
   const submit = document.querySelector('#review-enter');
   const signOut = document.querySelector('#review-sign-out');
   let checking = false;
-  function unlock(focus) {
+  async function emailHash(value) {
+    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value));
+    return [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, '0')).join('');
+  }
+  function unlock(hash, address, focus) {
+    const profile = config.reviewProfiles?.[hash] || {};
+    const identity = {...profile, email: address};
+    window.dataCityReviewer = identity;
+    document.querySelectorAll('.topbar .avatar').forEach(avatar => {
+      avatar.textContent = ((profile.firstName?.[0] || '') + (profile.surname?.[0] || '')).toUpperCase();
+    });
+    window.dispatchEvent(new CustomEvent('review-identity-change', {detail: identity}));
     root.hidden = true;
     document.documentElement.classList.remove('review-required');
     if (focus) {
@@ -20,7 +31,11 @@
     }
   }
   function lock() {
-    try { sessionStorage.removeItem(config.storageKey); } catch { /* Storage can be disabled. */ }
+    try {
+      sessionStorage.removeItem(config.storageKey);
+      sessionStorage.removeItem(config.storageKey + ':email');
+    } catch { /* Storage can be disabled. */ }
+    window.dataCityReviewer = null;
     document.querySelectorAll('dialog[open]').forEach(dialog => dialog.close());
     document.documentElement.classList.add('review-required');
     root.hidden = false;
@@ -31,9 +46,14 @@
     window.scrollTo(0, 0);
     email.focus();
   }
-  try {
-    if (config.allowedEmailHashes.includes(sessionStorage.getItem(config.storageKey))) unlock(false);
-  } catch { /* Remain on the entry screen when storage is unavailable. */ }
+  async function restoreSession() {
+    try {
+      const hash = sessionStorage.getItem(config.storageKey);
+      const address = sessionStorage.getItem(config.storageKey + ':email');
+      if (config.allowedEmailHashes.includes(hash) && address && await emailHash(address) === hash) unlock(hash, address, false);
+    } catch { /* Remain on the entry screen when storage is unavailable. */ }
+  }
+  restoreSession();
   submit.disabled = false;
   form.addEventListener('submit', async event => {
     event.preventDefault();
@@ -51,16 +71,18 @@
     checking = true;
     submit.disabled = true;
     try {
-      const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value));
-      const hash = [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, '0')).join('');
+      const hash = await emailHash(value);
       if (!config.allowedEmailHashes.includes(hash)) {
         error.textContent = 'This email is not on the review list. Please check the address or contact Luke.';
         email.setAttribute('aria-invalid', 'true');
         email.focus();
         return;
       }
-      try { sessionStorage.setItem(config.storageKey, hash); } catch { /* Current page still works. */ }
-      unlock(true);
+      try {
+        sessionStorage.setItem(config.storageKey, hash);
+        sessionStorage.setItem(config.storageKey + ':email', value);
+      } catch { /* Current page still works. */ }
+      unlock(hash, value, true);
     } catch {
       error.textContent = 'The email check could not run. Open the HTTPS link in a current browser and try again.';
     } finally {

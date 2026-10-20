@@ -4,5 +4,39 @@
     "b8c6a7c74945db4165339deb0c355ba34a1afda932900756381c2bff83580c2b",
     "223c46f9153979929df41512d803d12ab5cc89a291a95a10e3f5c129a4294325",
     "594d8a088f1a95df58be44ea318f5bb00837cfd2434c94524a4013953347d651"
-  ]
+  ],
+  "review_profiles": {
+    "7121ed7a6703c156ebbedde27c4d3dc0aac243105b1d8f78757116af80d5e4a7": {
+      "firstName": "Luke",
+      "surname": "Craven",
+      "jobTitle": "AI specialist",
+      "organisation": "Pathed Consulting",
+      "phone": "0333 335 5665",
+      "industry": "Local Government"
+    },
+    "b8c6a7c74945db4165339deb0c355ba34a1afda932900756381c2bff83580c2b": {
+      "firstName": "Ryan",
+      "surname": "Williams",
+      "jobTitle": "Business Development Executive",
+      "organisation": "The Data City",
+      "phone": "0333 335 5665",
+      "industry": "Local Government"
+    },
+    "594d8a088f1a95df58be44ea318f5bb00837cfd2434c94524a4013953347d651": {
+      "firstName": "Mitali",
+      "surname": "Mookerjee",
+      "jobTitle": "Managing Director (UK)",
+      "organisation": "The Data City",
+      "phone": "0333 335 5665",
+      "industry": "Local Government"
+    },
+    "223c46f9153979929df41512d803d12ab5cc89a291a95a10e3f5c129a4294325": {
+      "firstName": "Alex",
+      "surname": "Craven",
+      "jobTitle": "CEO",
+      "organisation": "The Data City",
+      "phone": "0333 335 5665",
+      "industry": "Local Government"
+    }
+  }
 }

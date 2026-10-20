@@ -42,6 +42,19 @@ class ReviewExport(unittest.TestCase):
             with self.assertRaises(ValueError):
                 review_gate.configuration()
 
+    def test_profile_metadata_cannot_add_an_unapproved_viewer(self):
+        with tempfile.TemporaryDirectory() as folder, patch.object(review_gate, 'ROOT', Path(folder)):
+            target = Path(folder) / 'data/review-access.json'
+            target.parent.mkdir()
+            allowed = hashlib.sha256(b'allowed@example.com').hexdigest()
+            other = hashlib.sha256(b'other@example.com').hexdigest()
+            profile = dict(firstName='Test', surname='Reviewer', jobTitle='Director', organisation='Example', phone='0333 335 5665', industry='Local Government')
+            target.write_text(json.dumps({'allowed_email_hashes': [allowed], 'review_profiles': {other: profile}}))
+            with self.assertRaises(ValueError):
+                review_gate.configuration()
+            target.write_text(json.dumps({'allowed_email_hashes': [allowed], 'review_profiles': {allowed: profile}}))
+            self.assertEqual(review_gate.configuration()['reviewProfiles'][allowed], profile)
+
 
 if __name__ == '__main__':
     unittest.main()

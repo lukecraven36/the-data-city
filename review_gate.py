@@ -21,8 +21,13 @@ def configuration():
     hashes = config['allowed_email_hashes']
     if not hashes or any(len(value) != 64 or any(c not in '0123456789abcdef' for c in value) for value in hashes):
         raise ValueError('Review access must contain valid SHA-256 email digests.')
-    revision = hashlib.sha256(''.join(sorted(hashes)).encode()).hexdigest()[:16]
-    return {'allowedEmailHashes': hashes, 'storageKey': 'tdc-demo-review:' + revision}
+    profiles = config.get('review_profiles', {})
+    fields = {'firstName', 'surname', 'jobTitle', 'organisation', 'phone', 'industry'}
+    for digest, profile in profiles.items():
+        if digest not in hashes or not isinstance(profile, dict) or set(profile) != fields or any(not isinstance(value, str) for value in profile.values()):
+            raise ValueError('Reviewer profiles must belong to allowed addresses and contain the expected text fields.')
+    revision = hashlib.sha256(json.dumps({'hashes': sorted(hashes), 'profiles': profiles}, sort_keys=True).encode()).hexdigest()[:16]
+    return {'allowedEmailHashes': hashes, 'reviewProfiles': profiles, 'storageKey': 'tdc-demo-review:' + revision}
 
 
 def render():

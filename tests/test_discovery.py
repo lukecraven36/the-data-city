@@ -36,7 +36,7 @@ class Discovery(unittest.TestCase):
 
     def test_journey_uses_authorised_contact_defaults_without_submission_target(self):
         output = discovery_view.render()
-        for value in ['Luke', 'Craven', 'luke@pathedconsulting.co.uk', '07985 606824', 'AI specialist', 'Pathed Consulting', 'Local Government']:
+        for value in ['Luke', 'Craven', 'luke@pathedconsulting.co.uk', '0333 335 5665', 'AI specialist', 'Pathed Consulting', 'Local Government']:
             self.assertIn(value, output)
         self.assertNotIn(' action=', output)
         self.assertEqual(output.count('<textarea '), 3)
