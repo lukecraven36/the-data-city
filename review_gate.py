@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 
 
 def wrap(document):
-    document = document.replace('<html lang="en">', '<html lang="en" class="review-required">', 1)
+    document = document.replace('<html lang="en">', '<html lang="en" class="review-required review-permissions">', 1)
     document = document.replace('<link rel="stylesheet" href="/brand.css">', '<link rel="stylesheet" href="/review-access.css"><script src="/review-access.js" defer></script><link rel="stylesheet" href="/brand.css">', 1)
     document = re.sub(r'(<body[^>]*>)', lambda match: match[0] + render(), document, count=1)
     document = document.replace('<span class="avatar"', '<button type="button" id="review-sign-out">Leave review</button><span class="avatar"', 1)
@@ -26,8 +26,11 @@ def configuration():
     for digest, profile in profiles.items():
         if digest not in hashes or not isinstance(profile, dict) or set(profile) != fields or any(not isinstance(value, str) for value in profile.values()):
             raise ValueError('Reviewer profiles must belong to allowed addresses and contain the expected text fields.')
-    revision = hashlib.sha256(json.dumps({'hashes': sorted(hashes), 'profiles': profiles}, sort_keys=True).encode()).hexdigest()[:16]
-    return {'allowedEmailHashes': hashes, 'reviewProfiles': profiles, 'storageKey': 'tdc-demo-review:' + revision}
+    interview_hashes = config.get('interview_email_hashes', [])
+    if not isinstance(interview_hashes, list) or any(value not in hashes for value in interview_hashes):
+        raise ValueError('Interview viewers must already be approved reviewers.')
+    revision = hashlib.sha256(json.dumps({'hashes': sorted(hashes), 'profiles': profiles, 'interview': sorted(interview_hashes)}, sort_keys=True).encode()).hexdigest()[:16]
+    return {'allowedEmailHashes': hashes, 'reviewProfiles': profiles, 'interviewEmailHashes': interview_hashes, 'storageKey': 'tdc-demo-review:' + revision}
 
 
 def render():

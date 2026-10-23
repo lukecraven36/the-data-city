@@ -55,4 +55,4 @@ python3 build_site.py
 
 Tests use mock transports and temporary ledgers. No live allowance is consumed. The discovery journey passed desktop and mobile-viewport browser checks locally; physical iPhone/Safari verification remains to be done.
 
-The featured [Interview page](docs/INTERVIEW-PAGE.md) distils the demo and proposed role into a customer journey and RevOps discussion. It uses local assets and makes no API requests.
+Luke’s sign-in-only [Interview page](docs/INTERVIEW-PAGE.md) distils the demo and proposed role into a customer journey and RevOps discussion. It uses local assets and makes no API requests.

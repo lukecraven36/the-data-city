@@ -10,13 +10,34 @@ import review_gate
 
 
 class ReviewExport(unittest.TestCase):
+    def test_interview_visibility_requires_explicit_approved_address(self):
+        config = review_gate.configuration()
+        requested = hashlib.sha256(b'luke@pathedconsulting.co.uk').hexdigest()
+        self.assertEqual(config['interviewEmailHashes'], [requested])
+        self.assertIn(requested, config['allowedEmailHashes'])
+        with tempfile.TemporaryDirectory() as folder, patch.object(review_gate, 'ROOT', Path(folder)):
+            target = Path(folder) / 'data/review-access.json'
+            target.parent.mkdir()
+            allowed = hashlib.sha256(b'allowed@example.com').hexdigest()
+            other = hashlib.sha256(b'other@example.com').hexdigest()
+            config = {'allowed_email_hashes': [allowed], 'interview_email_hashes': []}
+            target.write_text(json.dumps(config))
+            first = review_gate.configuration()['storageKey']
+            config['interview_email_hashes'] = [allowed]
+            target.write_text(json.dumps(config))
+            self.assertNotEqual(first, review_gate.configuration()['storageKey'])
+            config['interview_email_hashes'] = [other]
+            target.write_text(json.dumps(config))
+            with self.assertRaises(ValueError):
+                review_gate.configuration()
+
     def test_project_path_export_keeps_all_pages_behind_entry_ui(self):
         with tempfile.TemporaryDirectory() as folder, patch.object(build_site, 'OUT', Path(folder) / 'dist'):
             build_site.build('/the-data-city/', email_gate=True)
             out = build_site.OUT
             for route in ['index.html', 'about-me/index.html', 'role-at-data-city/index.html', 'interview/index.html']:
                 document = (out / route).read_text(encoding='utf-8')
-                self.assertIn('class="review-required"', document)
+                self.assertIn('class="review-required review-permissions"', document)
                 self.assertIn('id="review-entry"', document)
                 self.assertIn('src="/the-data-city/review-access.js"', document)
                 self.assertNotIn('href="/about-me', document)

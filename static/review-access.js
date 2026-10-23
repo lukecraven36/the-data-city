@@ -15,6 +15,12 @@
     return [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, '0')).join('');
   }
   function unlock(hash, address, focus) {
+    const interviewAllowed = (config.interviewEmailHashes || []).includes(hash);
+    document.documentElement.classList.toggle('interview-reviewer', interviewAllowed);
+    if (document.querySelector('.interview-story') && !interviewAllowed) {
+      location.replace(document.querySelector('.sidebar .identity').href);
+      return;
+    }
     const profile = config.reviewProfiles?.[hash] || {};
     const identity = {...profile, email: address};
     window.dataCityReviewer = identity;
@@ -36,6 +42,7 @@
       sessionStorage.removeItem(config.storageKey + ':email');
     } catch { /* Storage can be disabled. */ }
     window.dataCityReviewer = null;
+    document.documentElement.classList.remove('interview-reviewer');
     document.querySelectorAll('dialog[open]').forEach(dialog => dialog.close());
     document.documentElement.classList.add('review-required');
     root.hidden = false;
@@ -54,6 +61,13 @@
     } catch { /* Remain on the entry screen when storage is unavailable. */ }
   }
   restoreSession();
+  window.addEventListener('pageshow', event => {
+    if (!event.persisted) return;
+    document.documentElement.classList.add('review-required');
+    document.documentElement.classList.remove('interview-reviewer');
+    root.hidden = false;
+    restoreSession();
+  });
   submit.disabled = false;
   form.addEventListener('submit', async event => {
     event.preventDefault();

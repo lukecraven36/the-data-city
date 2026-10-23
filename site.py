@@ -65,7 +65,7 @@ PAGES = {'/interview': interview_view.render, '/': discovery_view.render, '/role
 def render(path, email_gate=False):
     title = dict(NAV)[path]
     symbols = ['✦', '◈', '↗', '◎']
-    nav = ''.join(f'<a href="{url}"'+(' aria-current="page"' if url == path else '')+f'><span class="nav-symbol" aria-hidden="true">{symbols[i]}</span>{label}</a>' for i, (url, label) in enumerate(NAV))
+    nav = ''.join(f'<a href="{url}"'+(' data-review-feature="interview"' if url == '/interview' else '')+(' aria-current="page"' if url == path else '')+f'><span class="nav-symbol" aria-hidden="true">{symbols[i]}</span>{label}</a>' for i, (url, label) in enumerate(NAV))
     script_path = {'/interview': '/interview.js', '/': '/discovery.js', '/role-at-data-city': '/role.js', '/about-me': '/cv.js'}.get(path)
     script = f'<script src="{script_path}" defer></script>' if script_path else ''
     if path == '/':

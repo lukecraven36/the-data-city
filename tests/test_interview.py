@@ -12,7 +12,7 @@ class InterviewPage(unittest.TestCase):
         with patch.object(build_site.site.api, 'request', side_effect=AssertionError('No API requests')):
             document = build_site.site.render('/interview')
         self.assertEqual(build_site.site.NAV[0], ('/interview', 'Interview'))
-        self.assertIn('href="/interview" aria-current="page"', document)
+        self.assertIn('href="/interview" data-review-feature="interview" aria-current="page"', document)
         self.assertIn('href="/interview.css"', document)
         self.assertIn('src="/interview.js"', document)
         self.assertIn('href="/"', document)

@@ -1,6 +1,6 @@
 # Interview presentation
 
-The featured `/interview` page is an independent proposal for discussion. The existing discovery demo, role page, CV and legacy role redirects remain available.
+The reviewer-specific `/interview` page is an independent proposal for discussion. The existing discovery demo, role page, CV and legacy role redirects remain available.
 
 `interview_view.py` renders the full semantic content. `static/interview.css` gives it a responsive editorial layout. `static/interview.js` progressively enhances the five-stage customer journey with selectable illustrative handoffs, arrow-key navigation and Home/End support. Without JavaScript all handoffs remain readable. Reduced-motion preferences are respected.
 
@@ -12,9 +12,11 @@ The static exporter supports root hosting and `/the-data-city/`, including the n
 
 ## Verification
 
-- 25 offline Python tests; all browser scripts pass Node syntax checks.
+- 26 offline Python tests; all browser scripts pass Node syntax checks.
 - Root and Pages-prefix exports checked, including direct Interview entry, existing routes and legacy redirects.
 - Chromium/Edge previews inspected at 1440, 390, 375 and 320px; no horizontal overflow. All five stages, keyboard navigation, CTA destinations, session persistence and sign-out checked.
 - All four reviewer profiles still populate the existing discovery form. No browser errors or external requests during the local checks.
 - Original data, access configuration, provider client and page-content files match their pre-change SHA-256 hashes.
 - Mobile checks use browser emulation; physical iPhone/Safari remains unverified.
+
+Interview visibility is explicitly assigned by `interview_email_hashes` in the existing reviewer configuration. Only Luke’s pathedconsulting address has this flag. Other reviewers do not see its navigation and direct visits return to the discovery page. Visibility is rechecked on session restoration and browser-history restoration; public static source remains readable.
