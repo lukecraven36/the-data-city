@@ -1,4 +1,4 @@
-"""Export the three reviewed pages without credentials, a server, or API calls."""
+"""Export the four reviewed pages without credentials, a server, or API calls."""
 import importlib.util
 import argparse
 import re
@@ -29,7 +29,7 @@ def build(base_path='', email_gate=False):
         target = OUT / old_route.lstrip('/') / 'index.html'
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta http-equiv="refresh" content="0;url={destination}"><link rel="canonical" href="{destination}"><title>A Role at The Data City</title></head><body><a href="{destination}">Continue to A Role at The Data City</a></body></html>', encoding='utf-8')
-    for name in ['style.css', 'data.js', 'cv.js', 'discovery.js', 'discovery.css', 'role.css', 'role.js', 'review-access.css', 'review-access.js', 'brand.css', 'datacity-logo.svg', 'datacity-logo-icon.svg']:
+    for name in ['style.css', 'data.js', 'cv.js', 'discovery.js', 'discovery.css', 'role.css', 'role.js', 'interview.css', 'interview.js', 'review-access.css', 'review-access.js', 'brand.css', 'datacity-logo.svg', 'datacity-logo-icon.svg']:
         content = (ROOT / 'static' / name).read_text(encoding='utf-8')
         if name.endswith('.css'):
             content = content.replace('url("/fonts/', 'url("' + prefix + '/fonts/')
@@ -40,7 +40,7 @@ def build(base_path='', email_gate=False):
     (OUT / '_headers').write_text('/*\n  Cache-Control: private, no-store\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  Content-Security-Policy: default-src \'none\'; style-src \'self\'; font-src \'self\'; img-src \'self\'; script-src \'self\'; connect-src \'none\'; base-uri \'none\'; frame-ancestors \'none\'; form-action \'none\'\n')
     (OUT / '.nojekyll').touch()
     (OUT / 'robots.txt').write_text('User-agent: *\nDisallow: /\n', encoding='utf-8')
-    print('Three pages and two legacy redirects exported from the reviewed cache. No provider request made.')
+    print('Four pages and two legacy redirects exported from the reviewed cache. No provider request made.')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)

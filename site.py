@@ -13,10 +13,11 @@ import data_view
 import cv_view
 import discovery_view
 import role_view
+import interview_view
 import review_gate
 
 ROOT = Path(__file__).resolve().parent
-NAV = [('/', 'Discover Your Market'), ('/role-at-data-city', 'A Role at The Data City'), ('/about-me', 'About Me')]
+NAV = [('/interview', 'Interview'), ('/', 'Discover Your Market'), ('/role-at-data-city', 'A Role at The Data City'), ('/about-me', 'About Me')]
 REDIRECTS = {'/ai-lead': '/role-at-data-city', '/commercial-product-lead': '/role-at-data-city'}
 
 def source(url, label):
@@ -59,19 +60,21 @@ def data_page():
 def about_page():
     return cv_view.render()
 
-PAGES = {'/': discovery_view.render, '/role-at-data-city': role_view.render, '/about-me': about_page}
+PAGES = {'/interview': interview_view.render, '/': discovery_view.render, '/role-at-data-city': role_view.render, '/about-me': about_page}
 
 def render(path, email_gate=False):
     title = dict(NAV)[path]
-    symbols = ['◈', '↗', '◎']
+    symbols = ['✦', '◈', '↗', '◎']
     nav = ''.join(f'<a href="{url}"'+(' aria-current="page"' if url == path else '')+f'><span class="nav-symbol" aria-hidden="true">{symbols[i]}</span>{label}</a>' for i, (url, label) in enumerate(NAV))
-    script_path = {'/': '/discovery.js', '/role-at-data-city': '/role.js', '/about-me': '/cv.js'}.get(path)
+    script_path = {'/interview': '/interview.js', '/': '/discovery.js', '/role-at-data-city': '/role.js', '/about-me': '/cv.js'}.get(path)
     script = f'<script src="{script_path}" defer></script>' if script_path else ''
     if path == '/':
         script += '<link rel="stylesheet" href="/discovery.css">'
     if path == '/role-at-data-city':
         script += '<link rel="stylesheet" href="/role.css">'
-    body_class = ' class="discovery-layout"' if path == '/' else ''
+    if path == '/interview':
+        script += '<link rel="stylesheet" href="/interview.css">'
+    body_class = ' class="discovery-layout"' if path == '/' else (' class="interview-layout"' if path == '/interview' else '')
     document = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#100a2d"><title>{title} · The Data City conversation</title><link rel="stylesheet" href="/style.css">{script}<link rel="stylesheet" href="/brand.css"><link rel="icon" type="image/svg+xml" href="/datacity-logo-icon.svg"></head><body{body_class}><a class="skip" href="#main">Skip to content</a><div class="app-shell"><aside class="sidebar"><a class="identity" href="/"><span class="site-brand"><img src="/datacity-logo.svg" alt="The Data City" width="172" height="53"><small>Luke Craven · a proposed contribution</small></span></a><p class="side-caption">A PROPOSED CONTRIBUTION</p><nav aria-label="Main navigation">{nav}</nav><div class="side-bottom"><strong>PRIVATE WORKING DRAFT</strong>A conversation about customer needs, useful AI and what I could contribute.</div></aside><div class="site-content"><header class="topbar"><span class="topbar-date">The Data City / {title}</span><div class="topbar-right"><span class="private">Private working draft</span><span class="avatar" aria-hidden="true">LC</span></div></header><main id="main">{PAGES[path]()}</main><footer><span>Prepared for a conversation with Alex &amp; Mitali</span><span>Working draft · 18 October 2026</span></footer></div></div></body></html>'''
     return review_gate.wrap(document) if email_gate else document
 
@@ -96,13 +99,13 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header('Location', REDIRECTS[path.rstrip('/')])
             self.send_header('Cache-Control', 'no-store')
             self.end_headers(); return
-        if path in ('/style.css', '/discovery.css', '/role.css', '/brand.css'):
+        if path in ('/style.css', '/discovery.css', '/role.css', '/interview.css', '/brand.css'):
             content = (ROOT / 'static' / path.lstrip('/')).read_bytes(); mime = 'text/css'
         elif path in ('/datacity-logo.svg', '/datacity-logo-icon.svg'):
             content = (ROOT / 'static' / path.lstrip('/')).read_bytes(); mime = 'image/svg+xml'
         elif path in ('/fonts/poppins-400.woff2', '/fonts/poppins-500.woff2', '/fonts/poppins-600.woff2', '/fonts/poppins-700.woff2'):
             content = (ROOT / 'static' / path.lstrip('/')).read_bytes(); mime = 'font/woff2'
-        elif path in ('/data.js', '/cv.js', '/discovery.js', '/role.js'):
+        elif path in ('/data.js', '/cv.js', '/discovery.js', '/role.js', '/interview.js'):
             content = (ROOT / 'static' / path.lstrip('/')).read_bytes(); mime = 'text/javascript; charset=utf-8'
         elif path in PAGES:
             content = render(path).encode(); mime = 'text/html; charset=utf-8'

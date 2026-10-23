@@ -2,7 +2,7 @@
 
 Latest research: [the ten-company technology enrichment pack](docs/TECHNOLOGY-ENRICHMENT.md) records the second approved API response, public-source enrichment and dashboard-ready evidence. Luke has broadened the demonstration to a generic local-government authority with no Leeds/geography filter. All ten returned companies are retained. Local usage is now **2/2**. The new homepage uses this evidence with a separate illustrative presentation layer; see [the discovery homepage record](docs/DISCOVERY-HOMEPAGE.md).
 
-Current implementation has three main pages: **Discover Your Market**, **A Role at The Data City**, **About Me**; the two former role URLs redirect to the combined page. The original brief is [docs/handoff.md](docs/handoff.md). The [revised AI Discovery brief](docs/ai-discovery-revised-brief.md) proposes a new homepage after local migration is verified. Start with [the local handoff](docs/CODEX-LOCAL-HANDOFF.md) and [phone workflow](docs/MOBILE-LOCAL-WORKFLOW.md). The homepage now implements the prepared contact-to-discovery-to-report journey; implementation and verification are recorded in [docs/DISCOVERY-HOMEPAGE.md](docs/DISCOVERY-HOMEPAGE.md). No cheat-sheet or bulk retrieval.
+Current implementation has four main pages: **Interview**, **Discover Your Market**, **A Role at The Data City**, **About Me**; the two former role URLs redirect to the combined page. The original brief is [docs/handoff.md](docs/handoff.md). The [revised AI Discovery brief](docs/ai-discovery-revised-brief.md) proposes a new homepage after local migration is verified. Start with [the local handoff](docs/CODEX-LOCAL-HANDOFF.md) and [phone workflow](docs/MOBILE-LOCAL-WORKFLOW.md). The homepage now implements the prepared contact-to-discovery-to-report journey; implementation and verification are recorded in [docs/DISCOVERY-HOMEPAGE.md](docs/DISCOVERY-HOMEPAGE.md). No cheat-sheet or bulk retrieval.
 
 ## Current version
 
@@ -14,7 +14,7 @@ The current visual identity follows The Data City’s US reference: deep navy, c
 
 ## GitHub and cloud workflow
 
-The repository is `lukecraven36/the-data-city`. Luke has authorised making it public for GitHub Pages. GitHub Actions automatically checks the site and exports its three static pages and two legacy redirects on pushes to `main` and pull requests. Builds read the saved sample and never authenticate with or call The Data City. Review artifacts expire after seven days.
+The repository is `lukecraven36/the-data-city`. Luke has authorised making it public for GitHub Pages. GitHub Actions automatically checks the site and exports its four static pages and two legacy redirects on pushes to `main` and pull requests. Builds read the saved sample and never authenticate with or call The Data City. Review artifacts expire after seven days.
 
 `python3 build_site.py` generates `dist/` for root hosting without the additional email screen. `python3 build_site.py --base-path /the-data-city/ --email-gate` builds the GitHub Pages version. No dependency installation is needed. The new Pages workflow runs offline checks and publishes the static demonstration on pushes to `main`.
 
@@ -48,8 +48,11 @@ node --check static/data.js
 node --check static/cv.js
 node --check static/discovery.js
 node --check static/role.js
+node --check static/interview.js
 node --check static/review-access.js
 python3 build_site.py
 ```
 
 Tests use mock transports and temporary ledgers. No live allowance is consumed. The discovery journey passed desktop and mobile-viewport browser checks locally; physical iPhone/Safari verification remains to be done.
+
+The featured [Interview page](docs/INTERVIEW-PAGE.md) distils the demo and proposed role into a customer journey and RevOps discussion. It uses local assets and makes no API requests.

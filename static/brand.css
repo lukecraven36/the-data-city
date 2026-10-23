@@ -14,7 +14,7 @@ h1,h2,h3,button,input,textarea{font-family:inherit}h1{font-weight:600;letter-spa
 @media(max-width:850px){.site-brand img{width:150px}.sidebar .identity small{margin-top:8px!important}.site-brand small{font-size:9px!important}}
 @media(max-width:650px){.discovery-hero{padding:25px 22px}.discovery-hero h1{font-size:43px}.role-hero h1{font-size:36px}.review-brand{padding:18px;margin-bottom:29px}.review-brand img{width:156px}.sidebar .identity{max-width:100%}.site-brand img{width:145px}.role-section-head h2{font-size:24px}.question-heading h1{font-size:39px}}
 @media(max-width:360px){.discovery-hero h1{font-size:36px}.role-hero h1{font-size:32px}.review-entry h1{font-size:34px}}
-@media(max-width:650px){.sidebar nav{display:grid;grid-template-columns:1fr 1.3fr .65fr;gap:4px;overflow:visible}.sidebar nav a{white-space:normal;justify-content:center;text-align:center;padding:10px 6px;font-size:9px;min-height:46px}}
+@media(max-width:650px){.sidebar nav{display:grid;grid-template-columns:1fr 1fr;gap:4px;overflow:visible}.sidebar nav a{white-space:normal;justify-content:center;text-align:center;padding:10px 6px;font-size:9px;min-height:46px}}
 @font-face {
   font-family: 'Poppins';
   font-style: normal;

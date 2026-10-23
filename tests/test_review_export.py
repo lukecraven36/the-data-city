@@ -14,7 +14,7 @@ class ReviewExport(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder, patch.object(build_site, 'OUT', Path(folder) / 'dist'):
             build_site.build('/the-data-city/', email_gate=True)
             out = build_site.OUT
-            for route in ['index.html', 'about-me/index.html', 'role-at-data-city/index.html']:
+            for route in ['index.html', 'about-me/index.html', 'role-at-data-city/index.html', 'interview/index.html']:
                 document = (out / route).read_text(encoding='utf-8')
                 self.assertIn('class="review-required"', document)
                 self.assertIn('id="review-entry"', document)

@@ -100,7 +100,7 @@ class Safety(unittest.TestCase):
                     if path != '/':
                         self.assertNotIn('luke@pathedconsulting.co.uk', output)
                     self.assertNotIn('access_token', output)
-        self.assertEqual(len(review.PAGES), 3)
+        self.assertEqual(len(review.PAGES), 4)
         self.assertEqual(api.summary(self.path), [])
         self.classify('public one')
         self.assertIn('Response awaiting review', review.data_page())
@@ -112,7 +112,7 @@ class Safety(unittest.TestCase):
         thread.start()
         client = http.client.HTTPConnection('127.0.0.1', server.server_port)
         try:
-            for path in list(review.PAGES) + ['/style.css', '/data.js', '/cv.js', '/discovery.js', '/discovery.css', '/role.css', '/role.js']:
+            for path in list(review.PAGES) + ['/style.css', '/data.js', '/cv.js', '/discovery.js', '/discovery.css', '/role.css', '/role.js', '/interview.css', '/interview.js']:
                 client.request('GET', path)
                 response=client.getresponse(); response.read()
                 self.assertEqual(response.status, 401)
