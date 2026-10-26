@@ -112,7 +112,7 @@ class Safety(unittest.TestCase):
         thread.start()
         client = http.client.HTTPConnection('127.0.0.1', server.server_port)
         try:
-            for path in list(review.PAGES) + ['/style.css', '/data.js', '/cv.js', '/discovery.js', '/discovery.css', '/role.css', '/role.js', '/interview.css', '/interview.js']:
+            for path in list(review.PAGES) + ['/style.css', '/data.js', '/cv.js', '/discovery.js', '/discovery.css', '/role.css', '/role.js', '/interview.css']:
                 client.request('GET', path)
                 response=client.getresponse(); response.read()
                 self.assertEqual(response.status, 401)

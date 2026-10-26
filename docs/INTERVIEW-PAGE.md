@@ -1,22 +1,13 @@
-# Interview presentation
+# Interview briefing
 
-The reviewer-specific `/interview` page is an independent proposal for discussion. The existing discovery demo, role page, CV and legacy role redirects remain available.
+The `/interview` page is Luke’s internal preparation reference. Its three sections are company overview (history, senior leadership, business model and classification workflow), recent public developments and expansion, and a proposed role/contribution. The previous promotional hero and presentation journey have been replaced.
 
-`interview_view.py` renders the full semantic content. `static/interview.css` gives it a responsive editorial layout. `static/interview.js` progressively enhances the five-stage customer journey with selectable illustrative handoffs, arrow-key navigation and Home/End support. Without JavaScript all handoffs remain readable. Reduced-motion preferences are respected.
+`interview_view.py` holds concise research checked on 26 October 2026, with links to official sources. Current leadership is reproduced from the company team page, including Mitali Mookerjee as Managing Director (UK). No reporting hierarchy is inferred. Performance figures and expansion plans are labelled with their announcement date; Luke’s interpretation and potential responsibilities are clearly distinguished from company facts. Country coverage is described as an announcement, with current availability to confirm.
 
-The presentation distinguishes the existing prepared demo from a proposed customer journey and potential RevOps handoffs. It does not simulate integrations, claim live generation, add metrics or send information anywhere. Measures and a 30/60/90-day approach are suggestions to validate with the team.
+`static/interview.css` provides large text, a history timeline, six leadership cards, a data pipeline, SIC/RSIC/RTIC comparison, news cards and contribution cards. The only disclosure uses native HTML details/summary, which works without page-specific JavaScript. The obsolete Interview script has been removed from exports and workflow checks.
 
-The new route uses the existing browser email entry. This is a convenience screen on a public site, not server-enforced access control. No access profiles, datasets, API client or private usage state are changed.
+The page retains its existing route, hosting prefixes and reviewer visibility. Only the configured Luke email can see it in the app; other reviewers are redirected to discovery and do not see the Interview navigation. This is a browser convenience on a public static site, not server-enforced access control. Research uses public material only.
 
-The static exporter supports root hosting and `/the-data-city/`, including the new local CSS and JS. Both workflows run the Python suite and browser-script syntax checks. The authenticated local server allows the new route and assets.
+The existing demonstration, About Me, role content, datasets, access configuration, provider client and private API state are outside this change. No classification requests are needed.
 
-## Verification
-
-- 26 offline Python tests; all browser scripts pass Node syntax checks.
-- Root and Pages-prefix exports checked, including direct Interview entry, existing routes and legacy redirects.
-- Chromium/Edge previews inspected at 1440, 390, 375 and 320px; no horizontal overflow. All five stages, keyboard navigation, CTA destinations, session persistence and sign-out checked.
-- All four reviewer profiles still populate the existing discovery form. No browser errors or external requests during the local checks.
-- Original data, access configuration, provider client and page-content files match their pre-change SHA-256 hashes.
-- Mobile checks use browser emulation; physical iPhone/Safari remains unverified.
-
-Interview visibility is explicitly assigned by `interview_email_hashes` in the existing reviewer configuration. Only Luke’s pathedconsulting address has this flag. Other reviewers do not see its navigation and direct visits return to the discovery page. Visibility is rechecked on session restoration and browser-history restoration; public static source remains readable.
+Validation: 26 offline tests and remaining JavaScript syntax checks pass. Root and Pages-prefix exports pass. Local Edge/Chromium checks cover 1440/390/375/320px with no horizontal overflow, all three section links, native disclosure keyboard control, both CTA destinations and all four reviewer identities. Original page content, access settings and datasets match their pre-change hashes. Physical Safari remains unverified.

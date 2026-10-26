@@ -66,7 +66,7 @@ def render(path, email_gate=False):
     title = dict(NAV)[path]
     symbols = ['✦', '◈', '↗', '◎']
     nav = ''.join(f'<a href="{url}"'+(' data-review-feature="interview"' if url == '/interview' else '')+(' aria-current="page"' if url == path else '')+f'><span class="nav-symbol" aria-hidden="true">{symbols[i]}</span>{label}</a>' for i, (url, label) in enumerate(NAV))
-    script_path = {'/interview': '/interview.js', '/': '/discovery.js', '/role-at-data-city': '/role.js', '/about-me': '/cv.js'}.get(path)
+    script_path = {'/': '/discovery.js', '/role-at-data-city': '/role.js', '/about-me': '/cv.js'}.get(path)
     script = f'<script src="{script_path}" defer></script>' if script_path else ''
     if path == '/':
         script += '<link rel="stylesheet" href="/discovery.css">'
@@ -105,7 +105,7 @@ class Handler(BaseHTTPRequestHandler):
             content = (ROOT / 'static' / path.lstrip('/')).read_bytes(); mime = 'image/svg+xml'
         elif path in ('/fonts/poppins-400.woff2', '/fonts/poppins-500.woff2', '/fonts/poppins-600.woff2', '/fonts/poppins-700.woff2'):
             content = (ROOT / 'static' / path.lstrip('/')).read_bytes(); mime = 'font/woff2'
-        elif path in ('/data.js', '/cv.js', '/discovery.js', '/role.js', '/interview.js'):
+        elif path in ('/data.js', '/cv.js', '/discovery.js', '/role.js'):
             content = (ROOT / 'static' / path.lstrip('/')).read_bytes(); mime = 'text/javascript; charset=utf-8'
         elif path in PAGES:
             content = render(path).encode(); mime = 'text/html; charset=utf-8'

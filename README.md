@@ -48,11 +48,10 @@ node --check static/data.js
 node --check static/cv.js
 node --check static/discovery.js
 node --check static/role.js
-node --check static/interview.js
 node --check static/review-access.js
 python3 build_site.py
 ```
 
 Tests use mock transports and temporary ledgers. No live allowance is consumed. The discovery journey passed desktop and mobile-viewport browser checks locally; physical iPhone/Safari verification remains to be done.
 
-Luke’s sign-in-only [Interview page](docs/INTERVIEW-PAGE.md) distils the demo and proposed role into a customer journey and RevOps discussion. It uses local assets and makes no API requests.
+Luke’s sign-in-only [Interview page](docs/INTERVIEW-PAGE.md) provides a dated company overview, recent developments and potential contribution. It uses local assets and makes no API requests.

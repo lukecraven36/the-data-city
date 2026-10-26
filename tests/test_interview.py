@@ -14,23 +14,27 @@ class InterviewPage(unittest.TestCase):
         self.assertEqual(build_site.site.NAV[0], ('/interview', 'Interview'))
         self.assertIn('href="/interview" data-review-feature="interview" aria-current="page"', document)
         self.assertIn('href="/interview.css"', document)
-        self.assertIn('src="/interview.js"', document)
+        self.assertNotIn('src="/interview.js"', document)
         self.assertIn('href="/"', document)
         self.assertIn('href="/role-at-data-city"', document)
         self.assertEqual(len(build_site.site.PAGES), 4)
 
-    def test_journey_is_complete_without_javascript(self):
+    def test_briefing_follows_requested_order_and_cites_public_sources(self):
         document = interview_view.render()
-        self.assertEqual(document.count('class="journey-stage"'), 5)
-        self.assertEqual(document.count('class="handoff-panel"'), 5)
-        for key, name, *_ in interview_view.STAGES:
-            self.assertIn(f'aria-controls="handoff-{key}"', document)
-            self.assertIn(f'aria-labelledby="stage-{key}"', document)
+        self.assertLess(document.index('id="company"'), document.index('id="developments"'))
+        self.assertLess(document.index('id="developments"'), document.index('id="my-role"'))
+        self.assertEqual(document.count('class="leader-card'), 6)
+        for _, name, title in interview_view.LEADERS:
             self.assertIn(name, document)
-        for text in ['Independent proposal for discussion', 'prepared sample', 'illustrative financials', 'subject to validating', 'Baseline first.', 'Attract + Explore', 'Product', 'human review']:
+            self.assertIn(title, document)
+        for text in ['2017', 'Open Innovations', 'Companies House', 'Standard Industrial Classification', 'Real-Time SIC', 'Real-Time Industrial Classification', 'Monthly maintenance', 'Oxford Economics', '2027/28', '26 OCTOBER 2026', 'MY INTERPRETATION', 'responsibilities and priorities to agree', 'human review']:
             self.assertIn(text, document)
-        for text in ['Keltbray', 'Simpson', 'Natalia', '£100,000', 'access_token', '@', 'conversion problems', 'broken operations', 'private email']:
+        for url, _ in interview_view.SOURCES.values():
+            self.assertIn(url, document)
+            self.assertTrue(url.startswith('https://thedatacity.com/'))
+        for text in ['interview-hero', 'lasting customer value', 'Keltbray', 'Natalia', 'access_token', '@', 'private email']:
             self.assertNotIn(text, document)
+        self.assertIn('<details class="interview-prompts">', document)
 
     def test_both_hosting_prefixes_export_assets_and_links(self):
         for prefix in ['', '/the-data-city/']:
@@ -38,10 +42,10 @@ class InterviewPage(unittest.TestCase):
                 build_site.build(prefix, email_gate=True)
                 document = (build_site.OUT / 'interview/index.html').read_text(encoding='utf-8')
                 base = prefix.rstrip('/')
-                for target in ['/interview.css', '/interview.js', '/review-access.js', '/role-at-data-city']:
+                for target in ['/interview.css', '/review-access.js', '/role-at-data-city']:
                     self.assertIn(f'"{base}{target}"', document)
                 self.assertIn('id="review-entry"', document)
-                for asset in ['interview.css', 'interview.js']:
+                for asset in ['interview.css']:
                     self.assertEqual((build_site.OUT / asset).read_text(encoding='utf-8'), (Path('static') / asset).read_text(encoding='utf-8'))
                 for old in ['ai-lead', 'commercial-product-lead']:
                     redirect = (build_site.OUT / old / 'index.html').read_text()

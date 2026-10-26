@@ -25,7 +25,6 @@ jobs:
           node --check static/cv.js
           node --check static/discovery.js
           node --check static/role.js
-          node --check static/interview.js
           node --check static/review-access.js
       - name: Export four pages and legacy redirects without API requests
         run: python build_site.py
