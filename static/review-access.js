@@ -95,6 +95,11 @@
       try {
         sessionStorage.setItem(config.storageKey, hash);
         sessionStorage.setItem(config.storageKey + ':email', value);
+        if (!document.querySelector('.role-story')) {
+          const home = document.querySelector('.sidebar .identity').href;
+          location.replace(new URL('role-at-data-city/', home).href);
+          return;
+        }
       } catch { /* Current page still works. */ }
       unlock(hash, value, true);
     } catch {
