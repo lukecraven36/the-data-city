@@ -71,7 +71,7 @@ def render(path, email_gate=False):
     if path == '/':
         script += '<link rel="stylesheet" href="/discovery.css">'
     if path == '/role-at-data-city':
-        script += '<link rel="stylesheet" href="/role.css">'
+        script += '<link rel="stylesheet" href="/role.css?v=20261109-contrast">'
     if path == '/interview':
         script += '<link rel="stylesheet" href="/interview.css">'
     body_class = ' class="discovery-layout"' if path == '/' else (' class="interview-layout"' if path == '/interview' else '')
